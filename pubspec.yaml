@@ -1,0 +1,25 @@
+name: bikip_kanji_app
+
+description: "Bí Kíp Kanji - Ứng dụng học Kanji tiếng Nhật từ N5 đến N1 cho người Việt."
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.5
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
