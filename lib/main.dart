@@ -1,46 +1,18 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'app/app.dart';
+import 'data/repositories/content_repository.dart';
+import 'data/repositories/providers.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final content = await ContentRepository.load();
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Bí Kíp Kanji',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.deepPurple,
-        ),
-        useMaterial3: true,
-      ),
-      home: const HomePage(),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Bí Kíp Kanji'),
-      ),
-      body: const Center(
-        child: Text(
-          'Bí Kíp Kanji N5 - N1',
-          style: TextStyle(
-            fontSize: 32,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-      ),
-    );
-  }
+  runApp(
+    ProviderScope(
+      overrides: [contentRepositoryProvider.overrideWithValue(content)],
+      child: const BikipKanjiApp(),
+    ),
+  );
 }
