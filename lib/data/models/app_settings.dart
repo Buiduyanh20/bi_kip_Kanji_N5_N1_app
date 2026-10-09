@@ -52,12 +52,11 @@ class AppSettings {
     String? userName,
     LearnMethod? lastMethod,
     CountChoice? lastCount,
-  }) =>
-      AppSettings(
-        userName: userName ?? this.userName,
-        lastMethod: lastMethod ?? this.lastMethod,
-        lastCount: lastCount ?? this.lastCount,
-      );
+  }) => AppSettings(
+    userName: userName ?? this.userName,
+    lastMethod: lastMethod ?? this.lastMethod,
+    lastCount: lastCount ?? this.lastCount,
+  );
 
   Map<String, dynamic> toJson() => {
     'userName': userName,

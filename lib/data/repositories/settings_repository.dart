@@ -25,8 +25,8 @@ class SettingsRepository {
   Future<void> _put(String key, String value) => _db
       .into(_db.settingRows)
       .insertOnConflictUpdate(
-    SettingRowsCompanion.insert(settingKey: key, settingValue: value),
-  );
+        SettingRowsCompanion.insert(settingKey: key, settingValue: value),
+      );
 
   Future<void> setUserName(String name) =>
       _put(_Keys.userName, AppSettings.sanitizeUserName(name));

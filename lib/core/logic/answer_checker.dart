@@ -63,12 +63,13 @@ List<String> _parseReadingInput(String value) => value
     .toList();
 
 AnswerStatus _validateReading(String userAnswer, List<String> correctAnswers) {
-  final input = _parseReadingInput(userAnswer)
+  final input = _parseReadingInput(
+    userAnswer,
+  ).map(_cleanReading).where((s) => s.isNotEmpty).toList();
+  final normalized = correctAnswers
       .map(_cleanReading)
       .where((s) => s.isNotEmpty)
       .toList();
-  final normalized =
-  correctAnswers.map(_cleanReading).where((s) => s.isNotEmpty).toList();
 
   // Bỏ đáp án là tiền tố của đáp án khác (ひと so với ひとつ).
   final expected = <String>[];
@@ -86,8 +87,9 @@ AnswerStatus _validateReading(String userAnswer, List<String> correctAnswers) {
   if (input.isEmpty || expected.isEmpty) return AnswerStatus.incorrect;
 
   final exactMatches = input.where(expected.contains).toSet();
-  final nearMatches =
-  input.where((part) => expected.any((a) => a.startsWith(part))).toSet();
+  final nearMatches = input
+      .where((part) => expected.any((a) => a.startsWith(part)))
+      .toSet();
 
   if (exactMatches.length == expected.length) return AnswerStatus.exact;
   if (nearMatches.isNotEmpty) return AnswerStatus.near;
@@ -97,10 +99,15 @@ AnswerStatus _validateReading(String userAnswer, List<String> correctAnswers) {
 // ───────────────────────── Nghĩa / Hán Việt ─────────────────────────
 
 /// Các từ không tính là "từ khóa". Phải chuẩn hóa vì so sánh với từ đã bỏ dấu.
-final Set<String> _nonKeywordWords =
-{'bông', 'phía', 'hướng', 'cái', 'con', 'mùa', 'sức'}
-    .map(normalizeViet)
-    .toSet();
+final Set<String> _nonKeywordWords = {
+  'bông',
+  'phía',
+  'hướng',
+  'cái',
+  'con',
+  'mùa',
+  'sức',
+}.map(normalizeViet).toSet();
 
 List<String> _meaningKeywords(String answer) {
   final normalized = normalizeAnswerText(answer);
@@ -119,17 +126,17 @@ AnswerStatus _validateText(String userAnswer, List<String> correctAnswers) {
     return AnswerStatus.exact;
   }
   final hasKeyword = correctAnswers.any(
-        (a) => _meaningKeywords(a).any((keyword) => input.contains(keyword)),
+    (a) => _meaningKeywords(a).any((keyword) => input.contains(keyword)),
   );
   return hasKeyword ? AnswerStatus.near : AnswerStatus.incorrect;
 }
 
 /// Port của `validateKanjiAnswer`.
 AnswerStatus validateAnswer(
-    String userAnswer,
-    List<String> correctAnswers,
-    LearnMethod method,
-    ) {
+  String userAnswer,
+  List<String> correctAnswers,
+  LearnMethod method,
+) {
   if (method == LearnMethod.reading) {
     return _validateReading(userAnswer, correctAnswers);
   }

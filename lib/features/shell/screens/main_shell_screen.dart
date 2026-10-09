@@ -27,6 +27,11 @@ const _tabs = [
     iconActive: Icons.replay_rounded,
   ),
   _TabItem(
+    label: 'Yêu thích',
+    icon: Icons.favorite_border_rounded,
+    iconActive: Icons.favorite_rounded,
+  ),
+  _TabItem(
     label: 'Tiến độ',
     icon: Icons.bar_chart_outlined,
     iconActive: Icons.bar_chart_rounded,
@@ -91,7 +96,7 @@ class _BottomNav extends StatelessWidget {
           child: Row(
             children: List.generate(
               _tabs.length,
-                  (i) => Expanded(
+              (i) => Expanded(
                 child: _NavItem(
                   tab: _tabs[i],
                   isActive: currentIndex == i,

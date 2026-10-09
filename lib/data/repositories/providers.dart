@@ -9,27 +9,27 @@ import 'package:bikip_kanji_app/data/repositories/settings_repository.dart';
 
 /// Các provider dưới đây được override trong main().
 final contentRepositoryProvider = Provider<ContentRepository>(
-      (ref) => throw UnimplementedError('contentRepositoryProvider'),
+  (ref) => throw UnimplementedError('contentRepositoryProvider'),
 );
 
 final appDatabaseProvider = Provider<AppDatabase>(
-      (ref) => throw UnimplementedError('appDatabaseProvider'),
+  (ref) => throw UnimplementedError('appDatabaseProvider'),
 );
 
 final progressRepositoryProvider = Provider<ProgressRepository>(
-      (ref) => ProgressRepository(ref.watch(appDatabaseProvider)),
+  (ref) => ProgressRepository(ref.watch(appDatabaseProvider)),
 );
 
 final favoriteRepositoryProvider = Provider<FavoriteRepository>(
-      (ref) => FavoriteRepository(ref.watch(appDatabaseProvider)),
+  (ref) => FavoriteRepository(ref.watch(appDatabaseProvider)),
 );
 
 final settingsRepositoryProvider = Provider<SettingsRepository>(
-      (ref) => SettingsRepository(ref.watch(appDatabaseProvider)),
+  (ref) => SettingsRepository(ref.watch(appDatabaseProvider)),
 );
 
 final backupRepositoryProvider = Provider<BackupRepository>(
-      (ref) => BackupRepository(
+  (ref) => BackupRepository(
     db: ref.watch(appDatabaseProvider),
     progress: ref.watch(progressRepositoryProvider),
     favorites: ref.watch(favoriteRepositoryProvider),

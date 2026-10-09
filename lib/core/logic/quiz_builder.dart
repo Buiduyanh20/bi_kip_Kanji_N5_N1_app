@@ -46,11 +46,10 @@ List<QuizQuestion> buildLearnQuiz({
   ];
   return ordered
       .take(count)
-      .map((id) => QuizQuestion(
-    itemId: id,
-    contentType: contentType,
-    method: method,
-  ))
+      .map(
+        (id) =>
+            QuizQuestion(itemId: id, contentType: contentType, method: method),
+      )
       .toList();
 }
 
@@ -62,16 +61,15 @@ List<QuizQuestion> buildReviewQuiz({
   Random? rng,
 }) {
   final random = rng ?? Random();
-  final mistakes = getMistakes(progress)
-      .where((m) => contentType == null || m.type == contentType)
-      .toList();
+  final mistakes = getMistakes(
+    progress,
+  ).where((m) => contentType == null || m.type == contentType).toList();
   final selected = count != null ? mistakes.take(count) : mistakes;
   return shuffled(
-    selected.map((m) => QuizQuestion(
-      itemId: m.itemId,
-      contentType: m.type,
-      method: m.method,
-    )),
+    selected.map(
+      (m) =>
+          QuizQuestion(itemId: m.itemId, contentType: m.type, method: m.method),
+    ),
     random,
   );
 }

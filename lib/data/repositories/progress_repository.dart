@@ -31,32 +31,33 @@ class ProgressRepository {
           for (final e in item.methods.entries)
             _toCompanion(item, e.key, e.value),
       ];
-      await _db.batch((b) => b.insertAll(
-        _db.progressRows,
-        rows,
-        mode: InsertMode.insertOrReplace,
-      ));
+      await _db.batch(
+        (b) => b.insertAll(
+          _db.progressRows,
+          rows,
+          mode: InsertMode.insertOrReplace,
+        ),
+      );
     });
   }
 
   Future<void> clear() => _db.delete(_db.progressRows).go();
 
   ProgressRowsCompanion _toCompanion(
-      ItemProgress item,
-      LearnMethod method,
-      MethodProgress mp,
-      ) =>
-      ProgressRowsCompanion.insert(
-        itemId: item.itemId,
-        method: method.name,
-        contentType: item.type.name,
-        level: Value(item.level?.code),
-        correct: Value(mp.correct),
-        wrong: Value(mp.wrong),
-        streak: Value(mp.streak),
-        status: Value(mp.status.key),
-        lastAnsweredAt: Value(mp.lastAnsweredAt),
-      );
+    ItemProgress item,
+    LearnMethod method,
+    MethodProgress mp,
+  ) => ProgressRowsCompanion.insert(
+    itemId: item.itemId,
+    method: method.name,
+    contentType: item.type.name,
+    level: Value(item.level?.code),
+    correct: Value(mp.correct),
+    wrong: Value(mp.wrong),
+    streak: Value(mp.streak),
+    status: Value(mp.status.key),
+    lastAnsweredAt: Value(mp.lastAnsweredAt),
+  );
 
   Map<String, ItemProgress> _group(List<ProgressRow> rows) {
     final result = <String, ItemProgress>{};

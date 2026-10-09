@@ -33,11 +33,11 @@ class BackupRepository {
     required FavoriteRepository favorites,
     required SettingsRepository settings,
     required ContentRepository content,
-  })  : _db = db,
-        _progress = progress,
-        _favorites = favorites,
-        _settings = settings,
-        _content = content;
+  }) : _db = db,
+       _progress = progress,
+       _favorites = favorites,
+       _settings = settings,
+       _content = content;
 
   /// Trùng tên file xuất của web.
   static const fileName = 'bikip-kanji-progress.json';

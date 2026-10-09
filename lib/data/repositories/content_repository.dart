@@ -11,15 +11,15 @@ import 'package:bikip_kanji_app/data/models/vocab.dart';
 /// Dữ liệu tĩnh, nạp một lần vào bộ nhớ (tương đương contentRepository.ts).
 class ContentRepository {
   ContentRepository(List<Kanji> kanji, List<Vocab> vocab)
-      : _kanji = List.unmodifiable(kanji),
-        _vocab = List.unmodifiable(vocab),
-        _kanjiById = {for (final k in kanji) k.id: k},
-        _vocabById = {for (final v in vocab) v.id: v} {
+    : _kanji = List.unmodifiable(kanji),
+      _vocab = List.unmodifiable(vocab),
+      _kanjiById = {for (final k in kanji) k.id: k},
+      _vocabById = {for (final v in vocab) v.id: v} {
     assert(_kanjiById.length == _kanji.length, 'Trùng id Kanji');
     assert(_vocabById.length == _vocab.length, 'Trùng id Vocab');
     assert(
-    !_kanjiById.keys.any(_vocabById.containsKey),
-    'Id Kanji trùng id Vocab',
+      !_kanjiById.keys.any(_vocabById.containsKey),
+      'Id Kanji trùng id Vocab',
     );
   }
 
@@ -36,17 +36,21 @@ class ContentRepository {
     // Thứ tự N1 → N5 giống `Object.values(kanjiData)` bên web.
     for (final level in JlptLevel.values.reversed) {
       final file = level.code.toLowerCase();
-      kanji.addAll(await _readList(b, 'assets/data/kanji/$file.json', Kanji.fromJson));
-      vocab.addAll(await _readList(b, 'assets/data/vocabulary/$file.json', Vocab.fromJson));
+      kanji.addAll(
+        await _readList(b, 'assets/data/kanji/$file.json', Kanji.fromJson),
+      );
+      vocab.addAll(
+        await _readList(b, 'assets/data/vocabulary/$file.json', Vocab.fromJson),
+      );
     }
     return ContentRepository(kanji, vocab);
   }
 
   static Future<List<T>> _readList<T>(
-      AssetBundle bundle,
-      String path,
-      T Function(Map<String, dynamic>) parse,
-      ) async {
+    AssetBundle bundle,
+    String path,
+    T Function(Map<String, dynamic>) parse,
+  ) async {
     var text = await bundle.loadString(path);
     if (text.startsWith('\uFEFF')) text = text.substring(1); // bỏ BOM nếu có
     final list = jsonDecode(text) as List<dynamic>;
@@ -99,7 +103,6 @@ class ContentRepository {
     ];
   }
 
-  List<JlptLevel> levelsWithContent(ContentType type) => JlptLevel.values
-      .where((level) => countByLevel(type, level) > 0)
-      .toList();
+  List<JlptLevel> levelsWithContent(ContentType type) =>
+      JlptLevel.values.where((level) => countByLevel(type, level) > 0).toList();
 }

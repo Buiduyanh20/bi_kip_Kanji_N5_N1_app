@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-
 import 'router.dart';
 import 'theme/app_theme.dart';
 
 class BikipKanjiApp extends StatelessWidget {
-  const BikipKanjiApp({super.key});
+  const BikipKanjiApp({super.key, required this.hasSeenWelcome});
+
+  final bool hasSeenWelcome;
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +13,7 @@ class BikipKanjiApp extends StatelessWidget {
       title: 'Bí Kíp Kanji',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light,
-      routerConfig: appRouter,
+      routerConfig: createAppRouter(hasSeenWelcome: hasSeenWelcome),
     );
   }
 }

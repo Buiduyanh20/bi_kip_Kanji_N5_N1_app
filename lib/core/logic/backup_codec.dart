@@ -43,11 +43,8 @@ class BackupDecodeResult {
 String encodeBackup(BackupData data) {
   final payload = <String, dynamic>{
     'version': kBackupVersion,
-    'exportedAt':
-    (data.exportedAt ?? DateTime.now()).toUtc().toIso8601String(),
-    'items': {
-      for (final e in data.items.entries) e.key: e.value.toJson(),
-    },
+    'exportedAt': (data.exportedAt ?? DateTime.now()).toUtc().toIso8601String(),
+    'items': {for (final e in data.items.entries) e.key: e.value.toJson()},
     if (data.favorites != null)
       'favorites': [for (final f in data.favorites!) f.toJson()],
     if (data.settings != null) 'settings': data.settings!.toJson(),
@@ -55,10 +52,9 @@ String encodeBackup(BackupData data) {
   return const JsonEncoder.withIndent('  ').convert(payload);
 }
 
-List<LearnMethod> _allowedMethods(ContentType type) =>
-    type == ContentType.kanji
-        ? LearnMethod.values
-        : const [LearnMethod.reading, LearnMethod.meaning];
+List<LearnMethod> _allowedMethods(ContentType type) => type == ContentType.kanji
+    ? LearnMethod.values
+    : const [LearnMethod.reading, LearnMethod.meaning];
 
 ItemProgress? _parseItem(String key, Object? raw) {
   if (raw is! Map) return null;
@@ -88,9 +84,9 @@ ItemProgress? _parseItem(String key, Object? raw) {
 
 /// [isKnown] cho biết id có tồn tại trong nội dung app không.
 BackupDecodeResult decodeBackup(
-    String text, {
-      bool Function(ContentType type, String id)? isKnown,
-    }) {
+  String text, {
+  bool Function(ContentType type, String id)? isKnown,
+}) {
   var source = text;
   if (source.startsWith('\uFEFF')) source = source.substring(1);
 
@@ -148,7 +144,9 @@ BackupDecodeResult decodeBackup(
   }
 
   final rawSettings = root['settings'];
-  final settings = rawSettings is Map ? AppSettings.fromJson(rawSettings) : null;
+  final settings = rawSettings is Map
+      ? AppSettings.fromJson(rawSettings)
+      : null;
 
   final exported = root['exportedAt'];
 

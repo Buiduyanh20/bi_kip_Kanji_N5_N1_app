@@ -25,8 +25,7 @@ final RegExp _punctSymbol = RegExp(r'[\p{P}\p{S}]+', unicode: true);
 
 /// trim, gộp khoảng trắng, lowercase, đ→d, bỏ dấu.
 String normalizeViet(String value) {
-  final lower =
-  value.trim().replaceAll(_whitespaceRuns, ' ').toLowerCase();
+  final lower = value.trim().replaceAll(_whitespaceRuns, ' ').toLowerCase();
   final buffer = StringBuffer();
   for (final rune in lower.runes) {
     final ch = String.fromCharCode(rune);
@@ -47,7 +46,6 @@ String normalizeAnswerText(String value) =>
     normalizeViet(value).replaceAll(_trailingJunk, '').trim();
 
 /// Dùng cho ô tìm kiếm.
-String normalizeSearchValue(String value) => normalizeViet(value)
-    .replaceAll(_punctSymbol, ' ')
-    .replaceAll(_whitespaceRuns, ' ')
-    .trim();
+String normalizeSearchValue(String value) => normalizeViet(
+  value,
+).replaceAll(_punctSymbol, ' ').replaceAll(_whitespaceRuns, ' ').trim();

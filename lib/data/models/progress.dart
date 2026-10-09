@@ -73,10 +73,10 @@ class ItemProgress {
   final Map<LearnMethod, MethodProgress> methods;
 
   ItemProgress recordAnswer(
-      LearnMethod method, {
-        required bool isCorrect,
-        int? nowMs,
-      }) {
+    LearnMethod method, {
+    required bool isCorrect,
+    int? nowMs,
+  }) {
     final previous = methods[method] ?? const MethodProgress();
     return ItemProgress(
       itemId: itemId,
@@ -93,9 +93,7 @@ class ItemProgress {
     'itemId': itemId,
     'type': type.name,
     if (level != null) 'level': level!.code,
-    'methods': {
-      for (final e in methods.entries) e.key.name: e.value.toJson(),
-    },
+    'methods': {for (final e in methods.entries) e.key.name: e.value.toJson()},
   };
 
   factory ItemProgress.fromJson(Map<String, dynamic> json) {
@@ -104,8 +102,9 @@ class ItemProgress {
     rawMethods.forEach((key, value) {
       final method = LearnMethod.tryParse(key.toString());
       if (method != null && value is Map) {
-        methods[method] =
-            MethodProgress.fromJson(Map<String, dynamic>.from(value));
+        methods[method] = MethodProgress.fromJson(
+          Map<String, dynamic>.from(value),
+        );
       }
     });
     return ItemProgress(

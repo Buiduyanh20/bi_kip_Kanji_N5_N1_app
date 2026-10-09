@@ -17,11 +17,10 @@ class Mistake {
 }
 
 MethodProgress? getMethodProgress(
-    Map<String, ItemProgress> items,
-    String itemId,
-    LearnMethod method,
-    ) =>
-    items[itemId]?.methods[method];
+  Map<String, ItemProgress> items,
+  String itemId,
+  LearnMethod method,
+) => items[itemId]?.methods[method];
 
 /// Cần ôn: từng sai và chưa mastered.
 bool isNeedsReview(MethodProgress? p) =>
@@ -33,12 +32,14 @@ List<Mistake> getMistakes(Map<String, ItemProgress> items) {
   for (final item in items.values) {
     for (final entry in item.methods.entries) {
       if (isNeedsReview(entry.value)) {
-        result.add(Mistake(
-          itemId: item.itemId,
-          type: item.type,
-          method: entry.key,
-          wrong: entry.value.wrong,
-        ));
+        result.add(
+          Mistake(
+            itemId: item.itemId,
+            type: item.type,
+            method: entry.key,
+            wrong: entry.value.wrong,
+          ),
+        );
       }
     }
   }
@@ -48,14 +49,14 @@ List<Mistake> getMistakes(Map<String, ItemProgress> items) {
 
 /// "Đã nhớ" = MỌI phương pháp đều mastered.
 bool isItemMastered(
-    ContentItem item,
-    List<LearnMethod> methods,
-    Map<String, ItemProgress> items,
-    ) {
+  ContentItem item,
+  List<LearnMethod> methods,
+  Map<String, ItemProgress> items,
+) {
   final progress = items[item.id];
   return methods.isNotEmpty &&
       methods.every(
-            (m) => progress?.methods[m]?.status == MasteryStatus.mastered,
+        (m) => progress?.methods[m]?.status == MasteryStatus.mastered,
       );
 }
 
@@ -86,16 +87,21 @@ List<LevelSummary> summarizeByLevel({
   final levels = content.map((i) => i.level).toSet();
   return [
     for (final level in levels)
-          () {
+      () {
         final levelItems = content.where((i) => i.level == level).toList();
-        final mastered =
-            levelItems.where((i) => isItemMastered(i, methods, items)).length;
+        final mastered = levelItems
+            .where((i) => isItemMastered(i, methods, items))
+            .length;
         final learning = levelItems
-            .where((i) =>
-        !isItemMastered(i, methods, items) &&
-            methods.any((m) =>
-            items[i.id]?.methods[m]?.status ==
-                MasteryStatus.learning))
+            .where(
+              (i) =>
+                  !isItemMastered(i, methods, items) &&
+                  methods.any(
+                    (m) =>
+                        items[i.id]?.methods[m]?.status ==
+                        MasteryStatus.learning,
+                  ),
+            )
             .length;
         return LevelSummary(
           level: level,

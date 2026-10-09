@@ -12,128 +12,184 @@ class $ProgressRowsTable extends ProgressRows
   static const VerificationMeta _itemIdMeta = const VerificationMeta('itemId');
   @override
   late final GeneratedColumn<String> itemId = GeneratedColumn<String>(
-      'item_id', aliasedName, false,
-      type: DriftSqlType.string, requiredDuringInsert: true);
+    'item_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
   static const VerificationMeta _methodMeta = const VerificationMeta('method');
   @override
   late final GeneratedColumn<String> method = GeneratedColumn<String>(
-      'method', aliasedName, false,
-      type: DriftSqlType.string, requiredDuringInsert: true);
-  static const VerificationMeta _contentTypeMeta =
-      const VerificationMeta('contentType');
+    'method',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _contentTypeMeta = const VerificationMeta(
+    'contentType',
+  );
   @override
   late final GeneratedColumn<String> contentType = GeneratedColumn<String>(
-      'content_type', aliasedName, false,
-      type: DriftSqlType.string, requiredDuringInsert: true);
+    'content_type',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
   static const VerificationMeta _levelMeta = const VerificationMeta('level');
   @override
   late final GeneratedColumn<String> level = GeneratedColumn<String>(
-      'level', aliasedName, true,
-      type: DriftSqlType.string, requiredDuringInsert: false);
-  static const VerificationMeta _correctMeta =
-      const VerificationMeta('correct');
+    'level',
+    aliasedName,
+    true,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+  );
+  static const VerificationMeta _correctMeta = const VerificationMeta(
+    'correct',
+  );
   @override
   late final GeneratedColumn<int> correct = GeneratedColumn<int>(
-      'correct', aliasedName, false,
-      type: DriftSqlType.int,
-      requiredDuringInsert: false,
-      defaultValue: const Constant(0));
+    'correct',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
   static const VerificationMeta _wrongMeta = const VerificationMeta('wrong');
   @override
   late final GeneratedColumn<int> wrong = GeneratedColumn<int>(
-      'wrong', aliasedName, false,
-      type: DriftSqlType.int,
-      requiredDuringInsert: false,
-      defaultValue: const Constant(0));
+    'wrong',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
   static const VerificationMeta _streakMeta = const VerificationMeta('streak');
   @override
   late final GeneratedColumn<int> streak = GeneratedColumn<int>(
-      'streak', aliasedName, false,
-      type: DriftSqlType.int,
-      requiredDuringInsert: false,
-      defaultValue: const Constant(0));
+    'streak',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
   static const VerificationMeta _statusMeta = const VerificationMeta('status');
   @override
   late final GeneratedColumn<String> status = GeneratedColumn<String>(
-      'status', aliasedName, false,
-      type: DriftSqlType.string,
-      requiredDuringInsert: false,
-      defaultValue: const Constant('new'));
-  static const VerificationMeta _lastAnsweredAtMeta =
-      const VerificationMeta('lastAnsweredAt');
+    'status',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: false,
+    defaultValue: const Constant('new'),
+  );
+  static const VerificationMeta _lastAnsweredAtMeta = const VerificationMeta(
+    'lastAnsweredAt',
+  );
   @override
   late final GeneratedColumn<int> lastAnsweredAt = GeneratedColumn<int>(
-      'last_answered_at', aliasedName, false,
-      type: DriftSqlType.int,
-      requiredDuringInsert: false,
-      defaultValue: const Constant(0));
+    'last_answered_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: false,
+    defaultValue: const Constant(0),
+  );
   @override
   List<GeneratedColumn> get $columns => [
-        itemId,
-        method,
-        contentType,
-        level,
-        correct,
-        wrong,
-        streak,
-        status,
-        lastAnsweredAt
-      ];
+    itemId,
+    method,
+    contentType,
+    level,
+    correct,
+    wrong,
+    streak,
+    status,
+    lastAnsweredAt,
+  ];
   @override
   String get aliasedName => _alias ?? actualTableName;
   @override
   String get actualTableName => $name;
   static const String $name = 'progress_rows';
   @override
-  VerificationContext validateIntegrity(Insertable<ProgressRow> instance,
-      {bool isInserting = false}) {
+  VerificationContext validateIntegrity(
+    Insertable<ProgressRow> instance, {
+    bool isInserting = false,
+  }) {
     final context = VerificationContext();
     final data = instance.toColumns(true);
     if (data.containsKey('item_id')) {
-      context.handle(_itemIdMeta,
-          itemId.isAcceptableOrUnknown(data['item_id']!, _itemIdMeta));
+      context.handle(
+        _itemIdMeta,
+        itemId.isAcceptableOrUnknown(data['item_id']!, _itemIdMeta),
+      );
     } else if (isInserting) {
       context.missing(_itemIdMeta);
     }
     if (data.containsKey('method')) {
-      context.handle(_methodMeta,
-          method.isAcceptableOrUnknown(data['method']!, _methodMeta));
+      context.handle(
+        _methodMeta,
+        method.isAcceptableOrUnknown(data['method']!, _methodMeta),
+      );
     } else if (isInserting) {
       context.missing(_methodMeta);
     }
     if (data.containsKey('content_type')) {
       context.handle(
+        _contentTypeMeta,
+        contentType.isAcceptableOrUnknown(
+          data['content_type']!,
           _contentTypeMeta,
-          contentType.isAcceptableOrUnknown(
-              data['content_type']!, _contentTypeMeta));
+        ),
+      );
     } else if (isInserting) {
       context.missing(_contentTypeMeta);
     }
     if (data.containsKey('level')) {
       context.handle(
-          _levelMeta, level.isAcceptableOrUnknown(data['level']!, _levelMeta));
+        _levelMeta,
+        level.isAcceptableOrUnknown(data['level']!, _levelMeta),
+      );
     }
     if (data.containsKey('correct')) {
-      context.handle(_correctMeta,
-          correct.isAcceptableOrUnknown(data['correct']!, _correctMeta));
+      context.handle(
+        _correctMeta,
+        correct.isAcceptableOrUnknown(data['correct']!, _correctMeta),
+      );
     }
     if (data.containsKey('wrong')) {
       context.handle(
-          _wrongMeta, wrong.isAcceptableOrUnknown(data['wrong']!, _wrongMeta));
+        _wrongMeta,
+        wrong.isAcceptableOrUnknown(data['wrong']!, _wrongMeta),
+      );
     }
     if (data.containsKey('streak')) {
-      context.handle(_streakMeta,
-          streak.isAcceptableOrUnknown(data['streak']!, _streakMeta));
+      context.handle(
+        _streakMeta,
+        streak.isAcceptableOrUnknown(data['streak']!, _streakMeta),
+      );
     }
     if (data.containsKey('status')) {
-      context.handle(_statusMeta,
-          status.isAcceptableOrUnknown(data['status']!, _statusMeta));
+      context.handle(
+        _statusMeta,
+        status.isAcceptableOrUnknown(data['status']!, _statusMeta),
+      );
     }
     if (data.containsKey('last_answered_at')) {
       context.handle(
+        _lastAnsweredAtMeta,
+        lastAnsweredAt.isAcceptableOrUnknown(
+          data['last_answered_at']!,
           _lastAnsweredAtMeta,
-          lastAnsweredAt.isAcceptableOrUnknown(
-              data['last_answered_at']!, _lastAnsweredAtMeta));
+        ),
+      );
     }
     return context;
   }
@@ -144,24 +200,42 @@ class $ProgressRowsTable extends ProgressRows
   ProgressRow map(Map<String, dynamic> data, {String? tablePrefix}) {
     final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
     return ProgressRow(
-      itemId: attachedDatabase.typeMapping
-          .read(DriftSqlType.string, data['${effectivePrefix}item_id'])!,
-      method: attachedDatabase.typeMapping
-          .read(DriftSqlType.string, data['${effectivePrefix}method'])!,
-      contentType: attachedDatabase.typeMapping
-          .read(DriftSqlType.string, data['${effectivePrefix}content_type'])!,
-      level: attachedDatabase.typeMapping
-          .read(DriftSqlType.string, data['${effectivePrefix}level']),
-      correct: attachedDatabase.typeMapping
-          .read(DriftSqlType.int, data['${effectivePrefix}correct'])!,
-      wrong: attachedDatabase.typeMapping
-          .read(DriftSqlType.int, data['${effectivePrefix}wrong'])!,
-      streak: attachedDatabase.typeMapping
-          .read(DriftSqlType.int, data['${effectivePrefix}streak'])!,
-      status: attachedDatabase.typeMapping
-          .read(DriftSqlType.string, data['${effectivePrefix}status'])!,
-      lastAnsweredAt: attachedDatabase.typeMapping
-          .read(DriftSqlType.int, data['${effectivePrefix}last_answered_at'])!,
+      itemId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}item_id'],
+      )!,
+      method: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}method'],
+      )!,
+      contentType: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}content_type'],
+      )!,
+      level: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}level'],
+      ),
+      correct: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}correct'],
+      )!,
+      wrong: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}wrong'],
+      )!,
+      streak: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}streak'],
+      )!,
+      status: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}status'],
+      )!,
+      lastAnsweredAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}last_answered_at'],
+      )!,
     );
   }
 
@@ -181,16 +255,17 @@ class ProgressRow extends DataClass implements Insertable<ProgressRow> {
   final int streak;
   final String status;
   final int lastAnsweredAt;
-  const ProgressRow(
-      {required this.itemId,
-      required this.method,
-      required this.contentType,
-      this.level,
-      required this.correct,
-      required this.wrong,
-      required this.streak,
-      required this.status,
-      required this.lastAnsweredAt});
+  const ProgressRow({
+    required this.itemId,
+    required this.method,
+    required this.contentType,
+    this.level,
+    required this.correct,
+    required this.wrong,
+    required this.streak,
+    required this.status,
+    required this.lastAnsweredAt,
+  });
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
     final map = <String, Expression>{};
@@ -213,8 +288,9 @@ class ProgressRow extends DataClass implements Insertable<ProgressRow> {
       itemId: Value(itemId),
       method: Value(method),
       contentType: Value(contentType),
-      level:
-          level == null && nullToAbsent ? const Value.absent() : Value(level),
+      level: level == null && nullToAbsent
+          ? const Value.absent()
+          : Value(level),
       correct: Value(correct),
       wrong: Value(wrong),
       streak: Value(streak),
@@ -223,8 +299,10 @@ class ProgressRow extends DataClass implements Insertable<ProgressRow> {
     );
   }
 
-  factory ProgressRow.fromJson(Map<String, dynamic> json,
-      {ValueSerializer? serializer}) {
+  factory ProgressRow.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
     serializer ??= driftRuntimeOptions.defaultSerializer;
     return ProgressRow(
       itemId: serializer.fromJson<String>(json['itemId']),
@@ -254,33 +332,34 @@ class ProgressRow extends DataClass implements Insertable<ProgressRow> {
     };
   }
 
-  ProgressRow copyWith(
-          {String? itemId,
-          String? method,
-          String? contentType,
-          Value<String?> level = const Value.absent(),
-          int? correct,
-          int? wrong,
-          int? streak,
-          String? status,
-          int? lastAnsweredAt}) =>
-      ProgressRow(
-        itemId: itemId ?? this.itemId,
-        method: method ?? this.method,
-        contentType: contentType ?? this.contentType,
-        level: level.present ? level.value : this.level,
-        correct: correct ?? this.correct,
-        wrong: wrong ?? this.wrong,
-        streak: streak ?? this.streak,
-        status: status ?? this.status,
-        lastAnsweredAt: lastAnsweredAt ?? this.lastAnsweredAt,
-      );
+  ProgressRow copyWith({
+    String? itemId,
+    String? method,
+    String? contentType,
+    Value<String?> level = const Value.absent(),
+    int? correct,
+    int? wrong,
+    int? streak,
+    String? status,
+    int? lastAnsweredAt,
+  }) => ProgressRow(
+    itemId: itemId ?? this.itemId,
+    method: method ?? this.method,
+    contentType: contentType ?? this.contentType,
+    level: level.present ? level.value : this.level,
+    correct: correct ?? this.correct,
+    wrong: wrong ?? this.wrong,
+    streak: streak ?? this.streak,
+    status: status ?? this.status,
+    lastAnsweredAt: lastAnsweredAt ?? this.lastAnsweredAt,
+  );
   ProgressRow copyWithCompanion(ProgressRowsCompanion data) {
     return ProgressRow(
       itemId: data.itemId.present ? data.itemId.value : this.itemId,
       method: data.method.present ? data.method.value : this.method,
-      contentType:
-          data.contentType.present ? data.contentType.value : this.contentType,
+      contentType: data.contentType.present
+          ? data.contentType.value
+          : this.contentType,
       level: data.level.present ? data.level.value : this.level,
       correct: data.correct.present ? data.correct.value : this.correct,
       wrong: data.wrong.present ? data.wrong.value : this.wrong,
@@ -309,8 +388,17 @@ class ProgressRow extends DataClass implements Insertable<ProgressRow> {
   }
 
   @override
-  int get hashCode => Object.hash(itemId, method, contentType, level, correct,
-      wrong, streak, status, lastAnsweredAt);
+  int get hashCode => Object.hash(
+    itemId,
+    method,
+    contentType,
+    level,
+    correct,
+    wrong,
+    streak,
+    status,
+    lastAnsweredAt,
+  );
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
@@ -360,9 +448,9 @@ class ProgressRowsCompanion extends UpdateCompanion<ProgressRow> {
     this.status = const Value.absent(),
     this.lastAnsweredAt = const Value.absent(),
     this.rowid = const Value.absent(),
-  })  : itemId = Value(itemId),
-        method = Value(method),
-        contentType = Value(contentType);
+  }) : itemId = Value(itemId),
+       method = Value(method),
+       contentType = Value(contentType);
   static Insertable<ProgressRow> custom({
     Expression<String>? itemId,
     Expression<String>? method,
@@ -389,17 +477,18 @@ class ProgressRowsCompanion extends UpdateCompanion<ProgressRow> {
     });
   }
 
-  ProgressRowsCompanion copyWith(
-      {Value<String>? itemId,
-      Value<String>? method,
-      Value<String>? contentType,
-      Value<String?>? level,
-      Value<int>? correct,
-      Value<int>? wrong,
-      Value<int>? streak,
-      Value<String>? status,
-      Value<int>? lastAnsweredAt,
-      Value<int>? rowid}) {
+  ProgressRowsCompanion copyWith({
+    Value<String>? itemId,
+    Value<String>? method,
+    Value<String>? contentType,
+    Value<String?>? level,
+    Value<int>? correct,
+    Value<int>? wrong,
+    Value<int>? streak,
+    Value<String>? status,
+    Value<int>? lastAnsweredAt,
+    Value<int>? rowid,
+  }) {
     return ProgressRowsCompanion(
       itemId: itemId ?? this.itemId,
       method: method ?? this.method,
@@ -474,23 +563,37 @@ class $FavoriteRowsTable extends FavoriteRows
   final GeneratedDatabase attachedDatabase;
   final String? _alias;
   $FavoriteRowsTable(this.attachedDatabase, [this._alias]);
-  static const VerificationMeta _kanjiIdMeta =
-      const VerificationMeta('kanjiId');
+  static const VerificationMeta _kanjiIdMeta = const VerificationMeta(
+    'kanjiId',
+  );
   @override
   late final GeneratedColumn<String> kanjiId = GeneratedColumn<String>(
-      'kanji_id', aliasedName, false,
-      type: DriftSqlType.string, requiredDuringInsert: true);
+    'kanji_id',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
   static const VerificationMeta _levelMeta = const VerificationMeta('level');
   @override
   late final GeneratedColumn<String> level = GeneratedColumn<String>(
-      'level', aliasedName, false,
-      type: DriftSqlType.string, requiredDuringInsert: true);
-  static const VerificationMeta _createdAtMeta =
-      const VerificationMeta('createdAt');
+    'level',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _createdAtMeta = const VerificationMeta(
+    'createdAt',
+  );
   @override
   late final GeneratedColumn<int> createdAt = GeneratedColumn<int>(
-      'created_at', aliasedName, false,
-      type: DriftSqlType.int, requiredDuringInsert: true);
+    'created_at',
+    aliasedName,
+    false,
+    type: DriftSqlType.int,
+    requiredDuringInsert: true,
+  );
   @override
   List<GeneratedColumn> get $columns => [kanjiId, level, createdAt];
   @override
@@ -499,25 +602,33 @@ class $FavoriteRowsTable extends FavoriteRows
   String get actualTableName => $name;
   static const String $name = 'favorite_rows';
   @override
-  VerificationContext validateIntegrity(Insertable<FavoriteRow> instance,
-      {bool isInserting = false}) {
+  VerificationContext validateIntegrity(
+    Insertable<FavoriteRow> instance, {
+    bool isInserting = false,
+  }) {
     final context = VerificationContext();
     final data = instance.toColumns(true);
     if (data.containsKey('kanji_id')) {
-      context.handle(_kanjiIdMeta,
-          kanjiId.isAcceptableOrUnknown(data['kanji_id']!, _kanjiIdMeta));
+      context.handle(
+        _kanjiIdMeta,
+        kanjiId.isAcceptableOrUnknown(data['kanji_id']!, _kanjiIdMeta),
+      );
     } else if (isInserting) {
       context.missing(_kanjiIdMeta);
     }
     if (data.containsKey('level')) {
       context.handle(
-          _levelMeta, level.isAcceptableOrUnknown(data['level']!, _levelMeta));
+        _levelMeta,
+        level.isAcceptableOrUnknown(data['level']!, _levelMeta),
+      );
     } else if (isInserting) {
       context.missing(_levelMeta);
     }
     if (data.containsKey('created_at')) {
-      context.handle(_createdAtMeta,
-          createdAt.isAcceptableOrUnknown(data['created_at']!, _createdAtMeta));
+      context.handle(
+        _createdAtMeta,
+        createdAt.isAcceptableOrUnknown(data['created_at']!, _createdAtMeta),
+      );
     } else if (isInserting) {
       context.missing(_createdAtMeta);
     }
@@ -530,12 +641,18 @@ class $FavoriteRowsTable extends FavoriteRows
   FavoriteRow map(Map<String, dynamic> data, {String? tablePrefix}) {
     final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
     return FavoriteRow(
-      kanjiId: attachedDatabase.typeMapping
-          .read(DriftSqlType.string, data['${effectivePrefix}kanji_id'])!,
-      level: attachedDatabase.typeMapping
-          .read(DriftSqlType.string, data['${effectivePrefix}level'])!,
-      createdAt: attachedDatabase.typeMapping
-          .read(DriftSqlType.int, data['${effectivePrefix}created_at'])!,
+      kanjiId: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}kanji_id'],
+      )!,
+      level: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}level'],
+      )!,
+      createdAt: attachedDatabase.typeMapping.read(
+        DriftSqlType.int,
+        data['${effectivePrefix}created_at'],
+      )!,
     );
   }
 
@@ -549,8 +666,11 @@ class FavoriteRow extends DataClass implements Insertable<FavoriteRow> {
   final String kanjiId;
   final String level;
   final int createdAt;
-  const FavoriteRow(
-      {required this.kanjiId, required this.level, required this.createdAt});
+  const FavoriteRow({
+    required this.kanjiId,
+    required this.level,
+    required this.createdAt,
+  });
   @override
   Map<String, Expression> toColumns(bool nullToAbsent) {
     final map = <String, Expression>{};
@@ -568,8 +688,10 @@ class FavoriteRow extends DataClass implements Insertable<FavoriteRow> {
     );
   }
 
-  factory FavoriteRow.fromJson(Map<String, dynamic> json,
-      {ValueSerializer? serializer}) {
+  factory FavoriteRow.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
     serializer ??= driftRuntimeOptions.defaultSerializer;
     return FavoriteRow(
       kanjiId: serializer.fromJson<String>(json['kanjiId']),
@@ -638,9 +760,9 @@ class FavoriteRowsCompanion extends UpdateCompanion<FavoriteRow> {
     required String level,
     required int createdAt,
     this.rowid = const Value.absent(),
-  })  : kanjiId = Value(kanjiId),
-        level = Value(level),
-        createdAt = Value(createdAt);
+  }) : kanjiId = Value(kanjiId),
+       level = Value(level),
+       createdAt = Value(createdAt);
   static Insertable<FavoriteRow> custom({
     Expression<String>? kanjiId,
     Expression<String>? level,
@@ -655,11 +777,12 @@ class FavoriteRowsCompanion extends UpdateCompanion<FavoriteRow> {
     });
   }
 
-  FavoriteRowsCompanion copyWith(
-      {Value<String>? kanjiId,
-      Value<String>? level,
-      Value<int>? createdAt,
-      Value<int>? rowid}) {
+  FavoriteRowsCompanion copyWith({
+    Value<String>? kanjiId,
+    Value<String>? level,
+    Value<int>? createdAt,
+    Value<int>? rowid,
+  }) {
     return FavoriteRowsCompanion(
       kanjiId: kanjiId ?? this.kanjiId,
       level: level ?? this.level,
@@ -704,18 +827,28 @@ class $SettingRowsTable extends SettingRows
   final GeneratedDatabase attachedDatabase;
   final String? _alias;
   $SettingRowsTable(this.attachedDatabase, [this._alias]);
-  static const VerificationMeta _settingKeyMeta =
-      const VerificationMeta('settingKey');
+  static const VerificationMeta _settingKeyMeta = const VerificationMeta(
+    'settingKey',
+  );
   @override
   late final GeneratedColumn<String> settingKey = GeneratedColumn<String>(
-      'setting_key', aliasedName, false,
-      type: DriftSqlType.string, requiredDuringInsert: true);
-  static const VerificationMeta _settingValueMeta =
-      const VerificationMeta('settingValue');
+    'setting_key',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
+  static const VerificationMeta _settingValueMeta = const VerificationMeta(
+    'settingValue',
+  );
   @override
   late final GeneratedColumn<String> settingValue = GeneratedColumn<String>(
-      'setting_value', aliasedName, false,
-      type: DriftSqlType.string, requiredDuringInsert: true);
+    'setting_value',
+    aliasedName,
+    false,
+    type: DriftSqlType.string,
+    requiredDuringInsert: true,
+  );
   @override
   List<GeneratedColumn> get $columns => [settingKey, settingValue];
   @override
@@ -724,23 +857,28 @@ class $SettingRowsTable extends SettingRows
   String get actualTableName => $name;
   static const String $name = 'setting_rows';
   @override
-  VerificationContext validateIntegrity(Insertable<SettingRow> instance,
-      {bool isInserting = false}) {
+  VerificationContext validateIntegrity(
+    Insertable<SettingRow> instance, {
+    bool isInserting = false,
+  }) {
     final context = VerificationContext();
     final data = instance.toColumns(true);
     if (data.containsKey('setting_key')) {
       context.handle(
-          _settingKeyMeta,
-          settingKey.isAcceptableOrUnknown(
-              data['setting_key']!, _settingKeyMeta));
+        _settingKeyMeta,
+        settingKey.isAcceptableOrUnknown(data['setting_key']!, _settingKeyMeta),
+      );
     } else if (isInserting) {
       context.missing(_settingKeyMeta);
     }
     if (data.containsKey('setting_value')) {
       context.handle(
+        _settingValueMeta,
+        settingValue.isAcceptableOrUnknown(
+          data['setting_value']!,
           _settingValueMeta,
-          settingValue.isAcceptableOrUnknown(
-              data['setting_value']!, _settingValueMeta));
+        ),
+      );
     } else if (isInserting) {
       context.missing(_settingValueMeta);
     }
@@ -753,10 +891,14 @@ class $SettingRowsTable extends SettingRows
   SettingRow map(Map<String, dynamic> data, {String? tablePrefix}) {
     final effectivePrefix = tablePrefix != null ? '$tablePrefix.' : '';
     return SettingRow(
-      settingKey: attachedDatabase.typeMapping
-          .read(DriftSqlType.string, data['${effectivePrefix}setting_key'])!,
-      settingValue: attachedDatabase.typeMapping
-          .read(DriftSqlType.string, data['${effectivePrefix}setting_value'])!,
+      settingKey: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}setting_key'],
+      )!,
+      settingValue: attachedDatabase.typeMapping.read(
+        DriftSqlType.string,
+        data['${effectivePrefix}setting_value'],
+      )!,
     );
   }
 
@@ -785,8 +927,10 @@ class SettingRow extends DataClass implements Insertable<SettingRow> {
     );
   }
 
-  factory SettingRow.fromJson(Map<String, dynamic> json,
-      {ValueSerializer? serializer}) {
+  factory SettingRow.fromJson(
+    Map<String, dynamic> json, {
+    ValueSerializer? serializer,
+  }) {
     serializer ??= driftRuntimeOptions.defaultSerializer;
     return SettingRow(
       settingKey: serializer.fromJson<String>(json['settingKey']),
@@ -803,13 +947,14 @@ class SettingRow extends DataClass implements Insertable<SettingRow> {
   }
 
   SettingRow copyWith({String? settingKey, String? settingValue}) => SettingRow(
-        settingKey: settingKey ?? this.settingKey,
-        settingValue: settingValue ?? this.settingValue,
-      );
+    settingKey: settingKey ?? this.settingKey,
+    settingValue: settingValue ?? this.settingValue,
+  );
   SettingRow copyWithCompanion(SettingRowsCompanion data) {
     return SettingRow(
-      settingKey:
-          data.settingKey.present ? data.settingKey.value : this.settingKey,
+      settingKey: data.settingKey.present
+          ? data.settingKey.value
+          : this.settingKey,
       settingValue: data.settingValue.present
           ? data.settingValue.value
           : this.settingValue,
@@ -848,8 +993,8 @@ class SettingRowsCompanion extends UpdateCompanion<SettingRow> {
     required String settingKey,
     required String settingValue,
     this.rowid = const Value.absent(),
-  })  : settingKey = Value(settingKey),
-        settingValue = Value(settingValue);
+  }) : settingKey = Value(settingKey),
+       settingValue = Value(settingValue);
   static Insertable<SettingRow> custom({
     Expression<String>? settingKey,
     Expression<String>? settingValue,
@@ -862,10 +1007,11 @@ class SettingRowsCompanion extends UpdateCompanion<SettingRow> {
     });
   }
 
-  SettingRowsCompanion copyWith(
-      {Value<String>? settingKey,
-      Value<String>? settingValue,
-      Value<int>? rowid}) {
+  SettingRowsCompanion copyWith({
+    Value<String>? settingKey,
+    Value<String>? settingValue,
+    Value<int>? rowid,
+  }) {
     return SettingRowsCompanion(
       settingKey: settingKey ?? this.settingKey,
       settingValue: settingValue ?? this.settingValue,
@@ -909,376 +1055,428 @@ abstract class _$AppDatabase extends GeneratedDatabase {
   Iterable<TableInfo<Table, Object?>> get allTables =>
       allSchemaEntities.whereType<TableInfo<Table, Object?>>();
   @override
-  List<DatabaseSchemaEntity> get allSchemaEntities =>
-      [progressRows, favoriteRows, settingRows];
+  List<DatabaseSchemaEntity> get allSchemaEntities => [
+    progressRows,
+    favoriteRows,
+    settingRows,
+  ];
 }
 
-typedef $$ProgressRowsTableCreateCompanionBuilder = ProgressRowsCompanion
-    Function({
-  required String itemId,
-  required String method,
-  required String contentType,
-  Value<String?> level,
-  Value<int> correct,
-  Value<int> wrong,
-  Value<int> streak,
-  Value<String> status,
-  Value<int> lastAnsweredAt,
-  Value<int> rowid,
-});
-typedef $$ProgressRowsTableUpdateCompanionBuilder = ProgressRowsCompanion
-    Function({
-  Value<String> itemId,
-  Value<String> method,
-  Value<String> contentType,
-  Value<String?> level,
-  Value<int> correct,
-  Value<int> wrong,
-  Value<int> streak,
-  Value<String> status,
-  Value<int> lastAnsweredAt,
-  Value<int> rowid,
-});
+typedef $$ProgressRowsTableCreateCompanionBuilder =
+    ProgressRowsCompanion Function({
+      required String itemId,
+      required String method,
+      required String contentType,
+      Value<String?> level,
+      Value<int> correct,
+      Value<int> wrong,
+      Value<int> streak,
+      Value<String> status,
+      Value<int> lastAnsweredAt,
+      Value<int> rowid,
+    });
+typedef $$ProgressRowsTableUpdateCompanionBuilder =
+    ProgressRowsCompanion Function({
+      Value<String> itemId,
+      Value<String> method,
+      Value<String> contentType,
+      Value<String?> level,
+      Value<int> correct,
+      Value<int> wrong,
+      Value<int> streak,
+      Value<String> status,
+      Value<int> lastAnsweredAt,
+      Value<int> rowid,
+    });
 
-class $$ProgressRowsTableTableManager extends RootTableManager<
-    _$AppDatabase,
-    $ProgressRowsTable,
-    ProgressRow,
-    $$ProgressRowsTableFilterComposer,
-    $$ProgressRowsTableOrderingComposer,
-    $$ProgressRowsTableCreateCompanionBuilder,
-    $$ProgressRowsTableUpdateCompanionBuilder> {
+class $$ProgressRowsTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $ProgressRowsTable,
+          ProgressRow,
+          $$ProgressRowsTableFilterComposer,
+          $$ProgressRowsTableOrderingComposer,
+          $$ProgressRowsTableCreateCompanionBuilder,
+          $$ProgressRowsTableUpdateCompanionBuilder
+        > {
   $$ProgressRowsTableTableManager(_$AppDatabase db, $ProgressRowsTable table)
-      : super(TableManagerState(
+    : super(
+        TableManagerState(
           db: db,
           table: table,
-          filteringComposer:
-              $$ProgressRowsTableFilterComposer(ComposerState(db, table)),
-          orderingComposer:
-              $$ProgressRowsTableOrderingComposer(ComposerState(db, table)),
-          updateCompanionCallback: ({
-            Value<String> itemId = const Value.absent(),
-            Value<String> method = const Value.absent(),
-            Value<String> contentType = const Value.absent(),
-            Value<String?> level = const Value.absent(),
-            Value<int> correct = const Value.absent(),
-            Value<int> wrong = const Value.absent(),
-            Value<int> streak = const Value.absent(),
-            Value<String> status = const Value.absent(),
-            Value<int> lastAnsweredAt = const Value.absent(),
-            Value<int> rowid = const Value.absent(),
-          }) =>
-              ProgressRowsCompanion(
-            itemId: itemId,
-            method: method,
-            contentType: contentType,
-            level: level,
-            correct: correct,
-            wrong: wrong,
-            streak: streak,
-            status: status,
-            lastAnsweredAt: lastAnsweredAt,
-            rowid: rowid,
+          filteringComposer: $$ProgressRowsTableFilterComposer(
+            ComposerState(db, table),
           ),
-          createCompanionCallback: ({
-            required String itemId,
-            required String method,
-            required String contentType,
-            Value<String?> level = const Value.absent(),
-            Value<int> correct = const Value.absent(),
-            Value<int> wrong = const Value.absent(),
-            Value<int> streak = const Value.absent(),
-            Value<String> status = const Value.absent(),
-            Value<int> lastAnsweredAt = const Value.absent(),
-            Value<int> rowid = const Value.absent(),
-          }) =>
-              ProgressRowsCompanion.insert(
-            itemId: itemId,
-            method: method,
-            contentType: contentType,
-            level: level,
-            correct: correct,
-            wrong: wrong,
-            streak: streak,
-            status: status,
-            lastAnsweredAt: lastAnsweredAt,
-            rowid: rowid,
+          orderingComposer: $$ProgressRowsTableOrderingComposer(
+            ComposerState(db, table),
           ),
-        ));
+          updateCompanionCallback:
+              ({
+                Value<String> itemId = const Value.absent(),
+                Value<String> method = const Value.absent(),
+                Value<String> contentType = const Value.absent(),
+                Value<String?> level = const Value.absent(),
+                Value<int> correct = const Value.absent(),
+                Value<int> wrong = const Value.absent(),
+                Value<int> streak = const Value.absent(),
+                Value<String> status = const Value.absent(),
+                Value<int> lastAnsweredAt = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => ProgressRowsCompanion(
+                itemId: itemId,
+                method: method,
+                contentType: contentType,
+                level: level,
+                correct: correct,
+                wrong: wrong,
+                streak: streak,
+                status: status,
+                lastAnsweredAt: lastAnsweredAt,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String itemId,
+                required String method,
+                required String contentType,
+                Value<String?> level = const Value.absent(),
+                Value<int> correct = const Value.absent(),
+                Value<int> wrong = const Value.absent(),
+                Value<int> streak = const Value.absent(),
+                Value<String> status = const Value.absent(),
+                Value<int> lastAnsweredAt = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => ProgressRowsCompanion.insert(
+                itemId: itemId,
+                method: method,
+                contentType: contentType,
+                level: level,
+                correct: correct,
+                wrong: wrong,
+                streak: streak,
+                status: status,
+                lastAnsweredAt: lastAnsweredAt,
+                rowid: rowid,
+              ),
+        ),
+      );
 }
 
 class $$ProgressRowsTableFilterComposer
     extends FilterComposer<_$AppDatabase, $ProgressRowsTable> {
   $$ProgressRowsTableFilterComposer(super.$state);
   ColumnFilters<String> get itemId => $state.composableBuilder(
-      column: $state.table.itemId,
-      builder: (column, joinBuilders) =>
-          ColumnFilters(column, joinBuilders: joinBuilders));
+    column: $state.table.itemId,
+    builder: (column, joinBuilders) =>
+        ColumnFilters(column, joinBuilders: joinBuilders),
+  );
 
   ColumnFilters<String> get method => $state.composableBuilder(
-      column: $state.table.method,
-      builder: (column, joinBuilders) =>
-          ColumnFilters(column, joinBuilders: joinBuilders));
+    column: $state.table.method,
+    builder: (column, joinBuilders) =>
+        ColumnFilters(column, joinBuilders: joinBuilders),
+  );
 
   ColumnFilters<String> get contentType => $state.composableBuilder(
-      column: $state.table.contentType,
-      builder: (column, joinBuilders) =>
-          ColumnFilters(column, joinBuilders: joinBuilders));
+    column: $state.table.contentType,
+    builder: (column, joinBuilders) =>
+        ColumnFilters(column, joinBuilders: joinBuilders),
+  );
 
   ColumnFilters<String> get level => $state.composableBuilder(
-      column: $state.table.level,
-      builder: (column, joinBuilders) =>
-          ColumnFilters(column, joinBuilders: joinBuilders));
+    column: $state.table.level,
+    builder: (column, joinBuilders) =>
+        ColumnFilters(column, joinBuilders: joinBuilders),
+  );
 
   ColumnFilters<int> get correct => $state.composableBuilder(
-      column: $state.table.correct,
-      builder: (column, joinBuilders) =>
-          ColumnFilters(column, joinBuilders: joinBuilders));
+    column: $state.table.correct,
+    builder: (column, joinBuilders) =>
+        ColumnFilters(column, joinBuilders: joinBuilders),
+  );
 
   ColumnFilters<int> get wrong => $state.composableBuilder(
-      column: $state.table.wrong,
-      builder: (column, joinBuilders) =>
-          ColumnFilters(column, joinBuilders: joinBuilders));
+    column: $state.table.wrong,
+    builder: (column, joinBuilders) =>
+        ColumnFilters(column, joinBuilders: joinBuilders),
+  );
 
   ColumnFilters<int> get streak => $state.composableBuilder(
-      column: $state.table.streak,
-      builder: (column, joinBuilders) =>
-          ColumnFilters(column, joinBuilders: joinBuilders));
+    column: $state.table.streak,
+    builder: (column, joinBuilders) =>
+        ColumnFilters(column, joinBuilders: joinBuilders),
+  );
 
   ColumnFilters<String> get status => $state.composableBuilder(
-      column: $state.table.status,
-      builder: (column, joinBuilders) =>
-          ColumnFilters(column, joinBuilders: joinBuilders));
+    column: $state.table.status,
+    builder: (column, joinBuilders) =>
+        ColumnFilters(column, joinBuilders: joinBuilders),
+  );
 
   ColumnFilters<int> get lastAnsweredAt => $state.composableBuilder(
-      column: $state.table.lastAnsweredAt,
-      builder: (column, joinBuilders) =>
-          ColumnFilters(column, joinBuilders: joinBuilders));
+    column: $state.table.lastAnsweredAt,
+    builder: (column, joinBuilders) =>
+        ColumnFilters(column, joinBuilders: joinBuilders),
+  );
 }
 
 class $$ProgressRowsTableOrderingComposer
     extends OrderingComposer<_$AppDatabase, $ProgressRowsTable> {
   $$ProgressRowsTableOrderingComposer(super.$state);
   ColumnOrderings<String> get itemId => $state.composableBuilder(
-      column: $state.table.itemId,
-      builder: (column, joinBuilders) =>
-          ColumnOrderings(column, joinBuilders: joinBuilders));
+    column: $state.table.itemId,
+    builder: (column, joinBuilders) =>
+        ColumnOrderings(column, joinBuilders: joinBuilders),
+  );
 
   ColumnOrderings<String> get method => $state.composableBuilder(
-      column: $state.table.method,
-      builder: (column, joinBuilders) =>
-          ColumnOrderings(column, joinBuilders: joinBuilders));
+    column: $state.table.method,
+    builder: (column, joinBuilders) =>
+        ColumnOrderings(column, joinBuilders: joinBuilders),
+  );
 
   ColumnOrderings<String> get contentType => $state.composableBuilder(
-      column: $state.table.contentType,
-      builder: (column, joinBuilders) =>
-          ColumnOrderings(column, joinBuilders: joinBuilders));
+    column: $state.table.contentType,
+    builder: (column, joinBuilders) =>
+        ColumnOrderings(column, joinBuilders: joinBuilders),
+  );
 
   ColumnOrderings<String> get level => $state.composableBuilder(
-      column: $state.table.level,
-      builder: (column, joinBuilders) =>
-          ColumnOrderings(column, joinBuilders: joinBuilders));
+    column: $state.table.level,
+    builder: (column, joinBuilders) =>
+        ColumnOrderings(column, joinBuilders: joinBuilders),
+  );
 
   ColumnOrderings<int> get correct => $state.composableBuilder(
-      column: $state.table.correct,
-      builder: (column, joinBuilders) =>
-          ColumnOrderings(column, joinBuilders: joinBuilders));
+    column: $state.table.correct,
+    builder: (column, joinBuilders) =>
+        ColumnOrderings(column, joinBuilders: joinBuilders),
+  );
 
   ColumnOrderings<int> get wrong => $state.composableBuilder(
-      column: $state.table.wrong,
-      builder: (column, joinBuilders) =>
-          ColumnOrderings(column, joinBuilders: joinBuilders));
+    column: $state.table.wrong,
+    builder: (column, joinBuilders) =>
+        ColumnOrderings(column, joinBuilders: joinBuilders),
+  );
 
   ColumnOrderings<int> get streak => $state.composableBuilder(
-      column: $state.table.streak,
-      builder: (column, joinBuilders) =>
-          ColumnOrderings(column, joinBuilders: joinBuilders));
+    column: $state.table.streak,
+    builder: (column, joinBuilders) =>
+        ColumnOrderings(column, joinBuilders: joinBuilders),
+  );
 
   ColumnOrderings<String> get status => $state.composableBuilder(
-      column: $state.table.status,
-      builder: (column, joinBuilders) =>
-          ColumnOrderings(column, joinBuilders: joinBuilders));
+    column: $state.table.status,
+    builder: (column, joinBuilders) =>
+        ColumnOrderings(column, joinBuilders: joinBuilders),
+  );
 
   ColumnOrderings<int> get lastAnsweredAt => $state.composableBuilder(
-      column: $state.table.lastAnsweredAt,
-      builder: (column, joinBuilders) =>
-          ColumnOrderings(column, joinBuilders: joinBuilders));
+    column: $state.table.lastAnsweredAt,
+    builder: (column, joinBuilders) =>
+        ColumnOrderings(column, joinBuilders: joinBuilders),
+  );
 }
 
-typedef $$FavoriteRowsTableCreateCompanionBuilder = FavoriteRowsCompanion
-    Function({
-  required String kanjiId,
-  required String level,
-  required int createdAt,
-  Value<int> rowid,
-});
-typedef $$FavoriteRowsTableUpdateCompanionBuilder = FavoriteRowsCompanion
-    Function({
-  Value<String> kanjiId,
-  Value<String> level,
-  Value<int> createdAt,
-  Value<int> rowid,
-});
+typedef $$FavoriteRowsTableCreateCompanionBuilder =
+    FavoriteRowsCompanion Function({
+      required String kanjiId,
+      required String level,
+      required int createdAt,
+      Value<int> rowid,
+    });
+typedef $$FavoriteRowsTableUpdateCompanionBuilder =
+    FavoriteRowsCompanion Function({
+      Value<String> kanjiId,
+      Value<String> level,
+      Value<int> createdAt,
+      Value<int> rowid,
+    });
 
-class $$FavoriteRowsTableTableManager extends RootTableManager<
-    _$AppDatabase,
-    $FavoriteRowsTable,
-    FavoriteRow,
-    $$FavoriteRowsTableFilterComposer,
-    $$FavoriteRowsTableOrderingComposer,
-    $$FavoriteRowsTableCreateCompanionBuilder,
-    $$FavoriteRowsTableUpdateCompanionBuilder> {
+class $$FavoriteRowsTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $FavoriteRowsTable,
+          FavoriteRow,
+          $$FavoriteRowsTableFilterComposer,
+          $$FavoriteRowsTableOrderingComposer,
+          $$FavoriteRowsTableCreateCompanionBuilder,
+          $$FavoriteRowsTableUpdateCompanionBuilder
+        > {
   $$FavoriteRowsTableTableManager(_$AppDatabase db, $FavoriteRowsTable table)
-      : super(TableManagerState(
+    : super(
+        TableManagerState(
           db: db,
           table: table,
-          filteringComposer:
-              $$FavoriteRowsTableFilterComposer(ComposerState(db, table)),
-          orderingComposer:
-              $$FavoriteRowsTableOrderingComposer(ComposerState(db, table)),
-          updateCompanionCallback: ({
-            Value<String> kanjiId = const Value.absent(),
-            Value<String> level = const Value.absent(),
-            Value<int> createdAt = const Value.absent(),
-            Value<int> rowid = const Value.absent(),
-          }) =>
-              FavoriteRowsCompanion(
-            kanjiId: kanjiId,
-            level: level,
-            createdAt: createdAt,
-            rowid: rowid,
+          filteringComposer: $$FavoriteRowsTableFilterComposer(
+            ComposerState(db, table),
           ),
-          createCompanionCallback: ({
-            required String kanjiId,
-            required String level,
-            required int createdAt,
-            Value<int> rowid = const Value.absent(),
-          }) =>
-              FavoriteRowsCompanion.insert(
-            kanjiId: kanjiId,
-            level: level,
-            createdAt: createdAt,
-            rowid: rowid,
+          orderingComposer: $$FavoriteRowsTableOrderingComposer(
+            ComposerState(db, table),
           ),
-        ));
+          updateCompanionCallback:
+              ({
+                Value<String> kanjiId = const Value.absent(),
+                Value<String> level = const Value.absent(),
+                Value<int> createdAt = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => FavoriteRowsCompanion(
+                kanjiId: kanjiId,
+                level: level,
+                createdAt: createdAt,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String kanjiId,
+                required String level,
+                required int createdAt,
+                Value<int> rowid = const Value.absent(),
+              }) => FavoriteRowsCompanion.insert(
+                kanjiId: kanjiId,
+                level: level,
+                createdAt: createdAt,
+                rowid: rowid,
+              ),
+        ),
+      );
 }
 
 class $$FavoriteRowsTableFilterComposer
     extends FilterComposer<_$AppDatabase, $FavoriteRowsTable> {
   $$FavoriteRowsTableFilterComposer(super.$state);
   ColumnFilters<String> get kanjiId => $state.composableBuilder(
-      column: $state.table.kanjiId,
-      builder: (column, joinBuilders) =>
-          ColumnFilters(column, joinBuilders: joinBuilders));
+    column: $state.table.kanjiId,
+    builder: (column, joinBuilders) =>
+        ColumnFilters(column, joinBuilders: joinBuilders),
+  );
 
   ColumnFilters<String> get level => $state.composableBuilder(
-      column: $state.table.level,
-      builder: (column, joinBuilders) =>
-          ColumnFilters(column, joinBuilders: joinBuilders));
+    column: $state.table.level,
+    builder: (column, joinBuilders) =>
+        ColumnFilters(column, joinBuilders: joinBuilders),
+  );
 
   ColumnFilters<int> get createdAt => $state.composableBuilder(
-      column: $state.table.createdAt,
-      builder: (column, joinBuilders) =>
-          ColumnFilters(column, joinBuilders: joinBuilders));
+    column: $state.table.createdAt,
+    builder: (column, joinBuilders) =>
+        ColumnFilters(column, joinBuilders: joinBuilders),
+  );
 }
 
 class $$FavoriteRowsTableOrderingComposer
     extends OrderingComposer<_$AppDatabase, $FavoriteRowsTable> {
   $$FavoriteRowsTableOrderingComposer(super.$state);
   ColumnOrderings<String> get kanjiId => $state.composableBuilder(
-      column: $state.table.kanjiId,
-      builder: (column, joinBuilders) =>
-          ColumnOrderings(column, joinBuilders: joinBuilders));
+    column: $state.table.kanjiId,
+    builder: (column, joinBuilders) =>
+        ColumnOrderings(column, joinBuilders: joinBuilders),
+  );
 
   ColumnOrderings<String> get level => $state.composableBuilder(
-      column: $state.table.level,
-      builder: (column, joinBuilders) =>
-          ColumnOrderings(column, joinBuilders: joinBuilders));
+    column: $state.table.level,
+    builder: (column, joinBuilders) =>
+        ColumnOrderings(column, joinBuilders: joinBuilders),
+  );
 
   ColumnOrderings<int> get createdAt => $state.composableBuilder(
-      column: $state.table.createdAt,
-      builder: (column, joinBuilders) =>
-          ColumnOrderings(column, joinBuilders: joinBuilders));
+    column: $state.table.createdAt,
+    builder: (column, joinBuilders) =>
+        ColumnOrderings(column, joinBuilders: joinBuilders),
+  );
 }
 
-typedef $$SettingRowsTableCreateCompanionBuilder = SettingRowsCompanion
-    Function({
-  required String settingKey,
-  required String settingValue,
-  Value<int> rowid,
-});
-typedef $$SettingRowsTableUpdateCompanionBuilder = SettingRowsCompanion
-    Function({
-  Value<String> settingKey,
-  Value<String> settingValue,
-  Value<int> rowid,
-});
+typedef $$SettingRowsTableCreateCompanionBuilder =
+    SettingRowsCompanion Function({
+      required String settingKey,
+      required String settingValue,
+      Value<int> rowid,
+    });
+typedef $$SettingRowsTableUpdateCompanionBuilder =
+    SettingRowsCompanion Function({
+      Value<String> settingKey,
+      Value<String> settingValue,
+      Value<int> rowid,
+    });
 
-class $$SettingRowsTableTableManager extends RootTableManager<
-    _$AppDatabase,
-    $SettingRowsTable,
-    SettingRow,
-    $$SettingRowsTableFilterComposer,
-    $$SettingRowsTableOrderingComposer,
-    $$SettingRowsTableCreateCompanionBuilder,
-    $$SettingRowsTableUpdateCompanionBuilder> {
+class $$SettingRowsTableTableManager
+    extends
+        RootTableManager<
+          _$AppDatabase,
+          $SettingRowsTable,
+          SettingRow,
+          $$SettingRowsTableFilterComposer,
+          $$SettingRowsTableOrderingComposer,
+          $$SettingRowsTableCreateCompanionBuilder,
+          $$SettingRowsTableUpdateCompanionBuilder
+        > {
   $$SettingRowsTableTableManager(_$AppDatabase db, $SettingRowsTable table)
-      : super(TableManagerState(
+    : super(
+        TableManagerState(
           db: db,
           table: table,
-          filteringComposer:
-              $$SettingRowsTableFilterComposer(ComposerState(db, table)),
-          orderingComposer:
-              $$SettingRowsTableOrderingComposer(ComposerState(db, table)),
-          updateCompanionCallback: ({
-            Value<String> settingKey = const Value.absent(),
-            Value<String> settingValue = const Value.absent(),
-            Value<int> rowid = const Value.absent(),
-          }) =>
-              SettingRowsCompanion(
-            settingKey: settingKey,
-            settingValue: settingValue,
-            rowid: rowid,
+          filteringComposer: $$SettingRowsTableFilterComposer(
+            ComposerState(db, table),
           ),
-          createCompanionCallback: ({
-            required String settingKey,
-            required String settingValue,
-            Value<int> rowid = const Value.absent(),
-          }) =>
-              SettingRowsCompanion.insert(
-            settingKey: settingKey,
-            settingValue: settingValue,
-            rowid: rowid,
+          orderingComposer: $$SettingRowsTableOrderingComposer(
+            ComposerState(db, table),
           ),
-        ));
+          updateCompanionCallback:
+              ({
+                Value<String> settingKey = const Value.absent(),
+                Value<String> settingValue = const Value.absent(),
+                Value<int> rowid = const Value.absent(),
+              }) => SettingRowsCompanion(
+                settingKey: settingKey,
+                settingValue: settingValue,
+                rowid: rowid,
+              ),
+          createCompanionCallback:
+              ({
+                required String settingKey,
+                required String settingValue,
+                Value<int> rowid = const Value.absent(),
+              }) => SettingRowsCompanion.insert(
+                settingKey: settingKey,
+                settingValue: settingValue,
+                rowid: rowid,
+              ),
+        ),
+      );
 }
 
 class $$SettingRowsTableFilterComposer
     extends FilterComposer<_$AppDatabase, $SettingRowsTable> {
   $$SettingRowsTableFilterComposer(super.$state);
   ColumnFilters<String> get settingKey => $state.composableBuilder(
-      column: $state.table.settingKey,
-      builder: (column, joinBuilders) =>
-          ColumnFilters(column, joinBuilders: joinBuilders));
+    column: $state.table.settingKey,
+    builder: (column, joinBuilders) =>
+        ColumnFilters(column, joinBuilders: joinBuilders),
+  );
 
   ColumnFilters<String> get settingValue => $state.composableBuilder(
-      column: $state.table.settingValue,
-      builder: (column, joinBuilders) =>
-          ColumnFilters(column, joinBuilders: joinBuilders));
+    column: $state.table.settingValue,
+    builder: (column, joinBuilders) =>
+        ColumnFilters(column, joinBuilders: joinBuilders),
+  );
 }
 
 class $$SettingRowsTableOrderingComposer
     extends OrderingComposer<_$AppDatabase, $SettingRowsTable> {
   $$SettingRowsTableOrderingComposer(super.$state);
   ColumnOrderings<String> get settingKey => $state.composableBuilder(
-      column: $state.table.settingKey,
-      builder: (column, joinBuilders) =>
-          ColumnOrderings(column, joinBuilders: joinBuilders));
+    column: $state.table.settingKey,
+    builder: (column, joinBuilders) =>
+        ColumnOrderings(column, joinBuilders: joinBuilders),
+  );
 
   ColumnOrderings<String> get settingValue => $state.composableBuilder(
-      column: $state.table.settingValue,
-      builder: (column, joinBuilders) =>
-          ColumnOrderings(column, joinBuilders: joinBuilders));
+    column: $state.table.settingValue,
+    builder: (column, joinBuilders) =>
+        ColumnOrderings(column, joinBuilders: joinBuilders),
+  );
 }
 
 class $AppDatabaseManager {

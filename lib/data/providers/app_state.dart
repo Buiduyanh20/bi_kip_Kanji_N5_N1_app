@@ -15,11 +15,11 @@ import 'package:bikip_kanji_app/data/repositories/providers.dart';
 // Nhờ vậy màn hình đọc state đồng bộ, không phải xử lý AsyncValue.
 
 final initialProgressProvider = Provider<Map<String, ItemProgress>>(
-      (ref) => throw UnimplementedError('initialProgressProvider'),
+  (ref) => throw UnimplementedError('initialProgressProvider'),
 );
 
 final initialSettingsProvider = Provider<AppSettings>(
-      (ref) => throw UnimplementedError('initialSettingsProvider'),
+  (ref) => throw UnimplementedError('initialSettingsProvider'),
 );
 
 // ───────── Progress ─────────
@@ -36,7 +36,8 @@ class ProgressNotifier extends Notifier<Map<String, ItemProgress>> {
     required LearnMethod method,
     required bool isCorrect,
   }) async {
-    var current = state[item.id] ??
+    var current =
+        state[item.id] ??
         ItemProgress(itemId: item.id, type: item.type, level: item.level);
     if (current.level == null) {
       current = ItemProgress(
@@ -62,9 +63,9 @@ class ProgressNotifier extends Notifier<Map<String, ItemProgress>> {
 }
 
 final progressProvider =
-NotifierProvider<ProgressNotifier, Map<String, ItemProgress>>(
-  ProgressNotifier.new,
-);
+    NotifierProvider<ProgressNotifier, Map<String, ItemProgress>>(
+      ProgressNotifier.new,
+    );
 
 // ───────── Settings ─────────
 
@@ -79,9 +80,9 @@ class SettingsNotifier extends Notifier<AppSettings> {
   }
 
   Future<void> setLastLearningOptions(
-      LearnMethod method,
-      CountChoice count,
-      ) async {
+    LearnMethod method,
+    CountChoice count,
+  ) async {
     state = state.copyWith(lastMethod: method, lastCount: count);
     await ref
         .read(settingsRepositoryProvider)
@@ -93,13 +94,14 @@ class SettingsNotifier extends Notifier<AppSettings> {
   }
 }
 
-final settingsProvider =
-NotifierProvider<SettingsNotifier, AppSettings>(SettingsNotifier.new);
+final settingsProvider = NotifierProvider<SettingsNotifier, AppSettings>(
+  SettingsNotifier.new,
+);
 
 // ───────── Favorites ─────────
 
 final favoritesProvider = StreamProvider<List<Favorite>>(
-      (ref) => ref.watch(favoriteRepositoryProvider).watchAll(),
+  (ref) => ref.watch(favoriteRepositoryProvider).watchAll(),
 );
 
 /// Để mọi nút tim tự cập nhật: `ref.watch(favoriteIdsProvider).contains(id)`.

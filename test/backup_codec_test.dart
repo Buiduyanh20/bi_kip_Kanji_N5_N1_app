@@ -67,21 +67,26 @@ void main() {
 
   group('File sai định dạng', () {
     test('không phải JSON', () {
-      expect(() => decodeBackup('xxx'),
-          throwsA(isA<BackupFormatException>()));
+      expect(() => decodeBackup('xxx'), throwsA(isA<BackupFormatException>()));
     });
     test('items là mảng hoặc thiếu', () {
-      expect(() => decodeBackup('{"items": []}'),
-          throwsA(isA<BackupFormatException>()));
-      expect(() => decodeBackup('{"version": 1}'),
-          throwsA(isA<BackupFormatException>()));
+      expect(
+        () => decodeBackup('{"items": []}'),
+        throwsA(isA<BackupFormatException>()),
+      );
+      expect(
+        () => decodeBackup('{"version": 1}'),
+        throwsA(isA<BackupFormatException>()),
+      );
     });
     test('gốc không phải object', () {
       expect(() => decodeBackup('[]'), throwsA(isA<BackupFormatException>()));
     });
     test('version mới hơn bị từ chối', () {
-      expect(() => decodeBackup('{"version": 2, "items": {}}'),
-          throwsA(isA<BackupFormatException>()));
+      expect(
+        () => decodeBackup('{"version": 2, "items": {}}'),
+        throwsA(isA<BackupFormatException>()),
+      );
     });
   });
 
@@ -94,18 +99,24 @@ void main() {
           level: JlptLevel.n5,
         ).recordAnswer(LearnMethod.hanviet, isCorrect: false, nowMs: 42),
       };
-      final text = encodeBackup(BackupData(
-        items: items,
-        favorites: const [
-          Favorite(kanjiId: 'kanji_n5_001', level: JlptLevel.n5, createdAt: 7),
-        ],
-        settings: const AppSettings(
-          userName: 'ANH',
-          lastMethod: LearnMethod.reading,
-          lastCount: CountChoice.all(),
+      final text = encodeBackup(
+        BackupData(
+          items: items,
+          favorites: const [
+            Favorite(
+              kanjiId: 'kanji_n5_001',
+              level: JlptLevel.n5,
+              createdAt: 7,
+            ),
+          ],
+          settings: const AppSettings(
+            userName: 'ANH',
+            lastMethod: LearnMethod.reading,
+            lastCount: CountChoice.all(),
+          ),
+          exportedAt: DateTime.utc(2026, 10, 9),
         ),
-        exportedAt: DateTime.utc(2026, 10, 9),
-      ));
+      );
 
       final r = decodeBackup(text);
       expect(r.skipped, 0);

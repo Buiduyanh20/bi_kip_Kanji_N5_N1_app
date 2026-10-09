@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
+import 'package:shared_preferences/shared_preferences.dart';
 import 'app/app.dart';
 import 'core/database/app_database.dart';
 import 'data/providers/app_state.dart';
@@ -17,6 +17,9 @@ Future<void> main() async {
   final progress = await ProgressRepository(db).loadAll();
   final settings = await SettingsRepository(db).load();
 
+  final prefs = await SharedPreferences.getInstance();
+  final hasSeenWelcome = prefs.getBool('has_seen_welcome') ?? false;
+
   runApp(
     ProviderScope(
       overrides: [
@@ -25,7 +28,7 @@ Future<void> main() async {
         initialProgressProvider.overrideWithValue(progress),
         initialSettingsProvider.overrideWithValue(settings),
       ],
-      child: const BikipKanjiApp(),
+      child: BikipKanjiApp(hasSeenWelcome: hasSeenWelcome),
     ),
   );
 }
