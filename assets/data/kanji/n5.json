@@ -1,0 +1,2250 @@
+[
+  {
+    "id": "kanji_n5_001",
+    "char": "一",
+    "level": "N5",
+    "hanViet": [
+      "Nhất"
+    ],
+    "meanings": [
+      "Một"
+    ],
+    "onyomi": [
+      "イチ",
+      "イツ"
+    ],
+    "kunyomi": [
+      "ひと.つ"
+    ],
+    "hint": "Một nét ngang (一) tượng trưng cho số một.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_002",
+    "char": "九",
+    "level": "N5",
+    "hanViet": [
+      "Cửu"
+    ],
+    "meanings": [
+      "Chín"
+    ],
+    "onyomi": [
+      "キュウ",
+      "ク"
+    ],
+    "kunyomi": [
+      "ここの",
+      "ここの.つ"
+    ],
+    "hint": "Hình nét cong như số 9, liên tưởng đến số chín.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_003",
+    "char": "七",
+    "level": "N5",
+    "hanViet": [
+      "Thất"
+    ],
+    "meanings": [
+      "Bảy"
+    ],
+    "onyomi": [
+      "シチ"
+    ],
+    "kunyomi": [
+      "なな",
+      "なな.つ",
+      "なの"
+    ],
+    "hint": "Một nét ngang bị nét xiên cắt qua, liên tưởng đến số bảy.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_004",
+    "char": "十",
+    "level": "N5",
+    "hanViet": [
+      "Thập"
+    ],
+    "meanings": [
+      "Mười"
+    ],
+    "onyomi": [
+      "ジュウ",
+      "ジッ",
+      "ジュッ"
+    ],
+    "kunyomi": [
+      "とお",
+      "と"
+    ],
+    "hint": "Một nét dọc cắt một nét ngang thành hình chữ thập, tức mười.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_005",
+    "char": "人",
+    "level": "N5",
+    "hanViet": [
+      "Nhân"
+    ],
+    "meanings": [
+      "Người"
+    ],
+    "onyomi": [
+      "ジン",
+      "ニン"
+    ],
+    "kunyomi": [
+      "ひと"
+    ],
+    "hint": "Hai nét như hai chân của một người đang đứng.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_006",
+    "char": "二",
+    "level": "N5",
+    "hanViet": [
+      "Nhị"
+    ],
+    "meanings": [
+      "Hai"
+    ],
+    "onyomi": [
+      "ニ",
+      "ジ"
+    ],
+    "kunyomi": [
+      "ふた",
+      "ふた.つ",
+      "ふたた.び"
+    ],
+    "hint": "Hai nét ngang (二) tượng trưng cho số hai.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_007",
+    "char": "入",
+    "level": "N5",
+    "hanViet": [
+      "Nhập"
+    ],
+    "meanings": [
+      "Vào"
+    ],
+    "onyomi": [
+      "ニュウ",
+      "ジュ"
+    ],
+    "kunyomi": [
+      "い.る",
+      "い.れる",
+      "はい.る"
+    ],
+    "hint": "Hai nét chụm vào nhau như đang đi vào một lối cửa.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_008",
+    "char": "八",
+    "level": "N5",
+    "hanViet": [
+      "Bát"
+    ],
+    "meanings": [
+      "Tám"
+    ],
+    "onyomi": [
+      "ハチ"
+    ],
+    "kunyomi": [
+      "や",
+      "や.つ",
+      "やっ.つ",
+      "よう"
+    ],
+    "hint": "Hai nét tách ra hai phía, liên tưởng đến số tám.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_009",
+    "char": "土",
+    "level": "N5",
+    "hanViet": [
+      "Thổ"
+    ],
+    "meanings": [
+      "Đất"
+    ],
+    "onyomi": [
+      "ド",
+      "ト"
+    ],
+    "kunyomi": [
+      "つち"
+    ],
+    "hint": "Một nét thẳng mọc lên từ mặt đất, dưới là nền đất (土).",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_010",
+    "char": "万",
+    "level": "N5",
+    "hanViet": [
+      "Vạn"
+    ],
+    "meanings": [
+      "Mười ngàn"
+    ],
+    "onyomi": [
+      "マン",
+      "バン"
+    ],
+    "kunyomi": [
+      "よろず"
+    ],
+    "hint": "Ghi nhớ hình chữ 万 là đơn vị vạn, tức mười nghìn.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_011",
+    "char": "千",
+    "level": "N5",
+    "hanViet": [
+      "Thiên"
+    ],
+    "meanings": [
+      "Một ngàn"
+    ],
+    "onyomi": [
+      "セン"
+    ],
+    "kunyomi": [
+      "ち"
+    ],
+    "hint": "Thêm một nét xiên trên 十 (mười) để nhớ 千 là nghìn.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_012",
+    "char": "川",
+    "level": "N5",
+    "hanViet": [
+      "Xuyên"
+    ],
+    "meanings": [
+      "Sông"
+    ],
+    "onyomi": [
+      "セン"
+    ],
+    "kunyomi": [
+      "かわ"
+    ],
+    "hint": "Ba dòng dọc song song như dòng nước chảy của con sông.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_013",
+    "char": "大",
+    "level": "N5",
+    "hanViet": [
+      "Đại"
+    ],
+    "meanings": [
+      "To",
+      "Lớn"
+    ],
+    "onyomi": [
+      "ダイ",
+      "タイ"
+    ],
+    "kunyomi": [
+      "おお.きい"
+    ],
+    "hint": "Người (人) dang rộng hai tay thì trông thật to lớn.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_014",
+    "char": "子",
+    "level": "N5",
+    "hanViet": [
+      "Tử"
+    ],
+    "meanings": [
+      "Con"
+    ],
+    "onyomi": [
+      "シ",
+      "ス",
+      "ツ"
+    ],
+    "kunyomi": [
+      "こ",
+      "ね"
+    ],
+    "hint": "Hình một đứa trẻ với đầu, thân và hai tay, nghĩa là con.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_015",
+    "char": "女",
+    "level": "N5",
+    "hanViet": [
+      "Nữ"
+    ],
+    "meanings": [
+      "Con gái"
+    ],
+    "onyomi": [
+      "ジョ",
+      "ニョ",
+      "ニョウ"
+    ],
+    "kunyomi": [
+      "おんな",
+      "め"
+    ],
+    "hint": "Dáng người phụ nữ ngồi khép chân, ghi nhớ chữ Nữ (女).",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_016",
+    "char": "小",
+    "level": "N5",
+    "hanViet": [
+      "Tiểu"
+    ],
+    "meanings": [
+      "Nhỏ"
+    ],
+    "onyomi": [
+      "ショウ"
+    ],
+    "kunyomi": [
+      "ちい.さい"
+    ],
+    "hint": "Một nét chính ở giữa và hai nét nhỏ hai bên, nghĩa là nhỏ.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_017",
+    "char": "上",
+    "level": "N5",
+    "hanViet": [
+      "Thượng"
+    ],
+    "meanings": [
+      "Trên"
+    ],
+    "onyomi": [
+      "ジョウ",
+      "ショウ",
+      "シャン"
+    ],
+    "kunyomi": [
+      "うえ",
+      "かみ",
+      "あ.げる",
+      "あ.がる",
+      "あ.がり",
+      "のぼ.る",
+      "のぼ.り",
+      "のぼ.せる",
+      "のぼ.す",
+      "よ.す"
+    ],
+    "hint": "Nét ngắn nằm ở phía trên đường chuẩn, nên là trên.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_018",
+    "char": "口",
+    "level": "N5",
+    "hanViet": [
+      "Khẩu"
+    ],
+    "meanings": [
+      "Miệng"
+    ],
+    "onyomi": [
+      "コウ",
+      "ク"
+    ],
+    "kunyomi": [
+      "くち"
+    ],
+    "hint": "Hình vuông giống cái miệng đang mở.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_019",
+    "char": "三",
+    "level": "N5",
+    "hanViet": [
+      "Tam"
+    ],
+    "meanings": [
+      "Ba"
+    ],
+    "onyomi": [
+      "サン",
+      "ゾウ"
+    ],
+    "kunyomi": [
+      "み",
+      "み.つ",
+      "みっ.つ"
+    ],
+    "hint": "Ba nét ngang (三) tượng trưng cho số ba.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_020",
+    "char": "山",
+    "level": "N5",
+    "hanViet": [
+      "Sơn"
+    ],
+    "meanings": [
+      "Núi"
+    ],
+    "onyomi": [
+      "サン",
+      "セン"
+    ],
+    "kunyomi": [
+      "やま"
+    ],
+    "hint": "Ba đỉnh nhô cao như một dãy núi.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_021",
+    "char": "下",
+    "level": "N5",
+    "hanViet": [
+      "Hạ"
+    ],
+    "meanings": [
+      "Dưới"
+    ],
+    "onyomi": [
+      "カ",
+      "ゲ"
+    ],
+    "kunyomi": [
+      "した",
+      "しも",
+      "もと",
+      "さ.げる",
+      "さ.がる",
+      "くだ.る",
+      "くだ.り",
+      "くだ.す",
+      "くだ.さる",
+      "お.ろす",
+      "お.りる"
+    ],
+    "hint": "Nét ngắn nằm dưới đường chuẩn, nên là dưới.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_022",
+    "char": "円",
+    "level": "N5",
+    "hanViet": [
+      "Viên"
+    ],
+    "meanings": [
+      "Đồng yên Nhật"
+    ],
+    "onyomi": [
+      "エン"
+    ],
+    "kunyomi": [
+      "まる.い",
+      "まる",
+      "まど",
+      "まど.か",
+      "まろ.やか"
+    ],
+    "hint": "Khung tròn hóa vuông trong chữ Nhật, liên tưởng đồng yên và hình tròn.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_023",
+    "char": "火",
+    "level": "N5",
+    "hanViet": [
+      "Hỏa"
+    ],
+    "meanings": [
+      "Lửa"
+    ],
+    "onyomi": [
+      "カ"
+    ],
+    "kunyomi": [
+      "ひ"
+    ],
+    "hint": "Các nét xòe ra như ngọn lửa đang cháy.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_024",
+    "char": "今",
+    "level": "N5",
+    "hanViet": [
+      "Kim"
+    ],
+    "meanings": [
+      "Hiện tại"
+    ],
+    "onyomi": [
+      "コン",
+      "キン"
+    ],
+    "kunyomi": [
+      "いま"
+    ],
+    "hint": "Hãy nhớ việc đang ở dưới mái che ngay lúc này, tức hiện tại.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_025",
+    "char": "月",
+    "level": "N5",
+    "hanViet": [
+      "Nguyệt"
+    ],
+    "meanings": [
+      "Mặt trăng"
+    ],
+    "onyomi": [
+      "ゲツ",
+      "ガツ"
+    ],
+    "kunyomi": [
+      "つき"
+    ],
+    "hint": "Hình vầng trăng khuyết với hai nét bên trong.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_026",
+    "char": "五",
+    "level": "N5",
+    "hanViet": [
+      "Ngũ"
+    ],
+    "meanings": [
+      "Năm"
+    ],
+    "onyomi": [
+      "ゴ"
+    ],
+    "kunyomi": [
+      "いつ",
+      "いつ.つ"
+    ],
+    "hint": "Ghi nhớ hình 五 là số năm, thường gặp trong 五日, 五月.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_027",
+    "char": "午",
+    "level": "N5",
+    "hanViet": [
+      "Ngọ"
+    ],
+    "meanings": [
+      "Buổi trưa"
+    ],
+    "onyomi": [
+      "ゴ"
+    ],
+    "kunyomi": [
+      "うま"
+    ],
+    "hint": "Hình gần giống con trâu 牛 bị bớt nét, nhớ giờ Ngọ là buổi trưa.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_028",
+    "char": "少",
+    "level": "N5",
+    "hanViet": [
+      "Thiểu"
+    ],
+    "meanings": [
+      "Một ít"
+    ],
+    "onyomi": [
+      "ショウ"
+    ],
+    "kunyomi": [
+      "すく.ない",
+      "すこ.し"
+    ],
+    "hint": "Chữ 小 (nhỏ) thêm nét, biểu thị số lượng ít.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_029",
+    "char": "手",
+    "level": "N5",
+    "hanViet": [
+      "Thủ"
+    ],
+    "meanings": [
+      "Tay"
+    ],
+    "onyomi": [
+      "シュ",
+      "ズ"
+    ],
+    "kunyomi": [
+      "て"
+    ],
+    "hint": "Các nét như những ngón tay xòe ra, nghĩa là bàn tay.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_030",
+    "char": "中",
+    "level": "N5",
+    "hanViet": [
+      "Trung"
+    ],
+    "meanings": [
+      "Trong",
+      "Giữa"
+    ],
+    "onyomi": [
+      "チュウ"
+    ],
+    "kunyomi": [
+      "なか",
+      "うち",
+      "あた.る"
+    ],
+    "hint": "Một đường thẳng xuyên giữa cái miệng (口), nghĩa là ở giữa.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_031",
+    "char": "天",
+    "level": "N5",
+    "hanViet": [
+      "Thiên"
+    ],
+    "meanings": [
+      "Trời"
+    ],
+    "onyomi": [
+      "テン"
+    ],
+    "kunyomi": [
+      "あまつ",
+      "あめ"
+    ],
+    "hint": "Người lớn (大) có một nét ở trên đầu, phía trên con người là trời.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_032",
+    "char": "水",
+    "level": "N5",
+    "hanViet": [
+      "Thủy"
+    ],
+    "meanings": [
+      "Nước"
+    ],
+    "onyomi": [
+      "スイ"
+    ],
+    "kunyomi": [
+      "みず"
+    ],
+    "hint": "Nét giữa và các nhánh hai bên như dòng nước bắn ra.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_033",
+    "char": "木",
+    "level": "N5",
+    "hanViet": [
+      "Mộc"
+    ],
+    "meanings": [
+      "Cây"
+    ],
+    "onyomi": [
+      "ボク",
+      "モク"
+    ],
+    "kunyomi": [
+      "き"
+    ],
+    "hint": "Một thân cây thẳng, cành hai bên và rễ phía dưới.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_034",
+    "char": "父",
+    "level": "N5",
+    "hanViet": [
+      "Phụ"
+    ],
+    "meanings": [
+      "Cha",
+      "Bố"
+    ],
+    "onyomi": [
+      "フ"
+    ],
+    "kunyomi": [
+      "ちち"
+    ],
+    "hint": "Hai phần giao nhau như người cha dang tay làm việc cho gia đình.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_035",
+    "char": "分",
+    "level": "N5",
+    "hanViet": [
+      "Phân"
+    ],
+    "meanings": [
+      "Phút"
+    ],
+    "onyomi": [
+      "ブン",
+      "フン",
+      "ブ"
+    ],
+    "kunyomi": [
+      "わ.ける",
+      "わ.け",
+      "わ.かれる",
+      "わ.かる",
+      "わ.かつ"
+    ],
+    "hint": "Dùng dao (刀) chia phần ở phía dưới, nên nhớ là phân chia.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_036",
+    "char": "日",
+    "level": "N5",
+    "hanViet": [
+      "Nhật"
+    ],
+    "meanings": [
+      "Ngày",
+      "Mặt trời"
+    ],
+    "onyomi": [
+      "ニチ",
+      "ジツ"
+    ],
+    "kunyomi": [
+      "ひ"
+    ],
+    "hint": "Khung vuông có nét giữa như hình mặt trời, dùng cho ngày.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_037",
+    "char": "友",
+    "level": "N5",
+    "hanViet": [
+      "Hữu"
+    ],
+    "meanings": [
+      "Bạn bè"
+    ],
+    "onyomi": [
+      "ユウ"
+    ],
+    "kunyomi": [
+      "とも"
+    ],
+    "hint": "Hai bàn tay cùng giúp đỡ nhau, đó là bạn bè.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_038",
+    "char": "六",
+    "level": "N5",
+    "hanViet": [
+      "Lục"
+    ],
+    "meanings": [
+      "Sáu"
+    ],
+    "onyomi": [
+      "ロク",
+      "リク"
+    ],
+    "kunyomi": [
+      "む",
+      "む.つ",
+      "むっ.つ",
+      "むい"
+    ],
+    "hint": "Mái che phía trên và các nét phía dưới, ghi nhớ 六 là số sáu.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_039",
+    "char": "立",
+    "level": "N5",
+    "hanViet": [
+      "Lập"
+    ],
+    "meanings": [
+      "Thành lập"
+    ],
+    "onyomi": [
+      "リツ",
+      "リュウ",
+      "リットル"
+    ],
+    "kunyomi": [
+      "た.つ",
+      "た.てる"
+    ],
+    "hint": "Một người đứng thẳng trên mặt đất, nghĩa là đứng/lập.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_040",
+    "char": "半",
+    "level": "N5",
+    "hanViet": [
+      "Bán"
+    ],
+    "meanings": [
+      "Một nửa"
+    ],
+    "onyomi": [
+      "ハン"
+    ],
+    "kunyomi": [
+      "なか.ば"
+    ],
+    "hint": "Một vật được đường giữa chia làm hai, nghĩa là một nửa.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_041",
+    "char": "母",
+    "level": "N5",
+    "hanViet": [
+      "Mẫu"
+    ],
+    "meanings": [
+      "Mẹ"
+    ],
+    "onyomi": [
+      "ボ"
+    ],
+    "kunyomi": [
+      "はは",
+      "も"
+    ],
+    "hint": "Hình người mẹ với hai dấu bên trong gợi hình nuôi con.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_042",
+    "char": "北",
+    "level": "N5",
+    "hanViet": [
+      "Bắc"
+    ],
+    "meanings": [
+      "Phía bắc"
+    ],
+    "onyomi": [
+      "ホク"
+    ],
+    "kunyomi": [
+      "きた"
+    ],
+    "hint": "Hai người quay lưng về hai phía, ghi nhớ phương Bắc.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_043",
+    "char": "本",
+    "level": "N5",
+    "hanViet": [
+      "Bản"
+    ],
+    "meanings": [
+      "Căn bản"
+    ],
+    "onyomi": [
+      "ホン"
+    ],
+    "kunyomi": [
+      "もと"
+    ],
+    "hint": "Cây (木) được đánh dấu ở gốc, nghĩa là gốc/căn bản.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_044",
+    "char": "目",
+    "level": "N5",
+    "hanViet": [
+      "Mục"
+    ],
+    "meanings": [
+      "Mắt"
+    ],
+    "onyomi": [
+      "モク",
+      "ボク"
+    ],
+    "kunyomi": [
+      "め"
+    ],
+    "hint": "Khung mắt có hai nét bên trong như con ngươi, nghĩa là mắt.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_045",
+    "char": "白",
+    "level": "N5",
+    "hanViet": [
+      "Bạch"
+    ],
+    "meanings": [
+      "Màu trắng"
+    ],
+    "onyomi": [
+      "ハク",
+      "ビャク"
+    ],
+    "kunyomi": [
+      "しろ",
+      "しろ.い"
+    ],
+    "hint": "Mặt trời (日) có một tia sáng phía trên, gợi màu trắng sáng.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_046",
+    "char": "生",
+    "level": "N5",
+    "hanViet": [
+      "Sinh"
+    ],
+    "meanings": [
+      "Sinh trưởng"
+    ],
+    "onyomi": [
+      "セイ",
+      "ショウ"
+    ],
+    "kunyomi": [
+      "い.きる",
+      "い.かす",
+      "い.ける",
+      "う.まれる",
+      "う.まれ",
+      "う.む",
+      "お.う",
+      "は.える",
+      "は.やす",
+      "き",
+      "なま",
+      "な.る",
+      "な.す",
+      "む.す"
+    ],
+    "hint": "Mầm cây mọc lên khỏi mặt đất, nghĩa là sinh ra, sinh trưởng.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_047",
+    "char": "出",
+    "level": "N5",
+    "hanViet": [
+      "Xuất"
+    ],
+    "meanings": [
+      "Đi ra ngoài"
+    ],
+    "onyomi": [
+      "シュツ",
+      "スイ"
+    ],
+    "kunyomi": [
+      "で.る",
+      "だ.す",
+      "い.でる",
+      "い.だす"
+    ],
+    "hint": "Hai ngọn núi chồng nhau như vật nhô ra ngoài, nghĩa là ra.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_048",
+    "char": "古",
+    "level": "N5",
+    "hanViet": [
+      "Cổ"
+    ],
+    "meanings": [
+      "Cũ"
+    ],
+    "onyomi": [
+      "コ"
+    ],
+    "kunyomi": [
+      "ふる.い"
+    ],
+    "hint": "Mười (十) cái miệng (口) kể chuyện xưa, nghĩa là cũ/cổ.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_049",
+    "char": "左",
+    "level": "N5",
+    "hanViet": [
+      "Tả"
+    ],
+    "meanings": [
+      "Bên trái"
+    ],
+    "onyomi": [
+      "サ",
+      "シャ"
+    ],
+    "kunyomi": [
+      "ひだり"
+    ],
+    "hint": "Bàn tay phía trên kết hợp với công (工), ghi nhớ bên trái.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_050",
+    "char": "四",
+    "level": "N5",
+    "hanViet": [
+      "Tứ"
+    ],
+    "meanings": [
+      "Bốn"
+    ],
+    "onyomi": [
+      "シ"
+    ],
+    "kunyomi": [
+      "よ",
+      "よ.つ",
+      "よっ.つ",
+      "よん"
+    ],
+    "hint": "Bốn phần nằm trong khung, ghi nhớ số bốn.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_051",
+    "char": "外",
+    "level": "N5",
+    "hanViet": [
+      "Ngoại"
+    ],
+    "meanings": [
+      "Bên ngoài"
+    ],
+    "onyomi": [
+      "ガイ",
+      "ゲ"
+    ],
+    "kunyomi": [
+      "そと",
+      "ほか",
+      "はず.す",
+      "はず.れる"
+    ],
+    "hint": "Buổi tối (夕) bói (卜) ở bên ngoài, nghĩa là ngoài.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_052",
+    "char": "右",
+    "level": "N5",
+    "hanViet": [
+      "Hữu"
+    ],
+    "meanings": [
+      "Bên phải"
+    ],
+    "onyomi": [
+      "ウ",
+      "ユウ"
+    ],
+    "kunyomi": [
+      "みぎ"
+    ],
+    "hint": "Bàn tay đưa về phía cái miệng (口), ghi nhớ bên phải.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_053",
+    "char": "気",
+    "level": "N5",
+    "hanViet": [
+      "Khí"
+    ],
+    "meanings": [
+      "Không khí"
+    ],
+    "onyomi": [
+      "キ",
+      "ケ"
+    ],
+    "kunyomi": [
+      "いき"
+    ],
+    "hint": "Luồng khí chạy qua các nét bên trong, ghi nhớ khí/không khí.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_054",
+    "char": "休",
+    "level": "N5",
+    "hanViet": [
+      "Hưu"
+    ],
+    "meanings": [
+      "Nghỉ ngơi"
+    ],
+    "onyomi": [
+      "キュウ"
+    ],
+    "kunyomi": [
+      "やす.む",
+      "やす.まる",
+      "やす.める"
+    ],
+    "hint": "Người (亻) tựa vào cây (木) để nghỉ ngơi.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_055",
+    "char": "会",
+    "level": "N5",
+    "hanViet": [
+      "Hội"
+    ],
+    "meanings": [
+      "Hội họp"
+    ],
+    "onyomi": [
+      "カイ",
+      "エ"
+    ],
+    "kunyomi": [
+      "あ.う",
+      "あ.わせる",
+      "あつ.まる"
+    ],
+    "hint": "Người (人) tụ lại dưới một mái để gặp gỡ, hội họp.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_056",
+    "char": "安",
+    "level": "N5",
+    "hanViet": [
+      "An"
+    ],
+    "meanings": [
+      "An toàn",
+      "Rẻ"
+    ],
+    "onyomi": [
+      "アン"
+    ],
+    "kunyomi": [
+      "やす.い",
+      "やす.まる",
+      "やす",
+      "やす.らか"
+    ],
+    "hint": "Người phụ nữ (女) ở dưới mái nhà (宀) thì cảm thấy an ổn.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_057",
+    "char": "行",
+    "level": "N5",
+    "hanViet": [
+      "Hành"
+    ],
+    "meanings": [
+      "Đi"
+    ],
+    "onyomi": [
+      "コウ",
+      "ギョウ",
+      "アン"
+    ],
+    "kunyomi": [
+      "い.く",
+      "ゆ.く",
+      "おこな.う"
+    ],
+    "hint": "Các nét như ngã tư đường, gợi hành động đi lại.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_058",
+    "char": "耳",
+    "level": "N5",
+    "hanViet": [
+      "Nhĩ"
+    ],
+    "meanings": [
+      "Tai"
+    ],
+    "onyomi": [
+      "ジ"
+    ],
+    "kunyomi": [
+      "みみ"
+    ],
+    "hint": "Hình dáng một cái tai với các nét bên trong.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_059",
+    "char": "西",
+    "level": "N5",
+    "hanViet": [
+      "Tây"
+    ],
+    "meanings": [
+      "Phía tây"
+    ],
+    "onyomi": [
+      "セイ",
+      "サイ",
+      "ス"
+    ],
+    "kunyomi": [
+      "にし"
+    ],
+    "hint": "Hình mặt trời lặn trong khung phía Tây, ghi nhớ phương Tây.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_060",
+    "char": "先",
+    "level": "N5",
+    "hanViet": [
+      "Tiên"
+    ],
+    "meanings": [
+      "Trước tiên"
+    ],
+    "onyomi": [
+      "セン"
+    ],
+    "kunyomi": [
+      "さき",
+      "ま.ず"
+    ],
+    "hint": "Người đi phía trước với đôi chân (儿), nghĩa là trước tiên.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_061",
+    "char": "多",
+    "level": "N5",
+    "hanViet": [
+      "Đa"
+    ],
+    "meanings": [
+      "Nhiều",
+      "Đa dạng"
+    ],
+    "onyomi": [
+      "タ"
+    ],
+    "kunyomi": [
+      "おお.い",
+      "まさ.に",
+      "まさ.る"
+    ],
+    "hint": "Hai buổi tối (夕) chồng lên nhau, nhiều tối tức là nhiều.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_062",
+    "char": "名",
+    "level": "N5",
+    "hanViet": [
+      "Danh"
+    ],
+    "meanings": [
+      "Tên"
+    ],
+    "onyomi": [
+      "メイ",
+      "ミョウ"
+    ],
+    "kunyomi": [
+      "な"
+    ],
+    "hint": "Buổi tối (夕) phải dùng miệng (口) gọi tên nhau, nên là tên.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_063",
+    "char": "毎",
+    "level": "N5",
+    "hanViet": [
+      "Mỗi"
+    ],
+    "meanings": [
+      "Mỗi một"
+    ],
+    "onyomi": [
+      "マイ"
+    ],
+    "kunyomi": [
+      "ごと"
+    ],
+    "hint": "Ghi nhớ 毎 đi với ngày, tuần, năm để chỉ mỗi/mọi.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_064",
+    "char": "百",
+    "level": "N5",
+    "hanViet": [
+      "Bách"
+    ],
+    "meanings": [
+      "Trăm"
+    ],
+    "onyomi": [
+      "ヒャク",
+      "ビャク"
+    ],
+    "kunyomi": [
+      "もも"
+    ],
+    "hint": "Một (一) đứng trên trắng (白), ghi nhớ 百 là một trăm.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_065",
+    "char": "年",
+    "level": "N5",
+    "hanViet": [
+      "Niên"
+    ],
+    "meanings": [
+      "Năm"
+    ],
+    "onyomi": [
+      "ネン"
+    ],
+    "kunyomi": [
+      "とし"
+    ],
+    "hint": "Hình người mang bó lúa sau một vụ mùa, một vụ ứng với một năm.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_066",
+    "char": "来",
+    "level": "N5",
+    "hanViet": [
+      "Lai"
+    ],
+    "meanings": [
+      "Đến"
+    ],
+    "onyomi": [
+      "ライ",
+      "タイ"
+    ],
+    "kunyomi": [
+      "く.る",
+      "きた.る",
+      "きた.す",
+      "き",
+      "こ"
+    ],
+    "hint": "Hình cây có các hạt/quả kéo đến, ghi nhớ nghĩa đến.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_067",
+    "char": "男",
+    "level": "N5",
+    "hanViet": [
+      "Nam"
+    ],
+    "meanings": [
+      "Con trai"
+    ],
+    "onyomi": [
+      "ダン",
+      "ナン"
+    ],
+    "kunyomi": [
+      "おとこ",
+      "お"
+    ],
+    "hint": "Ruộng (田) cần sức lực (力), người dùng sức làm ruộng là đàn ông.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_068",
+    "char": "足",
+    "level": "N5",
+    "hanViet": [
+      "Túc"
+    ],
+    "meanings": [
+      "Chân"
+    ],
+    "onyomi": [
+      "ソク"
+    ],
+    "kunyomi": [
+      "あし",
+      "た.りる",
+      "た.る",
+      "た.す"
+    ],
+    "hint": "Phần trên như đầu gối, phần dưới như bàn chân đang bước, nghĩa là chân.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_069",
+    "char": "社",
+    "level": "N5",
+    "hanViet": [
+      "Xã"
+    ],
+    "meanings": [
+      "Xã hội"
+    ],
+    "onyomi": [
+      "シャ"
+    ],
+    "kunyomi": [
+      "やしろ"
+    ],
+    "hint": "Bộ thị (礻) bên cạnh đất (土), nơi cộng đồng thờ cúng, nghĩa là xã.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_070",
+    "char": "車",
+    "level": "N5",
+    "hanViet": [
+      "Xa"
+    ],
+    "meanings": [
+      "Xe hơi"
+    ],
+    "onyomi": [
+      "シャ"
+    ],
+    "kunyomi": [
+      "くるま"
+    ],
+    "hint": "Hình chiếc xe nhìn từ trên với trục và bánh, nghĩa là xe.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_071",
+    "char": "見",
+    "level": "N5",
+    "hanViet": [
+      "Kiến"
+    ],
+    "meanings": [
+      "Nhìn"
+    ],
+    "onyomi": [
+      "ケン"
+    ],
+    "kunyomi": [
+      "み.る",
+      "み.える",
+      "み.せる"
+    ],
+    "hint": "Mắt (目) ở trên đôi chân (儿), có mắt đi xem thì mới nhìn thấy.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_072",
+    "char": "言",
+    "level": "N5",
+    "hanViet": [
+      "Ngôn"
+    ],
+    "meanings": [
+      "Ngôn ngữ",
+      "Nói"
+    ],
+    "onyomi": [
+      "ゲン",
+      "ゴン"
+    ],
+    "kunyomi": [
+      "い.う",
+      "こと"
+    ],
+    "hint": "Các nét như lời nói phát ra từ miệng, nghĩa là nói/ngôn.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_073",
+    "char": "花",
+    "level": "N5",
+    "hanViet": [
+      "Hoa"
+    ],
+    "meanings": [
+      "Bông hoa"
+    ],
+    "onyomi": [
+      "カ",
+      "ケ"
+    ],
+    "kunyomi": [
+      "はな"
+    ],
+    "hint": "Cỏ (艹) ở trên, hóa (化) ở dưới, cây cỏ biến hóa thành hoa.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_074",
+    "char": "何",
+    "level": "N5",
+    "hanViet": [
+      "Hà"
+    ],
+    "meanings": [
+      "Cái gì"
+    ],
+    "onyomi": [
+      "カ"
+    ],
+    "kunyomi": [
+      "なに",
+      "なん"
+    ],
+    "hint": "Người (亻) hỏi điều có thể (可) là gì, nghĩa là cái gì.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_075",
+    "char": "雨",
+    "level": "N5",
+    "hanViet": [
+      "Vũ"
+    ],
+    "meanings": [
+      "Mưa"
+    ],
+    "onyomi": [
+      "ウ"
+    ],
+    "kunyomi": [
+      "あめ"
+    ],
+    "hint": "Khung trời với những giọt nước rơi bên trong, nghĩa là mưa.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_076",
+    "char": "学",
+    "level": "N5",
+    "hanViet": [
+      "Học"
+    ],
+    "meanings": [
+      "Học sinh"
+    ],
+    "onyomi": [
+      "ガク"
+    ],
+    "kunyomi": [
+      "まな.ぶ"
+    ],
+    "hint": "Đứa trẻ (子) dưới mái trường học kiến thức, nghĩa là học.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_077",
+    "char": "空",
+    "level": "N5",
+    "hanViet": [
+      "Không"
+    ],
+    "meanings": [
+      "Không khí",
+      "Trống rỗng"
+    ],
+    "onyomi": [
+      "クウ"
+    ],
+    "kunyomi": [
+      "そら",
+      "あ.く",
+      "あ.き",
+      "あ.ける",
+      "から",
+      "す.く",
+      "す.かす",
+      "むな.しい"
+    ],
+    "hint": "Trong hang/mái (穴) có công (工), khoảng bên trong trống rỗng là không.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_078",
+    "char": "金",
+    "level": "N5",
+    "hanViet": [
+      "Kim"
+    ],
+    "meanings": [
+      "Tiền",
+      "Kim loại"
+    ],
+    "onyomi": [
+      "キン",
+      "コン",
+      "ゴン"
+    ],
+    "kunyomi": [
+      "かね"
+    ],
+    "hint": "Hình kim loại/vàng được cất dưới mái, ghi nhớ tiền và kim loại.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_079",
+    "char": "国",
+    "level": "N5",
+    "hanViet": [
+      "Quốc"
+    ],
+    "meanings": [
+      "Đất nước"
+    ],
+    "onyomi": [
+      "コク"
+    ],
+    "kunyomi": [
+      "くに"
+    ],
+    "hint": "Ngọc (玉) nằm trong khung (囗) lãnh thổ, nghĩa là đất nước.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_080",
+    "char": "長",
+    "level": "N5",
+    "hanViet": [
+      "Trường"
+    ],
+    "meanings": [
+      "Dài"
+    ],
+    "onyomi": [
+      "チョウ"
+    ],
+    "kunyomi": [
+      "なが.い",
+      "おさ"
+    ],
+    "hint": "Hình mái tóc dài của người trưởng thành, ghi nhớ nghĩa dài/trưởng.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_081",
+    "char": "店",
+    "level": "N5",
+    "hanViet": [
+      "Điếm"
+    ],
+    "meanings": [
+      "Cửa tiệm"
+    ],
+    "onyomi": [
+      "テン"
+    ],
+    "kunyomi": [
+      "みせ",
+      "たな"
+    ],
+    "hint": "Trong mái nhà (广) có chỗ chiếm (占) để bày hàng, đó là cửa tiệm.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_082",
+    "char": "東",
+    "level": "N5",
+    "hanViet": [
+      "Đông"
+    ],
+    "meanings": [
+      "Phía đông"
+    ],
+    "onyomi": [
+      "トウ"
+    ],
+    "kunyomi": [
+      "ひがし"
+    ],
+    "hint": "Mặt trời (日) mọc xuyên qua cây (木), mặt trời mọc ở phía Đông.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_083",
+    "char": "南",
+    "level": "N5",
+    "hanViet": [
+      "Nam"
+    ],
+    "meanings": [
+      "Phía nam"
+    ],
+    "onyomi": [
+      "ナン",
+      "ナ"
+    ],
+    "kunyomi": [
+      "みなみ"
+    ],
+    "hint": "Ghi nhớ hình 南 như tấm biển chỉ phương Nam.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_084",
+    "char": "前",
+    "level": "N5",
+    "hanViet": [
+      "Tiền"
+    ],
+    "meanings": [
+      "Phía trước"
+    ],
+    "onyomi": [
+      "ゼン"
+    ],
+    "kunyomi": [
+      "まえ"
+    ],
+    "hint": "Phần phía trước có bước chân và lưỡi dao, ghi nhớ nghĩa phía trước.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_085",
+    "char": "食",
+    "level": "N5",
+    "hanViet": [
+      "Thực"
+    ],
+    "meanings": [
+      "Ăn"
+    ],
+    "onyomi": [
+      "ショク",
+      "ジキ"
+    ],
+    "kunyomi": [
+      "く.う",
+      "く.らう",
+      "た.べる",
+      "は.む"
+    ],
+    "hint": "Các nét như người ngồi dưới mái với bát thức ăn, nghĩa là ăn.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_086",
+    "char": "後",
+    "level": "N5",
+    "hanViet": [
+      "Hậu"
+    ],
+    "meanings": [
+      "Phía sau"
+    ],
+    "onyomi": [
+      "ゴ",
+      "コウ"
+    ],
+    "kunyomi": [
+      "のち",
+      "うし.ろ",
+      "あと",
+      "おく.れる"
+    ],
+    "hint": "Đi (彳) theo sợi dây nhỏ phía sau, gợi nghĩa phía sau.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_087",
+    "char": "高",
+    "level": "N5",
+    "hanViet": [
+      "Cao"
+    ],
+    "meanings": [
+      "Cao"
+    ],
+    "onyomi": [
+      "コウ"
+    ],
+    "kunyomi": [
+      "たか.い",
+      "たか",
+      "たか.まる",
+      "たか.める"
+    ],
+    "hint": "Hình một tòa nhà cao nhiều tầng, nghĩa là cao.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_088",
+    "char": "校",
+    "level": "N5",
+    "hanViet": [
+      "Hiệu"
+    ],
+    "meanings": [
+      "Trường học"
+    ],
+    "onyomi": [
+      "コウ",
+      "キョウ"
+    ],
+    "kunyomi": [],
+    "hint": "Cây (木) kết hợp giao (交), nơi mọi người giao học là trường.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_089",
+    "char": "時",
+    "level": "N5",
+    "hanViet": [
+      "Thời"
+    ],
+    "meanings": [
+      "Thời gian"
+    ],
+    "onyomi": [
+      "ジ"
+    ],
+    "kunyomi": [
+      "とき"
+    ],
+    "hint": "Mặt trời (日) bên cạnh chùa (寺), ngày ở chùa cũng trôi theo thời gian.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_090",
+    "char": "書",
+    "level": "N5",
+    "hanViet": [
+      "Thư"
+    ],
+    "meanings": [
+      "Sách",
+      "Viết"
+    ],
+    "onyomi": [
+      "ショ"
+    ],
+    "kunyomi": [
+      "か.く"
+    ],
+    "hint": "Bàn tay cầm bút viết lên tờ giấy, nghĩa là viết/sách.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_091",
+    "char": "週",
+    "level": "N5",
+    "hanViet": [
+      "Chu"
+    ],
+    "meanings": [
+      "Tuần lễ"
+    ],
+    "onyomi": [
+      "シュウ"
+    ],
+    "kunyomi": [],
+    "hint": "Đi (辶) một vòng quanh (周) rồi lặp lại, đó là một tuần.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_092",
+    "char": "魚",
+    "level": "N5",
+    "hanViet": [
+      "Ngư"
+    ],
+    "meanings": [
+      "Cá"
+    ],
+    "onyomi": [
+      "ギョ"
+    ],
+    "kunyomi": [
+      "うお",
+      "さかな"
+    ],
+    "hint": "Hình con cá với đầu, thân và đuôi, nghĩa là cá.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_093",
+    "char": "間",
+    "level": "N5",
+    "hanViet": [
+      "Gian"
+    ],
+    "meanings": [
+      "Thời gian"
+    ],
+    "onyomi": [
+      "カン",
+      "ケン"
+    ],
+    "kunyomi": [
+      "あいだ",
+      "ま",
+      "あい"
+    ],
+    "hint": "Mặt trời (日) lọt qua khe cửa (門), ánh sáng nằm ở khoảng giữa.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_094",
+    "char": "飲",
+    "level": "N5",
+    "hanViet": [
+      "Ẩm"
+    ],
+    "meanings": [
+      "Uống"
+    ],
+    "onyomi": [
+      "イン",
+      "オン"
+    ],
+    "kunyomi": [
+      "の.む"
+    ],
+    "hint": "Ăn/uống (飠) rồi há miệng theo 欠, nghĩa là uống.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_095",
+    "char": "道",
+    "level": "N5",
+    "hanViet": [
+      "Đạo"
+    ],
+    "meanings": [
+      "Con đường"
+    ],
+    "onyomi": [
+      "ドウ",
+      "トウ"
+    ],
+    "kunyomi": [
+      "みち"
+    ],
+    "hint": "Đi (辶) theo cái đầu (首) dẫn đường, nghĩa là con đường.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_096",
+    "char": "買",
+    "level": "N5",
+    "hanViet": [
+      "Mãi"
+    ],
+    "meanings": [
+      "Mua"
+    ],
+    "onyomi": [
+      "バイ"
+    ],
+    "kunyomi": [
+      "か.う"
+    ],
+    "hint": "Dùng con mắt (皿) để xem xét và dùng tiền (貝) để mua hàng.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_097",
+    "char": "話",
+    "level": "N5",
+    "hanViet": [
+      "Thoại"
+    ],
+    "meanings": [
+      "Nói chuyện"
+    ],
+    "onyomi": [
+      "ワ"
+    ],
+    "kunyomi": [
+      "はな.す",
+      "はなし"
+    ],
+    "hint": "Lời nói (言) phát ra từ lưỡi (舌), nghĩa là nói chuyện.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_098",
+    "char": "新",
+    "level": "N5",
+    "hanViet": [
+      "Tân"
+    ],
+    "meanings": [
+      "Mới"
+    ],
+    "onyomi": [
+      "シン"
+    ],
+    "kunyomi": [
+      "あたら.しい",
+      "あら.た"
+    ],
+    "hint": "Đứng (立) bên cây (木) dùng rìu (斤) chặt để làm thành cái mới.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_099",
+    "char": "電",
+    "level": "N5",
+    "hanViet": [
+      "Điện"
+    ],
+    "meanings": [
+      "Điện"
+    ],
+    "onyomi": [
+      "デン"
+    ],
+    "kunyomi": [],
+    "hint": "Mưa (雨) trên ruộng/đường điện phía dưới, liên tưởng tia chớp và điện.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_100",
+    "char": "駅",
+    "level": "N5",
+    "hanViet": [
+      "Dịch"
+    ],
+    "meanings": [
+      "Nhà ga"
+    ],
+    "onyomi": [
+      "エキ"
+    ],
+    "kunyomi": [],
+    "hint": "Ngựa (馬) ngày xưa dừng ở trạm, nay ghi là 駅, nghĩa là nhà ga.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_101",
+    "char": "語",
+    "level": "N5",
+    "hanViet": [
+      "Ngữ"
+    ],
+    "meanings": [
+      "Ngôn ngữ"
+    ],
+    "onyomi": [
+      "ゴ"
+    ],
+    "kunyomi": [
+      "かた.る",
+      "かた.らう"
+    ],
+    "hint": "Lời nói (言) của ta/ngũ (吾) tạo thành ngôn ngữ.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_102",
+    "char": "読",
+    "level": "N5",
+    "hanViet": [
+      "Độc"
+    ],
+    "meanings": [
+      "Đọc"
+    ],
+    "onyomi": [
+      "ドク",
+      "トク",
+      "トウ"
+    ],
+    "kunyomi": [
+      "よ.む"
+    ],
+    "hint": "Lời nói/chữ (言) đem ra đọc, ghi nhớ 読 là đọc.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n5_103",
+    "char": "聞",
+    "level": "N5",
+    "hanViet": [
+      "Văn"
+    ],
+    "meanings": [
+      "Tai",
+      "Nghe"
+    ],
+    "onyomi": [
+      "ブン",
+      "モン"
+    ],
+    "kunyomi": [
+      "き.く",
+      "き.こえる"
+    ],
+    "hint": "Đặt tai (耳) trong cửa (門) để lắng nghe, nghĩa là nghe.",
+    "story": "",
+    "examples": []
+  }
+]

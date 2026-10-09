@@ -1,0 +1,3780 @@
+[
+  {
+    "id": "kanji_n4_001",
+    "char": "力",
+    "level": "N4",
+    "hanViet": [
+      "Lực"
+    ],
+    "meanings": [
+      "Sức mạnh"
+    ],
+    "onyomi": [
+      "リョク",
+      "リキ"
+    ],
+    "kunyomi": [
+      "ちから"
+    ],
+    "hint": "Hình cánh tay gồng cơ bắp, gợi sức mạnh.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_002",
+    "char": "夕",
+    "level": "N4",
+    "hanViet": [
+      "Tịch"
+    ],
+    "meanings": [
+      "Buổi tối"
+    ],
+    "onyomi": [
+      "セキ"
+    ],
+    "kunyomi": [
+      "ゆう"
+    ],
+    "hint": "Nửa vầng trăng lúc chiều tà, gợi buổi tối.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_003",
+    "char": "工",
+    "level": "N4",
+    "hanViet": [
+      "Công"
+    ],
+    "meanings": [
+      "Công sức"
+    ],
+    "onyomi": [
+      "コウ",
+      "ク",
+      "グ"
+    ],
+    "kunyomi": [],
+    "hint": "Ghi nhớ chữ 工 (Công) qua nghĩa: công sức.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_004",
+    "char": "元",
+    "level": "N4",
+    "hanViet": [
+      "Nguyên"
+    ],
+    "meanings": [
+      "Nguồn gốc"
+    ],
+    "onyomi": [
+      "ゲン",
+      "ガン"
+    ],
+    "kunyomi": [
+      "もと"
+    ],
+    "hint": "Ghi nhớ chữ 元 (Nguyên) qua nghĩa: nguồn gốc.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_005",
+    "char": "止",
+    "level": "N4",
+    "hanViet": [
+      "Chỉ"
+    ],
+    "meanings": [
+      "Dừng lại"
+    ],
+    "onyomi": [
+      "シ"
+    ],
+    "kunyomi": [
+      "と.まる",
+      "と.める"
+    ],
+    "hint": "Ghi nhớ chữ 止 (Chỉ) qua nghĩa: dừng lại.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_006",
+    "char": "引",
+    "level": "N4",
+    "hanViet": [
+      "Dẫn"
+    ],
+    "meanings": [
+      "Kéo"
+    ],
+    "onyomi": [
+      "イン"
+    ],
+    "kunyomi": [
+      "ひ.く",
+      "ひ.ける"
+    ],
+    "hint": "Ghi nhớ chữ 引 (Dẫn) qua nghĩa: kéo.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_007",
+    "char": "牛",
+    "level": "N4",
+    "hanViet": [
+      "Ngưu"
+    ],
+    "meanings": [
+      "Con trâu",
+      "bò"
+    ],
+    "onyomi": [
+      "ギュウ"
+    ],
+    "kunyomi": [
+      "うし"
+    ],
+    "hint": "Ghi nhớ chữ 牛 (Ngưu) qua nghĩa: con trâu, bò.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_008",
+    "char": "区",
+    "level": "N4",
+    "hanViet": [
+      "Khu"
+    ],
+    "meanings": [
+      "Khu vực"
+    ],
+    "onyomi": [
+      "ク",
+      "オウ",
+      "コウ"
+    ],
+    "kunyomi": [],
+    "hint": "Ghi nhớ chữ 区 (Khu) qua nghĩa: khu vực.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_009",
+    "char": "犬",
+    "level": "N4",
+    "hanViet": [
+      "Khuyển"
+    ],
+    "meanings": [
+      "Con chó"
+    ],
+    "onyomi": [
+      "ケン"
+    ],
+    "kunyomi": [
+      "いぬ"
+    ],
+    "hint": "Ghi nhớ chữ 犬 (Khuyển) qua nghĩa: con chó.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_010",
+    "char": "不",
+    "level": "N4",
+    "hanViet": [
+      "Bất"
+    ],
+    "meanings": [
+      "Không"
+    ],
+    "onyomi": [
+      "フ",
+      "ブ"
+    ],
+    "kunyomi": [],
+    "hint": "Ghi nhớ chữ 不 (Bất) qua nghĩa: không.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_011",
+    "char": "文",
+    "level": "N4",
+    "hanViet": [
+      "Văn"
+    ],
+    "meanings": [
+      "Văn học"
+    ],
+    "onyomi": [
+      "ブン",
+      "モン"
+    ],
+    "kunyomi": [
+      "ふみ"
+    ],
+    "hint": "Ghi nhớ chữ 文 (Văn) qua nghĩa: văn học.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_012",
+    "char": "方",
+    "level": "N4",
+    "hanViet": [
+      "Phương"
+    ],
+    "meanings": [
+      "Ngài",
+      "vị",
+      "phương hướng"
+    ],
+    "onyomi": [
+      "ホウ"
+    ],
+    "kunyomi": [
+      "かた"
+    ],
+    "hint": "Ghi nhớ chữ 方 (Phương) qua nghĩa: ngài, vị, phương hướng.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_013",
+    "char": "心",
+    "level": "N4",
+    "hanViet": [
+      "Tâm"
+    ],
+    "meanings": [
+      "Trái tim"
+    ],
+    "onyomi": [
+      "シン"
+    ],
+    "kunyomi": [
+      "こころ"
+    ],
+    "hint": "Ghi nhớ chữ 心 (Tâm) qua nghĩa: trái tim.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_014",
+    "char": "切",
+    "level": "N4",
+    "hanViet": [
+      "Thiết"
+    ],
+    "meanings": [
+      "Cắt",
+      "đứt"
+    ],
+    "onyomi": [
+      "セツ",
+      "サイ"
+    ],
+    "kunyomi": [
+      "き.る",
+      "き.れる"
+    ],
+    "hint": "Ghi nhớ chữ 切 (Thiết) qua nghĩa: cắt, đứt.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_015",
+    "char": "太",
+    "level": "N4",
+    "hanViet": [
+      "Thái"
+    ],
+    "meanings": [
+      "To",
+      "lớn"
+    ],
+    "onyomi": [
+      "タイ",
+      "タ"
+    ],
+    "kunyomi": [
+      "ふと.い",
+      "ふと.る"
+    ],
+    "hint": "Ghi nhớ chữ 太 (Thái) qua nghĩa: to, lớn.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_016",
+    "char": "代",
+    "level": "N4",
+    "hanViet": [
+      "Đại"
+    ],
+    "meanings": [
+      "Thay thế"
+    ],
+    "onyomi": [
+      "ダイ",
+      "タイ"
+    ],
+    "kunyomi": [
+      "か.わる",
+      "か.える",
+      "よ",
+      "しろ"
+    ],
+    "hint": "Ghi nhớ chữ 代 (Đại) qua nghĩa: thay thế.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_017",
+    "char": "台",
+    "level": "N4",
+    "hanViet": [
+      "Đài"
+    ],
+    "meanings": [
+      "Nền cao"
+    ],
+    "onyomi": [
+      "ダイ",
+      "タイ"
+    ],
+    "kunyomi": [],
+    "hint": "Ghi nhớ chữ 台 (Đài) qua nghĩa: nền cao.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_018",
+    "char": "世",
+    "level": "N4",
+    "hanViet": [
+      "Thế"
+    ],
+    "meanings": [
+      "Thế giới"
+    ],
+    "onyomi": [
+      "セイ",
+      "セ",
+      "ソウ"
+    ],
+    "kunyomi": [
+      "よ"
+    ],
+    "hint": "Ghi nhớ chữ 世 (Thế) qua nghĩa: thế giới.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_019",
+    "char": "正",
+    "level": "N4",
+    "hanViet": [
+      "Chính"
+    ],
+    "meanings": [
+      "Đúng"
+    ],
+    "onyomi": [
+      "セイ",
+      "ショウ"
+    ],
+    "kunyomi": [
+      "ただ.しい",
+      "ただ.す",
+      "まさ"
+    ],
+    "hint": "Ghi nhớ chữ 正 (Chính) qua nghĩa: đúng.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_020",
+    "char": "田",
+    "level": "N4",
+    "hanViet": [
+      "Điền"
+    ],
+    "meanings": [
+      "Ruộng"
+    ],
+    "onyomi": [
+      "デン"
+    ],
+    "kunyomi": [
+      "た"
+    ],
+    "hint": "Ghi nhớ chữ 田 (Điền) qua nghĩa: ruộng.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_021",
+    "char": "冬",
+    "level": "N4",
+    "hanViet": [
+      "Đông"
+    ],
+    "meanings": [
+      "Mùa đông"
+    ],
+    "onyomi": [
+      "トウ"
+    ],
+    "kunyomi": [
+      "ふゆ"
+    ],
+    "hint": "Ghi nhớ chữ 冬 (Đông) qua nghĩa: mùa đông.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_022",
+    "char": "民",
+    "level": "N4",
+    "hanViet": [
+      "Dân"
+    ],
+    "meanings": [
+      "Dân tộc"
+    ],
+    "onyomi": [
+      "ミン"
+    ],
+    "kunyomi": [
+      "たみ"
+    ],
+    "hint": "Ghi nhớ chữ 民 (Dân) qua nghĩa: dân tộc.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_023",
+    "char": "用",
+    "level": "N4",
+    "hanViet": [
+      "Dụng"
+    ],
+    "meanings": [
+      "Dùng",
+      "sử dụng"
+    ],
+    "onyomi": [
+      "ヨウ"
+    ],
+    "kunyomi": [
+      "もち.いる"
+    ],
+    "hint": "Ghi nhớ chữ 用 (Dụng) qua nghĩa: dùng, sử dụng.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_024",
+    "char": "兄",
+    "level": "N4",
+    "hanViet": [
+      "Huynh"
+    ],
+    "meanings": [
+      "Anh trai"
+    ],
+    "onyomi": [
+      "ケイ",
+      "キョウ"
+    ],
+    "kunyomi": [
+      "あに"
+    ],
+    "hint": "Ghi nhớ chữ 兄 (Huynh) qua nghĩa: anh trai.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_025",
+    "char": "以",
+    "level": "N4",
+    "hanViet": [
+      "Dĩ"
+    ],
+    "meanings": [
+      "Lấy làm mốc"
+    ],
+    "onyomi": [
+      "イ"
+    ],
+    "kunyomi": [
+      "もっ.て"
+    ],
+    "hint": "Ghi nhớ chữ 以 (Dĩ) qua nghĩa: lấy làm mốc.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_026",
+    "char": "去",
+    "level": "N4",
+    "hanViet": [
+      "Khứ"
+    ],
+    "meanings": [
+      "Quá khứ"
+    ],
+    "onyomi": [
+      "キョ",
+      "コ"
+    ],
+    "kunyomi": [
+      "さ.る"
+    ],
+    "hint": "Ghi nhớ chữ 去 (Khứ) qua nghĩa: quá khứ.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_027",
+    "char": "仕",
+    "level": "N4",
+    "hanViet": [
+      "Sĩ"
+    ],
+    "meanings": [
+      "Làm việc"
+    ],
+    "onyomi": [
+      "シ",
+      "ジ"
+    ],
+    "kunyomi": [
+      "つか.える"
+    ],
+    "hint": "Ghi nhớ chữ 仕 (Sĩ) qua nghĩa: làm việc.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_028",
+    "char": "市",
+    "level": "N4",
+    "hanViet": [
+      "Thị"
+    ],
+    "meanings": [
+      "Thành thị"
+    ],
+    "onyomi": [
+      "シ"
+    ],
+    "kunyomi": [
+      "いち"
+    ],
+    "hint": "Ghi nhớ chữ 市 (Thị) qua nghĩa: thành thị.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_029",
+    "char": "広",
+    "level": "N4",
+    "hanViet": [
+      "Quảng"
+    ],
+    "meanings": [
+      "Rộng"
+    ],
+    "onyomi": [
+      "コウ"
+    ],
+    "kunyomi": [
+      "ひろ.い",
+      "ひろ.まる",
+      "ひろ.める",
+      "ひろ.がる",
+      "ひろ.げる"
+    ],
+    "hint": "Ghi nhớ chữ 広 (Quảng) qua nghĩa: rộng.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_030",
+    "char": "主",
+    "level": "N4",
+    "hanViet": [
+      "Chủ"
+    ],
+    "meanings": [
+      "Chủ nhân"
+    ],
+    "onyomi": [
+      "シュ",
+      "ス"
+    ],
+    "kunyomi": [
+      "ぬし",
+      "おも"
+    ],
+    "hint": "Ghi nhớ chữ 主 (Chủ) qua nghĩa: chủ nhân.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_031",
+    "char": "写",
+    "level": "N4",
+    "hanViet": [
+      "Tả"
+    ],
+    "meanings": [
+      "Miêu tả"
+    ],
+    "onyomi": [
+      "シャ",
+      "ジャ"
+    ],
+    "kunyomi": [
+      "うつ.す",
+      "うつ.る"
+    ],
+    "hint": "Ghi nhớ chữ 写 (Tả) qua nghĩa: miêu tả.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_032",
+    "char": "字",
+    "level": "N4",
+    "hanViet": [
+      "Tự"
+    ],
+    "meanings": [
+      "Chữ"
+    ],
+    "onyomi": [
+      "ジ"
+    ],
+    "kunyomi": [
+      "あざ"
+    ],
+    "hint": "Ghi nhớ chữ 字 (Tự) qua nghĩa: chữ.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_033",
+    "char": "自",
+    "level": "N4",
+    "hanViet": [
+      "Tự"
+    ],
+    "meanings": [
+      "Tự do"
+    ],
+    "onyomi": [
+      "ジ",
+      "シ"
+    ],
+    "kunyomi": [
+      "みずか.ら",
+      "おの.ずから",
+      "おの.ずと"
+    ],
+    "hint": "Ghi nhớ chữ 自 (Tự) qua nghĩa: tự do.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_034",
+    "char": "考",
+    "level": "N4",
+    "hanViet": [
+      "Khảo"
+    ],
+    "meanings": [
+      "Suy nghĩ"
+    ],
+    "onyomi": [
+      "コウ"
+    ],
+    "kunyomi": [
+      "かんが.える",
+      "かんが.え"
+    ],
+    "hint": "Ghi nhớ chữ 考 (Khảo) qua nghĩa: suy nghĩ.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_035",
+    "char": "合",
+    "level": "N4",
+    "hanViet": [
+      "Hợp"
+    ],
+    "meanings": [
+      "Gặp gỡ"
+    ],
+    "onyomi": [
+      "ゴウ",
+      "ガッ",
+      "カッ"
+    ],
+    "kunyomi": [
+      "あ.う",
+      "あ.わす",
+      "あ.わせる"
+    ],
+    "hint": "Ghi nhớ chữ 合 (Hợp) qua nghĩa: gặp gỡ.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_036",
+    "char": "光",
+    "level": "N4",
+    "hanViet": [
+      "Quang"
+    ],
+    "meanings": [
+      "Ánh sáng"
+    ],
+    "onyomi": [
+      "コウ"
+    ],
+    "kunyomi": [
+      "ひか.る",
+      "ひかり"
+    ],
+    "hint": "Ghi nhớ chữ 光 (Quang) qua nghĩa: ánh sáng.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_037",
+    "char": "好",
+    "level": "N4",
+    "hanViet": [
+      "Hảo"
+    ],
+    "meanings": [
+      "Thích"
+    ],
+    "onyomi": [
+      "コウ"
+    ],
+    "kunyomi": [
+      "この.む",
+      "す.く",
+      "よ.い",
+      "い.い"
+    ],
+    "hint": "Ghi nhớ chữ 好 (Hảo) qua nghĩa: thích.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_038",
+    "char": "死",
+    "level": "N4",
+    "hanViet": [
+      "Tử"
+    ],
+    "meanings": [
+      "Chết",
+      "mất"
+    ],
+    "onyomi": [
+      "シ"
+    ],
+    "kunyomi": [
+      "し.ぬ",
+      "し.に-"
+    ],
+    "hint": "Ghi nhớ chữ 死 (Tử) qua nghĩa: chết, mất.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_039",
+    "char": "回",
+    "level": "N4",
+    "hanViet": [
+      "Hồi"
+    ],
+    "meanings": [
+      "Vòng quanh"
+    ],
+    "onyomi": [
+      "カイ",
+      "エ"
+    ],
+    "kunyomi": [
+      "まわ.る",
+      "まわ.す",
+      "もとお.る"
+    ],
+    "hint": "Ghi nhớ chữ 回 (Hồi) qua nghĩa: vòng quanh.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_040",
+    "char": "有",
+    "level": "N4",
+    "hanViet": [
+      "Hữu"
+    ],
+    "meanings": [
+      "Có"
+    ],
+    "onyomi": [
+      "ユウ",
+      "ウ"
+    ],
+    "kunyomi": [
+      "あ.る"
+    ],
+    "hint": "Ghi nhớ chữ 有 (Hữu) qua nghĩa: có.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_041",
+    "char": "同",
+    "level": "N4",
+    "hanViet": [
+      "Đồng"
+    ],
+    "meanings": [
+      "Cùng"
+    ],
+    "onyomi": [
+      "ドウ"
+    ],
+    "kunyomi": [
+      "おな.じ"
+    ],
+    "hint": "Ghi nhớ chữ 同 (Đồng) qua nghĩa: cùng.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_042",
+    "char": "肉",
+    "level": "N4",
+    "hanViet": [
+      "Nhục"
+    ],
+    "meanings": [
+      "Thịt"
+    ],
+    "onyomi": [
+      "ニク"
+    ],
+    "kunyomi": [],
+    "hint": "Ghi nhớ chữ 肉 (Nhục) qua nghĩa: thịt.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_043",
+    "char": "色",
+    "level": "N4",
+    "hanViet": [
+      "Sắc"
+    ],
+    "meanings": [
+      "Màu sắc"
+    ],
+    "onyomi": [
+      "ショク",
+      "シキ"
+    ],
+    "kunyomi": [
+      "いろ"
+    ],
+    "hint": "Ghi nhớ chữ 色 (Sắc) qua nghĩa: màu sắc.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_044",
+    "char": "早",
+    "level": "N4",
+    "hanViet": [
+      "Tảo"
+    ],
+    "meanings": [
+      "Sớm"
+    ],
+    "onyomi": [
+      "ソウ",
+      "サッ"
+    ],
+    "kunyomi": [
+      "はや.い",
+      "はや",
+      "はや.まる",
+      "はや.める"
+    ],
+    "hint": "Ghi nhớ chữ 早 (Tảo) qua nghĩa: sớm.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_045",
+    "char": "地",
+    "level": "N4",
+    "hanViet": [
+      "Địa"
+    ],
+    "meanings": [
+      "Đất"
+    ],
+    "onyomi": [
+      "チ",
+      "ジ"
+    ],
+    "kunyomi": [],
+    "hint": "Ghi nhớ chữ 地 (Địa) qua nghĩa: đất.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_046",
+    "char": "池",
+    "level": "N4",
+    "hanViet": [
+      "Trì"
+    ],
+    "meanings": [
+      "Ao"
+    ],
+    "onyomi": [
+      "チ"
+    ],
+    "kunyomi": [
+      "いけ"
+    ],
+    "hint": "Ghi nhớ chữ 池 (Trì) qua nghĩa: ao.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_047",
+    "char": "村",
+    "level": "N4",
+    "hanViet": [
+      "Thôn"
+    ],
+    "meanings": [
+      "Làng"
+    ],
+    "onyomi": [
+      "ソン"
+    ],
+    "kunyomi": [
+      "むら"
+    ],
+    "hint": "Ghi nhớ chữ 村 (Thôn) qua nghĩa: làng.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_048",
+    "char": "体",
+    "level": "N4",
+    "hanViet": [
+      "Thể"
+    ],
+    "meanings": [
+      "Cơ thể"
+    ],
+    "onyomi": [
+      "タイ",
+      "テイ"
+    ],
+    "kunyomi": [
+      "からだ",
+      "かたち"
+    ],
+    "hint": "Ghi nhớ chữ 体 (Thể) qua nghĩa: cơ thể.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_049",
+    "char": "町",
+    "level": "N4",
+    "hanViet": [
+      "Đinh"
+    ],
+    "meanings": [
+      "Khu phố"
+    ],
+    "onyomi": [
+      "チョウ"
+    ],
+    "kunyomi": [
+      "まち"
+    ],
+    "hint": "Ghi nhớ chữ 町 (Đinh) qua nghĩa: khu phố.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_050",
+    "char": "低",
+    "level": "N4",
+    "hanViet": [
+      "Đê"
+    ],
+    "meanings": [
+      "Thấp"
+    ],
+    "onyomi": [
+      "テイ"
+    ],
+    "kunyomi": [
+      "ひく.い",
+      "ひく.める",
+      "ひく.まる"
+    ],
+    "hint": "Ghi nhớ chữ 低 (Đê) qua nghĩa: thấp.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_051",
+    "char": "弟",
+    "level": "N4",
+    "hanViet": [
+      "Đệ"
+    ],
+    "meanings": [
+      "Em trai"
+    ],
+    "onyomi": [
+      "テイ",
+      "ダイ",
+      "デ"
+    ],
+    "kunyomi": [
+      "おとうと"
+    ],
+    "hint": "Ghi nhớ chữ 弟 (Đệ) qua nghĩa: em trai.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_052",
+    "char": "走",
+    "level": "N4",
+    "hanViet": [
+      "Tẩu"
+    ],
+    "meanings": [
+      "Chạy"
+    ],
+    "onyomi": [
+      "ソウ"
+    ],
+    "kunyomi": [
+      "はし.る"
+    ],
+    "hint": "Ghi nhớ chữ 走 (Tẩu) qua nghĩa: chạy.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_053",
+    "char": "赤",
+    "level": "N4",
+    "hanViet": [
+      "Xích"
+    ],
+    "meanings": [
+      "Màu đỏ"
+    ],
+    "onyomi": [
+      "セキ",
+      "シャク"
+    ],
+    "kunyomi": [
+      "あか",
+      "あか.い",
+      "あか.らむ",
+      "あか.らめる"
+    ],
+    "hint": "Ghi nhớ chữ 赤 (Xích) qua nghĩa: màu đỏ.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_054",
+    "char": "図",
+    "level": "N4",
+    "hanViet": [
+      "Đồ"
+    ],
+    "meanings": [
+      "Hình vẽ"
+    ],
+    "onyomi": [
+      "ズ",
+      "ト"
+    ],
+    "kunyomi": [
+      "え",
+      "はか.る"
+    ],
+    "hint": "Ghi nhớ chữ 図 (Đồ) qua nghĩa: hình vẽ.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_055",
+    "char": "究",
+    "level": "N4",
+    "hanViet": [
+      "Cứu"
+    ],
+    "meanings": [
+      "Nghiên cứu"
+    ],
+    "onyomi": [
+      "キュウ",
+      "ク"
+    ],
+    "kunyomi": [
+      "きわ.める"
+    ],
+    "hint": "Ghi nhớ chữ 究 (Cứu) qua nghĩa: nghiên cứu.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_056",
+    "char": "声",
+    "level": "N4",
+    "hanViet": [
+      "Thanh"
+    ],
+    "meanings": [
+      "Giọng nói"
+    ],
+    "onyomi": [
+      "セイ",
+      "ショウ"
+    ],
+    "kunyomi": [
+      "こえ",
+      "こわ-"
+    ],
+    "hint": "Ghi nhớ chữ 声 (Thanh) qua nghĩa: giọng nói.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_057",
+    "char": "売",
+    "level": "N4",
+    "hanViet": [
+      "Mại"
+    ],
+    "meanings": [
+      "Bán"
+    ],
+    "onyomi": [
+      "バイ"
+    ],
+    "kunyomi": [
+      "う.る",
+      "う.れる"
+    ],
+    "hint": "Ghi nhớ chữ 売 (Mại) qua nghĩa: bán.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_058",
+    "char": "別",
+    "level": "N4",
+    "hanViet": [
+      "Biệt"
+    ],
+    "meanings": [
+      "Riêng biệt"
+    ],
+    "onyomi": [
+      "ベツ"
+    ],
+    "kunyomi": [
+      "わか.れる",
+      "わ.ける"
+    ],
+    "hint": "Ghi nhớ chữ 別 (Biệt) qua nghĩa: riêng biệt.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_059",
+    "char": "医",
+    "level": "N4",
+    "hanViet": [
+      "Y"
+    ],
+    "meanings": [
+      "Y học"
+    ],
+    "onyomi": [
+      "イ"
+    ],
+    "kunyomi": [],
+    "hint": "Ghi nhớ chữ 医 (Y) qua nghĩa: y học.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_060",
+    "char": "近",
+    "level": "N4",
+    "hanViet": [
+      "Cận"
+    ],
+    "meanings": [
+      "Gần"
+    ],
+    "onyomi": [
+      "キン",
+      "コン"
+    ],
+    "kunyomi": [
+      "ちか.い"
+    ],
+    "hint": "Ghi nhớ chữ 近 (Cận) qua nghĩa: gần.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_061",
+    "char": "私",
+    "level": "N4",
+    "hanViet": [
+      "Tư"
+    ],
+    "meanings": [
+      "Cá nhân"
+    ],
+    "onyomi": [
+      "シ"
+    ],
+    "kunyomi": [
+      "わたくし",
+      "わたし"
+    ],
+    "hint": "Ghi nhớ chữ 私 (Tư) qua nghĩa: cá nhân.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_062",
+    "char": "作",
+    "level": "N4",
+    "hanViet": [
+      "Tác"
+    ],
+    "meanings": [
+      "Làm"
+    ],
+    "onyomi": [
+      "サク",
+      "サ"
+    ],
+    "kunyomi": [
+      "つく.る",
+      "つく.り"
+    ],
+    "hint": "Ghi nhớ chữ 作 (Tác) qua nghĩa: làm.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_063",
+    "char": "住",
+    "level": "N4",
+    "hanViet": [
+      "Trú"
+    ],
+    "meanings": [
+      "Cư trú"
+    ],
+    "onyomi": [
+      "ジュウ",
+      "ヂュウ",
+      "チュウ"
+    ],
+    "kunyomi": [
+      "す.む",
+      "す.まう"
+    ],
+    "hint": "Ghi nhớ chữ 住 (Trú) qua nghĩa: cư trú.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_064",
+    "char": "者",
+    "level": "N4",
+    "hanViet": [
+      "Giả"
+    ],
+    "meanings": [
+      "Người nghiên cứu"
+    ],
+    "onyomi": [
+      "シャ"
+    ],
+    "kunyomi": [
+      "もの"
+    ],
+    "hint": "Ghi nhớ chữ 者 (Giả) qua nghĩa: người nghiên cứu.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_065",
+    "char": "事",
+    "level": "N4",
+    "hanViet": [
+      "Sự"
+    ],
+    "meanings": [
+      "Công việc"
+    ],
+    "onyomi": [
+      "ジ",
+      "ズ"
+    ],
+    "kunyomi": [
+      "こと",
+      "つか.う",
+      "つか.える"
+    ],
+    "hint": "Ghi nhớ chữ 事 (Sự) qua nghĩa: công việc.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_066",
+    "char": "使",
+    "level": "N4",
+    "hanViet": [
+      "Sử"
+    ],
+    "meanings": [
+      "Sử dụng"
+    ],
+    "onyomi": [
+      "シ"
+    ],
+    "kunyomi": [
+      "つか.う",
+      "つか.い"
+    ],
+    "hint": "Ghi nhớ chữ 使 (Sử) qua nghĩa: sử dụng.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_067",
+    "char": "始",
+    "level": "N4",
+    "hanViet": [
+      "Thủy"
+    ],
+    "meanings": [
+      "Bắt đầu"
+    ],
+    "onyomi": [
+      "シ"
+    ],
+    "kunyomi": [
+      "はじ.める",
+      "はじ.まる"
+    ],
+    "hint": "Ghi nhớ chữ 始 (Thủy) qua nghĩa: bắt đầu.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_068",
+    "char": "姉",
+    "level": "N4",
+    "hanViet": [
+      "Tỉ"
+    ],
+    "meanings": [
+      "Chị gái"
+    ],
+    "onyomi": [
+      "シ"
+    ],
+    "kunyomi": [
+      "あね",
+      "はは"
+    ],
+    "hint": "Ghi nhớ chữ 姉 (Tỉ) qua nghĩa: chị gái.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_069",
+    "char": "英",
+    "level": "N4",
+    "hanViet": [
+      "Anh"
+    ],
+    "meanings": [
+      "Nước Anh"
+    ],
+    "onyomi": [
+      "エイ"
+    ],
+    "kunyomi": [
+      "はなぶさ"
+    ],
+    "hint": "Ghi nhớ chữ 英 (Anh) qua nghĩa: nước anh.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_070",
+    "char": "京",
+    "level": "N4",
+    "hanViet": [
+      "Kinh"
+    ],
+    "meanings": [
+      "Kinh đô"
+    ],
+    "onyomi": [
+      "キョウ",
+      "ケイ",
+      "キン"
+    ],
+    "kunyomi": [
+      "みやこ"
+    ],
+    "hint": "Ghi nhớ chữ 京 (Kinh) qua nghĩa: kinh đô.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_071",
+    "char": "画",
+    "level": "N4",
+    "hanViet": [
+      "Họa",
+      "Hoạch"
+    ],
+    "meanings": [
+      "Vẽ",
+      "kế hoạch"
+    ],
+    "onyomi": [
+      "ガ",
+      "カク",
+      "エ",
+      "カイ"
+    ],
+    "kunyomi": [
+      "えが.く",
+      "かく.する",
+      "かぎ.る",
+      "はかりごと",
+      "はか.る"
+    ],
+    "hint": "Ghi nhớ chữ 画 (Họa / Hoạch) qua nghĩa: vẽ, kế hoạch.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_072",
+    "char": "妹",
+    "level": "N4",
+    "hanViet": [
+      "Muội"
+    ],
+    "meanings": [
+      "Em gái"
+    ],
+    "onyomi": [
+      "マイ"
+    ],
+    "kunyomi": [
+      "いもうと"
+    ],
+    "hint": "Ghi nhớ chữ 妹 (Muội) qua nghĩa: em gái.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_073",
+    "char": "味",
+    "level": "N4",
+    "hanViet": [
+      "Vị"
+    ],
+    "meanings": [
+      "Mùi vị"
+    ],
+    "onyomi": [
+      "ミ"
+    ],
+    "kunyomi": [
+      "あじ",
+      "あじ.わう"
+    ],
+    "hint": "Ghi nhớ chữ 味 (Vị) qua nghĩa: mùi vị.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_074",
+    "char": "服",
+    "level": "N4",
+    "hanViet": [
+      "Phục"
+    ],
+    "meanings": [
+      "Trang phục"
+    ],
+    "onyomi": [
+      "フク"
+    ],
+    "kunyomi": [],
+    "hint": "Ghi nhớ chữ 服 (Phục) qua nghĩa: trang phục.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_075",
+    "char": "物",
+    "level": "N4",
+    "hanViet": [
+      "Vật"
+    ],
+    "meanings": [
+      "Đồ vật"
+    ],
+    "onyomi": [
+      "ブツ",
+      "モツ"
+    ],
+    "kunyomi": [
+      "もの",
+      "もの-"
+    ],
+    "hint": "Ghi nhớ chữ 物 (Vật) qua nghĩa: đồ vật.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_076",
+    "char": "歩",
+    "level": "N4",
+    "hanViet": [
+      "Bộ"
+    ],
+    "meanings": [
+      "Đi bộ"
+    ],
+    "onyomi": [
+      "ホ",
+      "ブ",
+      "フ"
+    ],
+    "kunyomi": [
+      "ある.く",
+      "あゆ.む"
+    ],
+    "hint": "Ghi nhớ chữ 歩 (Bộ) qua nghĩa: đi bộ.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_077",
+    "char": "門",
+    "level": "N4",
+    "hanViet": [
+      "Môn"
+    ],
+    "meanings": [
+      "Cổng",
+      "cửa"
+    ],
+    "onyomi": [
+      "モン"
+    ],
+    "kunyomi": [
+      "かど",
+      "と"
+    ],
+    "hint": "Ghi nhớ chữ 門 (Môn) qua nghĩa: cổng, cửa.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_078",
+    "char": "夜",
+    "level": "N4",
+    "hanViet": [
+      "Dạ"
+    ],
+    "meanings": [
+      "Đêm"
+    ],
+    "onyomi": [
+      "ヤ"
+    ],
+    "kunyomi": [
+      "よ",
+      "よる"
+    ],
+    "hint": "Ghi nhớ chữ 夜 (Dạ) qua nghĩa: đêm.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_079",
+    "char": "明",
+    "level": "N4",
+    "hanViet": [
+      "Minh"
+    ],
+    "meanings": [
+      "Ánh sáng"
+    ],
+    "onyomi": [
+      "メイ",
+      "ミョウ",
+      "ミン"
+    ],
+    "kunyomi": [
+      "あ.かり",
+      "あか.るい",
+      "あか.るむ",
+      "あか.らむ",
+      "あき.らか",
+      "あ.ける",
+      "あ.く",
+      "あ.くる",
+      "あ.かす"
+    ],
+    "hint": "Ghi nhớ chữ 明 (Minh) qua nghĩa: ánh sáng.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_080",
+    "char": "林",
+    "level": "N4",
+    "hanViet": [
+      "Lâm"
+    ],
+    "meanings": [
+      "Rừng thưa"
+    ],
+    "onyomi": [
+      "リン"
+    ],
+    "kunyomi": [
+      "はやし"
+    ],
+    "hint": "Ghi nhớ chữ 林 (Lâm) qua nghĩa: rừng thưa.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_081",
+    "char": "青",
+    "level": "N4",
+    "hanViet": [
+      "Thanh"
+    ],
+    "meanings": [
+      "Màu xanh"
+    ],
+    "onyomi": [
+      "セイ",
+      "ショウ"
+    ],
+    "kunyomi": [
+      "あお",
+      "あお.い"
+    ],
+    "hint": "Ghi nhớ chữ 青 (Thanh) qua nghĩa: màu xanh.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_082",
+    "char": "所",
+    "level": "N4",
+    "hanViet": [
+      "Sở"
+    ],
+    "meanings": [
+      "Công sở"
+    ],
+    "onyomi": [
+      "ショ"
+    ],
+    "kunyomi": [
+      "ところ",
+      "どころ",
+      "とこ"
+    ],
+    "hint": "Ghi nhớ chữ 所 (Sở) qua nghĩa: công sở.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_083",
+    "char": "注",
+    "level": "N4",
+    "hanViet": [
+      "Chú"
+    ],
+    "meanings": [
+      "Ghi chú"
+    ],
+    "onyomi": [
+      "チュウ"
+    ],
+    "kunyomi": [
+      "そそ.ぐ",
+      "さ.す",
+      "つ.ぐ"
+    ],
+    "hint": "Ghi nhớ chữ 注 (Chú) qua nghĩa: ghi chú.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_084",
+    "char": "知",
+    "level": "N4",
+    "hanViet": [
+      "Tri"
+    ],
+    "meanings": [
+      "Biết"
+    ],
+    "onyomi": [
+      "チ"
+    ],
+    "kunyomi": [
+      "し.る",
+      "し.らせる"
+    ],
+    "hint": "Ghi nhớ chữ 知 (Tri) qua nghĩa: biết.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_085",
+    "char": "昼",
+    "level": "N4",
+    "hanViet": [
+      "Trú"
+    ],
+    "meanings": [
+      "Buổi trưa"
+    ],
+    "onyomi": [
+      "チュウ"
+    ],
+    "kunyomi": [
+      "ひる"
+    ],
+    "hint": "Ghi nhớ chữ 昼 (Trú) qua nghĩa: buổi trưa.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_086",
+    "char": "茶",
+    "level": "N4",
+    "hanViet": [
+      "Trà"
+    ],
+    "meanings": [
+      "Trà"
+    ],
+    "onyomi": [
+      "チャ",
+      "サ"
+    ],
+    "kunyomi": [],
+    "hint": "Ghi nhớ chữ 茶 (Trà) qua nghĩa: trà.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_087",
+    "char": "待",
+    "level": "N4",
+    "hanViet": [
+      "Đãi"
+    ],
+    "meanings": [
+      "Chiêu đãi"
+    ],
+    "onyomi": [
+      "タイ"
+    ],
+    "kunyomi": [
+      "ま.つ"
+    ],
+    "hint": "Ghi nhớ chữ 待 (Đãi) qua nghĩa: chiêu đãi.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_088",
+    "char": "洗",
+    "level": "N4",
+    "hanViet": [
+      "Tiên"
+    ],
+    "meanings": [
+      "Rửa",
+      "giặt"
+    ],
+    "onyomi": [
+      "セン"
+    ],
+    "kunyomi": [
+      "あら.う"
+    ],
+    "hint": "Ghi nhớ chữ 洗 (Tiên) qua nghĩa: rửa, giặt.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_089",
+    "char": "送",
+    "level": "N4",
+    "hanViet": [
+      "Tống"
+    ],
+    "meanings": [
+      "Gửi đi"
+    ],
+    "onyomi": [
+      "ソウ"
+    ],
+    "kunyomi": [
+      "おく.る"
+    ],
+    "hint": "Ghi nhớ chữ 送 (Tống) qua nghĩa: gửi đi.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_090",
+    "char": "品",
+    "level": "N4",
+    "hanViet": [
+      "Phẩm"
+    ],
+    "meanings": [
+      "Sản phẩm"
+    ],
+    "onyomi": [
+      "ヒン",
+      "ホン"
+    ],
+    "kunyomi": [
+      "しな"
+    ],
+    "hint": "Ghi nhớ chữ 品 (Phẩm) qua nghĩa: sản phẩm.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_091",
+    "char": "洋",
+    "level": "N4",
+    "hanViet": [
+      "Dương"
+    ],
+    "meanings": [
+      "Đại dương"
+    ],
+    "onyomi": [
+      "ヨウ"
+    ],
+    "kunyomi": [],
+    "hint": "Ghi nhớ chữ 洋 (Dương) qua nghĩa: đại dương.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_092",
+    "char": "便",
+    "level": "N4",
+    "hanViet": [
+      "Tiện"
+    ],
+    "meanings": [
+      "Tiện lợi"
+    ],
+    "onyomi": [
+      "ベン",
+      "ビン"
+    ],
+    "kunyomi": [
+      "たよ.り"
+    ],
+    "hint": "Ghi nhớ chữ 便 (Tiện) qua nghĩa: tiện lợi.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_093",
+    "char": "風",
+    "level": "N4",
+    "hanViet": [
+      "Phong"
+    ],
+    "meanings": [
+      "Gió"
+    ],
+    "onyomi": [
+      "フウ",
+      "フ"
+    ],
+    "kunyomi": [
+      "かぜ",
+      "かざ-"
+    ],
+    "hint": "Ghi nhớ chữ 風 (Phong) qua nghĩa: gió.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_094",
+    "char": "発",
+    "level": "N4",
+    "hanViet": [
+      "Phát"
+    ],
+    "meanings": [
+      "Xuất phát"
+    ],
+    "onyomi": [
+      "ハツ",
+      "ホツ"
+    ],
+    "kunyomi": [
+      "た.つ",
+      "あば.く",
+      "おこ.る",
+      "つか.わす",
+      "はな.つ"
+    ],
+    "hint": "Ghi nhớ chữ 発 (Phát) qua nghĩa: xuất phát.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_095",
+    "char": "度",
+    "level": "N4",
+    "hanViet": [
+      "Độ"
+    ],
+    "meanings": [
+      "Mức độ"
+    ],
+    "onyomi": [
+      "ド",
+      "ト",
+      "タク"
+    ],
+    "kunyomi": [
+      "たび"
+    ],
+    "hint": "Ghi nhớ chữ 度 (Độ) qua nghĩa: mức độ.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_096",
+    "char": "映",
+    "level": "N4",
+    "hanViet": [
+      "Ánh"
+    ],
+    "meanings": [
+      "Phản chiếu"
+    ],
+    "onyomi": [
+      "エイ"
+    ],
+    "kunyomi": [
+      "うつ.る",
+      "うつ.す",
+      "は.える"
+    ],
+    "hint": "Ghi nhớ chữ 映 (Ánh) qua nghĩa: phản chiếu.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_097",
+    "char": "海",
+    "level": "N4",
+    "hanViet": [
+      "Hải"
+    ],
+    "meanings": [
+      "Biển"
+    ],
+    "onyomi": [
+      "カイ"
+    ],
+    "kunyomi": [
+      "うみ"
+    ],
+    "hint": "Ghi nhớ chữ 海 (Hải) qua nghĩa: biển.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_098",
+    "char": "界",
+    "level": "N4",
+    "hanViet": [
+      "Giới"
+    ],
+    "meanings": [
+      "Thế giới"
+    ],
+    "onyomi": [
+      "カイ"
+    ],
+    "kunyomi": [],
+    "hint": "Ghi nhớ chữ 界 (Giới) qua nghĩa: thế giới.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_099",
+    "char": "屋",
+    "level": "N4",
+    "hanViet": [
+      "Ốc"
+    ],
+    "meanings": [
+      "Phòng"
+    ],
+    "onyomi": [
+      "オク"
+    ],
+    "kunyomi": [
+      "や"
+    ],
+    "hint": "Ghi nhớ chữ 屋 (Ốc) qua nghĩa: phòng.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_100",
+    "char": "音",
+    "level": "N4",
+    "hanViet": [
+      "Âm"
+    ],
+    "meanings": [
+      "Âm thanh"
+    ],
+    "onyomi": [
+      "オン",
+      "イン",
+      "ノン"
+    ],
+    "kunyomi": [
+      "おと",
+      "ね"
+    ],
+    "hint": "Ghi nhớ chữ 音 (Âm) qua nghĩa: âm thanh.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_101",
+    "char": "急",
+    "level": "N4",
+    "hanViet": [
+      "Cấp"
+    ],
+    "meanings": [
+      "Gấp"
+    ],
+    "onyomi": [
+      "キュウ"
+    ],
+    "kunyomi": [
+      "いそ.ぐ",
+      "いそ.ぎ"
+    ],
+    "hint": "Ghi nhớ chữ 急 (Cấp) qua nghĩa: gấp.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_102",
+    "char": "計",
+    "level": "N4",
+    "hanViet": [
+      "Kế"
+    ],
+    "meanings": [
+      "Dụng cụ đo"
+    ],
+    "onyomi": [
+      "ケイ"
+    ],
+    "kunyomi": [
+      "はか.る",
+      "はか.らう"
+    ],
+    "hint": "Ghi nhớ chữ 計 (Kế) qua nghĩa: dụng cụ đo.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_103",
+    "char": "建",
+    "level": "N4",
+    "hanViet": [
+      "Kiến"
+    ],
+    "meanings": [
+      "Xây dựng"
+    ],
+    "onyomi": [
+      "ケン",
+      "コン"
+    ],
+    "kunyomi": [
+      "た.てる",
+      "た.て",
+      "た.つ",
+      "た.ち-"
+    ],
+    "hint": "Ghi nhớ chữ 建 (Kiến) qua nghĩa: xây dựng.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_104",
+    "char": "研",
+    "level": "N4",
+    "hanViet": [
+      "Nghiên"
+    ],
+    "meanings": [
+      "Nghiên cứu"
+    ],
+    "onyomi": [
+      "ケン"
+    ],
+    "kunyomi": [
+      "と.ぐ"
+    ],
+    "hint": "Ghi nhớ chữ 研 (Nghiên) qua nghĩa: nghiên cứu.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_105",
+    "char": "県",
+    "level": "N4",
+    "hanViet": [
+      "Huyện"
+    ],
+    "meanings": [
+      "Tỉnh"
+    ],
+    "onyomi": [
+      "ケン"
+    ],
+    "kunyomi": [
+      "か.ける"
+    ],
+    "hint": "Ghi nhớ chữ 県 (Huyện) qua nghĩa: tỉnh.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_106",
+    "char": "思",
+    "level": "N4",
+    "hanViet": [
+      "Tư"
+    ],
+    "meanings": [
+      "Suy nghĩ"
+    ],
+    "onyomi": [
+      "シ"
+    ],
+    "kunyomi": [
+      "おも.う",
+      "おもえら.く",
+      "おぼ.す"
+    ],
+    "hint": "Ghi nhớ chữ 思 (Tư) qua nghĩa: suy nghĩ.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_107",
+    "char": "乗",
+    "level": "N4",
+    "hanViet": [
+      "Thừa"
+    ],
+    "meanings": [
+      "Lên xe"
+    ],
+    "onyomi": [
+      "ジョウ",
+      "ショウ"
+    ],
+    "kunyomi": [
+      "の.る",
+      "の.せる"
+    ],
+    "hint": "Ghi nhớ chữ 乗 (Thừa) qua nghĩa: lên xe.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_108",
+    "char": "重",
+    "level": "N4",
+    "hanViet": [
+      "Trọng"
+    ],
+    "meanings": [
+      "Nặng"
+    ],
+    "onyomi": [
+      "ジュウ",
+      "チョウ"
+    ],
+    "kunyomi": [
+      "え",
+      "おも.い",
+      "おも.り",
+      "おも.なう",
+      "かさ.ねる",
+      "かさ.なる"
+    ],
+    "hint": "Ghi nhớ chữ 重 (Trọng) qua nghĩa: nặng.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_109",
+    "char": "春",
+    "level": "N4",
+    "hanViet": [
+      "Xuân"
+    ],
+    "meanings": [
+      "Mùa xuân"
+    ],
+    "onyomi": [
+      "シュン"
+    ],
+    "kunyomi": [
+      "はる"
+    ],
+    "hint": "Ghi nhớ chữ 春 (Xuân) qua nghĩa: mùa xuân.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_110",
+    "char": "室",
+    "level": "N4",
+    "hanViet": [
+      "Thất"
+    ],
+    "meanings": [
+      "Phòng"
+    ],
+    "onyomi": [
+      "シツ"
+    ],
+    "kunyomi": [
+      "むろ"
+    ],
+    "hint": "Ghi nhớ chữ 室 (Thất) qua nghĩa: phòng.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_111",
+    "char": "持",
+    "level": "N4",
+    "hanViet": [
+      "Trì"
+    ],
+    "meanings": [
+      "Mang"
+    ],
+    "onyomi": [
+      "ジ"
+    ],
+    "kunyomi": [
+      "も.つ",
+      "も.てる"
+    ],
+    "hint": "Ghi nhớ chữ 持 (Trì) qua nghĩa: mang.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_112",
+    "char": "首",
+    "level": "N4",
+    "hanViet": [
+      "Thủ"
+    ],
+    "meanings": [
+      "Cổ",
+      "người đứng đầu"
+    ],
+    "onyomi": [
+      "シュ"
+    ],
+    "kunyomi": [
+      "くび"
+    ],
+    "hint": "Ghi nhớ chữ 首 (Thủ) qua nghĩa: cổ, người đứng đầu.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_113",
+    "char": "秋",
+    "level": "N4",
+    "hanViet": [
+      "Thu"
+    ],
+    "meanings": [
+      "Mùa thu"
+    ],
+    "onyomi": [
+      "シュウ"
+    ],
+    "kunyomi": [
+      "あき",
+      "とき"
+    ],
+    "hint": "Ghi nhớ chữ 秋 (Thu) qua nghĩa: mùa thu.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_114",
+    "char": "借",
+    "level": "N4",
+    "hanViet": [
+      "Tá"
+    ],
+    "meanings": [
+      "Vay",
+      "mượn"
+    ],
+    "onyomi": [
+      "シャク"
+    ],
+    "kunyomi": [
+      "か.りる"
+    ],
+    "hint": "Ghi nhớ chữ 借 (Tá) qua nghĩa: vay, mượn.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_115",
+    "char": "弱",
+    "level": "N4",
+    "hanViet": [
+      "Nhược"
+    ],
+    "meanings": [
+      "Yếu"
+    ],
+    "onyomi": [
+      "ジャク"
+    ],
+    "kunyomi": [
+      "よわ.い",
+      "よわ.る",
+      "よわ.まる",
+      "よわ.める"
+    ],
+    "hint": "Ghi nhớ chữ 弱 (Nhược) qua nghĩa: yếu.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_116",
+    "char": "紙",
+    "level": "N4",
+    "hanViet": [
+      "Chỉ"
+    ],
+    "meanings": [
+      "Tờ giấy"
+    ],
+    "onyomi": [
+      "シ"
+    ],
+    "kunyomi": [
+      "かみ"
+    ],
+    "hint": "Ghi nhớ chữ 紙 (Chỉ) qua nghĩa: tờ giấy.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_117",
+    "char": "帰",
+    "level": "N4",
+    "hanViet": [
+      "Quy"
+    ],
+    "meanings": [
+      "Trở về"
+    ],
+    "onyomi": [
+      "キ"
+    ],
+    "kunyomi": [
+      "かえ.る",
+      "かえ.す",
+      "おく.る",
+      "とつ.ぐ"
+    ],
+    "hint": "Ghi nhớ chữ 帰 (Quy) qua nghĩa: trở về.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_118",
+    "char": "起",
+    "level": "N4",
+    "hanViet": [
+      "Khởi"
+    ],
+    "meanings": [
+      "Thức dậy"
+    ],
+    "onyomi": [
+      "キ"
+    ],
+    "kunyomi": [
+      "お.きる",
+      "お.こる",
+      "お.こす",
+      "おこ.す",
+      "た.つ"
+    ],
+    "hint": "Ghi nhớ chữ 起 (Khởi) qua nghĩa: thức dậy.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_119",
+    "char": "夏",
+    "level": "N4",
+    "hanViet": [
+      "Hạ"
+    ],
+    "meanings": [
+      "Mùa hè"
+    ],
+    "onyomi": [
+      "カ",
+      "ガ",
+      "ゲ"
+    ],
+    "kunyomi": [
+      "なつ"
+    ],
+    "hint": "Ghi nhớ chữ 夏 (Hạ) qua nghĩa: mùa hè.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_120",
+    "char": "家",
+    "level": "N4",
+    "hanViet": [
+      "Gia"
+    ],
+    "meanings": [
+      "Nhà"
+    ],
+    "onyomi": [
+      "カ",
+      "ケ"
+    ],
+    "kunyomi": [
+      "いえ",
+      "や",
+      "うち"
+    ],
+    "hint": "Ghi nhớ chữ 家 (Gia) qua nghĩa: nhà.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_121",
+    "char": "院",
+    "level": "N4",
+    "hanViet": [
+      "Viện"
+    ],
+    "meanings": [
+      "Bệnh viện"
+    ],
+    "onyomi": [
+      "イン"
+    ],
+    "kunyomi": [],
+    "hint": "Ghi nhớ chữ 院 (Viện) qua nghĩa: bệnh viện.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_122",
+    "char": "員",
+    "level": "N4",
+    "hanViet": [
+      "Viên"
+    ],
+    "meanings": [
+      "Nhân viên"
+    ],
+    "onyomi": [
+      "イン"
+    ],
+    "kunyomi": [],
+    "hint": "Ghi nhớ chữ 員 (Viên) qua nghĩa: nhân viên.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_123",
+    "char": "病",
+    "level": "N4",
+    "hanViet": [
+      "Bệnh"
+    ],
+    "meanings": [
+      "Ốm đau"
+    ],
+    "onyomi": [
+      "ビョウ",
+      "ヘイ"
+    ],
+    "kunyomi": [
+      "や.む",
+      "やまい"
+    ],
+    "hint": "Ghi nhớ chữ 病 (Bệnh) qua nghĩa: ốm đau.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_124",
+    "char": "勉",
+    "level": "N4",
+    "hanViet": [
+      "Miễn"
+    ],
+    "meanings": [
+      "Miễn cưỡng"
+    ],
+    "onyomi": [
+      "ベン"
+    ],
+    "kunyomi": [
+      "つと.める"
+    ],
+    "hint": "Ghi nhớ chữ 勉 (Miễn) qua nghĩa: miễn cưỡng.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_125",
+    "char": "特",
+    "level": "N4",
+    "hanViet": [
+      "Đặc"
+    ],
+    "meanings": [
+      "Đặc biệt"
+    ],
+    "onyomi": [
+      "トク"
+    ],
+    "kunyomi": [],
+    "hint": "Ghi nhớ chữ 特 (Đặc) qua nghĩa: đặc biệt.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_126",
+    "char": "旅",
+    "level": "N4",
+    "hanViet": [
+      "Lữ"
+    ],
+    "meanings": [
+      "Du lịch"
+    ],
+    "onyomi": [
+      "リョ"
+    ],
+    "kunyomi": [
+      "たび"
+    ],
+    "hint": "Ghi nhớ chữ 旅 (Lữ) qua nghĩa: du lịch.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_127",
+    "char": "料",
+    "level": "N4",
+    "hanViet": [
+      "Liệu"
+    ],
+    "meanings": [
+      "Vật liệu"
+    ],
+    "onyomi": [
+      "リョウ"
+    ],
+    "kunyomi": [],
+    "hint": "Ghi nhớ chữ 料 (Liệu) qua nghĩa: vật liệu.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_128",
+    "char": "真",
+    "level": "N4",
+    "hanViet": [
+      "Chân"
+    ],
+    "meanings": [
+      "Chân thực"
+    ],
+    "onyomi": [
+      "シン"
+    ],
+    "kunyomi": [
+      "ま",
+      "まこと"
+    ],
+    "hint": "Ghi nhớ chữ 真 (Chân) qua nghĩa: chân thực.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_129",
+    "char": "通",
+    "level": "N4",
+    "hanViet": [
+      "Thông"
+    ],
+    "meanings": [
+      "Đi qua"
+    ],
+    "onyomi": [
+      "ツウ",
+      "ツ"
+    ],
+    "kunyomi": [
+      "とお.る",
+      "とお.り",
+      "とお.す",
+      "かよ.う"
+    ],
+    "hint": "Ghi nhớ chữ 通 (Thông) qua nghĩa: đi qua.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_130",
+    "char": "鳥",
+    "level": "N4",
+    "hanViet": [
+      "Điểu"
+    ],
+    "meanings": [
+      "Chim"
+    ],
+    "onyomi": [
+      "チョウ"
+    ],
+    "kunyomi": [
+      "とり"
+    ],
+    "hint": "Ghi nhớ chữ 鳥 (Điểu) qua nghĩa: chim.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_131",
+    "char": "転",
+    "level": "N4",
+    "hanViet": [
+      "Chuyển"
+    ],
+    "meanings": [
+      "Xoay",
+      "chuyển"
+    ],
+    "onyomi": [
+      "テン"
+    ],
+    "kunyomi": [
+      "ころ.がる",
+      "ころ.げる",
+      "ころ.がす",
+      "ころ.ぶ",
+      "まろ.ぶ",
+      "うたた",
+      "うつ.る"
+    ],
+    "hint": "Ghi nhớ chữ 転 (Chuyển) qua nghĩa: xoay, chuyển.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_132",
+    "char": "族",
+    "level": "N4",
+    "hanViet": [
+      "Tộc"
+    ],
+    "meanings": [
+      "Gia đình"
+    ],
+    "onyomi": [
+      "ゾク"
+    ],
+    "kunyomi": [],
+    "hint": "Ghi nhớ chữ 族 (Tộc) qua nghĩa: gia đình.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_133",
+    "char": "進",
+    "level": "N4",
+    "hanViet": [
+      "Tiến"
+    ],
+    "meanings": [
+      "Tiến bộ"
+    ],
+    "onyomi": [
+      "シン"
+    ],
+    "kunyomi": [
+      "すす.む",
+      "すす.める"
+    ],
+    "hint": "Ghi nhớ chữ 進 (Tiến) qua nghĩa: tiến bộ.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_134",
+    "char": "理",
+    "level": "N4",
+    "hanViet": [
+      "Lí"
+    ],
+    "meanings": [
+      "Lí do"
+    ],
+    "onyomi": [
+      "リ"
+    ],
+    "kunyomi": [
+      "ことわり"
+    ],
+    "hint": "Ghi nhớ chữ 理 (Lí) qua nghĩa: lí do.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_135",
+    "char": "野",
+    "level": "N4",
+    "hanViet": [
+      "Dã"
+    ],
+    "meanings": [
+      "Hoang dã"
+    ],
+    "onyomi": [
+      "ヤ",
+      "ショ"
+    ],
+    "kunyomi": [
+      "の",
+      "の-"
+    ],
+    "hint": "Ghi nhớ chữ 野 (Dã) qua nghĩa: hoang dã.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_136",
+    "char": "問",
+    "level": "N4",
+    "hanViet": [
+      "Vấn"
+    ],
+    "meanings": [
+      "Vấn đề"
+    ],
+    "onyomi": [
+      "モン"
+    ],
+    "kunyomi": [
+      "と.う",
+      "と.い",
+      "とん"
+    ],
+    "hint": "Ghi nhớ chữ 問 (Vấn) qua nghĩa: vấn đề.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_137",
+    "char": "都",
+    "level": "N4",
+    "hanViet": [
+      "Đô"
+    ],
+    "meanings": [
+      "Kinh đô"
+    ],
+    "onyomi": [
+      "ト",
+      "ツ"
+    ],
+    "kunyomi": [
+      "みやこ"
+    ],
+    "hint": "Ghi nhớ chữ 都 (Đô) qua nghĩa: kinh đô.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_138",
+    "char": "堂",
+    "level": "N4",
+    "hanViet": [
+      "Đường"
+    ],
+    "meanings": [
+      "Nhà lớn"
+    ],
+    "onyomi": [
+      "ドウ"
+    ],
+    "kunyomi": [],
+    "hint": "Ghi nhớ chữ 堂 (Đường) qua nghĩa: nhà lớn.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_139",
+    "char": "動",
+    "level": "N4",
+    "hanViet": [
+      "Động"
+    ],
+    "meanings": [
+      "Chuyển động"
+    ],
+    "onyomi": [
+      "ドウ"
+    ],
+    "kunyomi": [
+      "うご.く",
+      "うご.かす"
+    ],
+    "hint": "Ghi nhớ chữ 動 (Động) qua nghĩa: chuyển động.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_140",
+    "char": "悪",
+    "level": "N4",
+    "hanViet": [
+      "Ác"
+    ],
+    "meanings": [
+      "Xấu"
+    ],
+    "onyomi": [
+      "アク",
+      "オ"
+    ],
+    "kunyomi": [
+      "わる.い",
+      "わる-",
+      "あ.し",
+      "にく.い",
+      "ああ",
+      "いずくに",
+      "いずくんぞ",
+      "にく.む"
+    ],
+    "hint": "Ghi nhớ chữ 悪 (Ác) qua nghĩa: xấu.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_141",
+    "char": "強",
+    "level": "N4",
+    "hanViet": [
+      "Cường"
+    ],
+    "meanings": [
+      "Mạnh"
+    ],
+    "onyomi": [
+      "キョウ",
+      "ゴウ"
+    ],
+    "kunyomi": [
+      "つよ.い",
+      "つよ.まる",
+      "つよ.める",
+      "し.いる",
+      "こわ.い"
+    ],
+    "hint": "Ghi nhớ chữ 強 (Cường) qua nghĩa: mạnh.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_142",
+    "char": "教",
+    "level": "N4",
+    "hanViet": [
+      "Giáo"
+    ],
+    "meanings": [
+      "Dạy"
+    ],
+    "onyomi": [
+      "キョウ"
+    ],
+    "kunyomi": [
+      "おし.える",
+      "おそ.わる"
+    ],
+    "hint": "Ghi nhớ chữ 教 (Giáo) qua nghĩa: dạy.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_143",
+    "char": "産",
+    "level": "N4",
+    "hanViet": [
+      "Sản"
+    ],
+    "meanings": [
+      "Sản phẩm"
+    ],
+    "onyomi": [
+      "サン"
+    ],
+    "kunyomi": [
+      "う.む",
+      "う.まれる",
+      "うぶ-",
+      "む.す"
+    ],
+    "hint": "Ghi nhớ chữ 産 (Sản) qua nghĩa: sản phẩm.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_144",
+    "char": "黒",
+    "level": "N4",
+    "hanViet": [
+      "Hắc"
+    ],
+    "meanings": [
+      "Đen"
+    ],
+    "onyomi": [
+      "コク"
+    ],
+    "kunyomi": [
+      "くろ",
+      "くろ.ずむ",
+      "くろ.い"
+    ],
+    "hint": "Ghi nhớ chữ 黒 (Hắc) qua nghĩa: đen.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_145",
+    "char": "菜",
+    "level": "N4",
+    "hanViet": [
+      "Thái"
+    ],
+    "meanings": [
+      "Rau"
+    ],
+    "onyomi": [
+      "サイ"
+    ],
+    "kunyomi": [
+      "な"
+    ],
+    "hint": "Ghi nhớ chữ 菜 (Thái) qua nghĩa: rau.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_146",
+    "char": "終",
+    "level": "N4",
+    "hanViet": [
+      "Chung"
+    ],
+    "meanings": [
+      "Kết thúc"
+    ],
+    "onyomi": [
+      "シュウ"
+    ],
+    "kunyomi": [
+      "お.わる",
+      "お.える",
+      "つい",
+      "つい.に"
+    ],
+    "hint": "Ghi nhớ chữ 終 (Chung) qua nghĩa: kết thúc.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_147",
+    "char": "習",
+    "level": "N4",
+    "hanViet": [
+      "Tập"
+    ],
+    "meanings": [
+      "Học tập"
+    ],
+    "onyomi": [
+      "シュウ",
+      "ジュ"
+    ],
+    "kunyomi": [
+      "なら.う",
+      "なら.い"
+    ],
+    "hint": "Ghi nhớ chữ 習 (Tập) qua nghĩa: học tập.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_148",
+    "char": "集",
+    "level": "N4",
+    "hanViet": [
+      "Tập"
+    ],
+    "meanings": [
+      "Tập hợp"
+    ],
+    "onyomi": [
+      "シュウ"
+    ],
+    "kunyomi": [
+      "あつ.まる",
+      "あつ.める",
+      "つど.う"
+    ],
+    "hint": "Ghi nhớ chữ 集 (Tập) qua nghĩa: tập hợp.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_149",
+    "char": "場",
+    "level": "N4",
+    "hanViet": [
+      "Trường"
+    ],
+    "meanings": [
+      "Vùng đất rộng"
+    ],
+    "onyomi": [
+      "ジョウ",
+      "チョウ"
+    ],
+    "kunyomi": [
+      "ば"
+    ],
+    "hint": "Ghi nhớ chữ 場 (Trường) qua nghĩa: vùng đất rộng.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_150",
+    "char": "寒",
+    "level": "N4",
+    "hanViet": [
+      "Hàn"
+    ],
+    "meanings": [
+      "Lạnh"
+    ],
+    "onyomi": [
+      "カン"
+    ],
+    "kunyomi": [
+      "さむ.い"
+    ],
+    "hint": "Ghi nhớ chữ 寒 (Hàn) qua nghĩa: lạnh.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_151",
+    "char": "軽",
+    "level": "N4",
+    "hanViet": [
+      "Khinh"
+    ],
+    "meanings": [
+      "Nhẹ"
+    ],
+    "onyomi": [
+      "ケイ",
+      "キョウ",
+      "キン"
+    ],
+    "kunyomi": [
+      "かる.い",
+      "かろ.やか",
+      "かろ.んじる"
+    ],
+    "hint": "Ghi nhớ chữ 軽 (Khinh) qua nghĩa: nhẹ.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_152",
+    "char": "運",
+    "level": "N4",
+    "hanViet": [
+      "Vận"
+    ],
+    "meanings": [
+      "Vận chuyển"
+    ],
+    "onyomi": [
+      "ウン"
+    ],
+    "kunyomi": [
+      "はこ.ぶ"
+    ],
+    "hint": "Ghi nhớ chữ 運 (Vận) qua nghĩa: vận chuyển.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_153",
+    "char": "開",
+    "level": "N4",
+    "hanViet": [
+      "Khai"
+    ],
+    "meanings": [
+      "Mở",
+      "bắt đầu"
+    ],
+    "onyomi": [
+      "カイ"
+    ],
+    "kunyomi": [
+      "ひら.く",
+      "ひら.き",
+      "ひら.ける",
+      "あ.く",
+      "あ.ける"
+    ],
+    "hint": "Ghi nhớ chữ 開 (Khai) qua nghĩa: mở, bắt đầu.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_154",
+    "char": "飯",
+    "level": "N4",
+    "hanViet": [
+      "Phạn"
+    ],
+    "meanings": [
+      "Cơm"
+    ],
+    "onyomi": [
+      "ハン"
+    ],
+    "kunyomi": [
+      "めし"
+    ],
+    "hint": "Ghi nhớ chữ 飯 (Phạn) qua nghĩa: cơm.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_155",
+    "char": "答",
+    "level": "N4",
+    "hanViet": [
+      "Đáp"
+    ],
+    "meanings": [
+      "Trả lời"
+    ],
+    "onyomi": [
+      "トウ"
+    ],
+    "kunyomi": [
+      "こた.える",
+      "こた.え"
+    ],
+    "hint": "Ghi nhớ chữ 答 (Đáp) qua nghĩa: trả lời.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_156",
+    "char": "森",
+    "level": "N4",
+    "hanViet": [
+      "Sâm"
+    ],
+    "meanings": [
+      "Rừng rậm"
+    ],
+    "onyomi": [
+      "シン"
+    ],
+    "kunyomi": [
+      "もり"
+    ],
+    "hint": "Ghi nhớ chữ 森 (Sâm) qua nghĩa: rừng rậm.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_157",
+    "char": "暑",
+    "level": "N4",
+    "hanViet": [
+      "Thử"
+    ],
+    "meanings": [
+      "Nóng"
+    ],
+    "onyomi": [
+      "ショ"
+    ],
+    "kunyomi": [
+      "あつ.い"
+    ],
+    "hint": "Ghi nhớ chữ 暑 (Thử) qua nghĩa: nóng.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_158",
+    "char": "朝",
+    "level": "N4",
+    "hanViet": [
+      "Triều"
+    ],
+    "meanings": [
+      "Sáng sớm"
+    ],
+    "onyomi": [
+      "チョウ"
+    ],
+    "kunyomi": [
+      "あさ"
+    ],
+    "hint": "Ghi nhớ chữ 朝 (Triều) qua nghĩa: sáng sớm.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_159",
+    "char": "貸",
+    "level": "N4",
+    "hanViet": [
+      "Thải"
+    ],
+    "meanings": [
+      "Cho vay"
+    ],
+    "onyomi": [
+      "タイ"
+    ],
+    "kunyomi": [
+      "か.す",
+      "か.し-",
+      "かし-"
+    ],
+    "hint": "Ghi nhớ chữ 貸 (Thải) qua nghĩa: cho vay.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_160",
+    "char": "着",
+    "level": "N4",
+    "hanViet": [
+      "Trước"
+    ],
+    "meanings": [
+      "Đến",
+      "mặc"
+    ],
+    "onyomi": [
+      "チャク",
+      "ジャク"
+    ],
+    "kunyomi": [
+      "き.る",
+      "き.せる",
+      "つ.く",
+      "つ.ける"
+    ],
+    "hint": "Ghi nhớ chữ 着 (Trước) qua nghĩa: đến, mặc.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_161",
+    "char": "短",
+    "level": "N4",
+    "hanViet": [
+      "Đoản"
+    ],
+    "meanings": [
+      "Ngắn"
+    ],
+    "onyomi": [
+      "タン"
+    ],
+    "kunyomi": [
+      "みじか.い"
+    ],
+    "hint": "Ghi nhớ chữ 短 (Đoản) qua nghĩa: ngắn.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_162",
+    "char": "働",
+    "level": "N4",
+    "hanViet": [
+      "Động"
+    ],
+    "meanings": [
+      "Làm",
+      "lao động"
+    ],
+    "onyomi": [
+      "ドウ"
+    ],
+    "kunyomi": [
+      "はたら.く"
+    ],
+    "hint": "Ghi nhớ chữ 働 (Động) qua nghĩa: làm, lao động.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_163",
+    "char": "楽",
+    "level": "N4",
+    "hanViet": [
+      "Lạc"
+    ],
+    "meanings": [
+      "Vui vẻ"
+    ],
+    "onyomi": [
+      "ガク",
+      "ラク",
+      "ゴウ"
+    ],
+    "kunyomi": [
+      "たの.しい",
+      "たの.しむ",
+      "この.む"
+    ],
+    "hint": "Ghi nhớ chữ 楽 (Lạc) qua nghĩa: vui vẻ.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_164",
+    "char": "暗",
+    "level": "N4",
+    "hanViet": [
+      "Ám"
+    ],
+    "meanings": [
+      "Tối"
+    ],
+    "onyomi": [
+      "アン"
+    ],
+    "kunyomi": [
+      "くら.い",
+      "くら.む",
+      "くれ.る"
+    ],
+    "hint": "Ghi nhớ chữ 暗 (Ám) qua nghĩa: tối.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_165",
+    "char": "意",
+    "level": "N4",
+    "hanViet": [
+      "Ý"
+    ],
+    "meanings": [
+      "Ý kiến"
+    ],
+    "onyomi": [
+      "イ"
+    ],
+    "kunyomi": [],
+    "hint": "Ghi nhớ chữ 意 (Ý) qua nghĩa: ý kiến.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_166",
+    "char": "遠",
+    "level": "N4",
+    "hanViet": [
+      "Viễn"
+    ],
+    "meanings": [
+      "Xa"
+    ],
+    "onyomi": [
+      "エン",
+      "オン"
+    ],
+    "kunyomi": [
+      "とお.い"
+    ],
+    "hint": "Ghi nhớ chữ 遠 (Viễn) qua nghĩa: xa.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_167",
+    "char": "漢",
+    "level": "N4",
+    "hanViet": [
+      "Hán"
+    ],
+    "meanings": [
+      "Chữ Hán"
+    ],
+    "onyomi": [
+      "カン"
+    ],
+    "kunyomi": [],
+    "hint": "Ghi nhớ chữ 漢 (Hán) qua nghĩa: chữ hán.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_168",
+    "char": "業",
+    "level": "N4",
+    "hanViet": [
+      "Nghiệp"
+    ],
+    "meanings": [
+      "Sự nghiệp"
+    ],
+    "onyomi": [
+      "ギョウ",
+      "ゴウ"
+    ],
+    "kunyomi": [
+      "わざ"
+    ],
+    "hint": "Ghi nhớ chữ 業 (Nghiệp) qua nghĩa: sự nghiệp.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_169",
+    "char": "試",
+    "level": "N4",
+    "hanViet": [
+      "Thí"
+    ],
+    "meanings": [
+      "Thử nghiệm"
+    ],
+    "onyomi": [
+      "シ"
+    ],
+    "kunyomi": [
+      "こころ.みる",
+      "ため.す"
+    ],
+    "hint": "Ghi nhớ chữ 試 (Thí) qua nghĩa: thử nghiệm.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_170",
+    "char": "銀",
+    "level": "N4",
+    "hanViet": [
+      "Ngân"
+    ],
+    "meanings": [
+      "Bạc"
+    ],
+    "onyomi": [
+      "ギン"
+    ],
+    "kunyomi": [
+      "しろがね"
+    ],
+    "hint": "Ghi nhớ chữ 銀 (Ngân) qua nghĩa: bạc.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_171",
+    "char": "歌",
+    "level": "N4",
+    "hanViet": [
+      "Ca"
+    ],
+    "meanings": [
+      "Hát"
+    ],
+    "onyomi": [
+      "カ"
+    ],
+    "kunyomi": [
+      "うた",
+      "うた.う"
+    ],
+    "hint": "Ghi nhớ chữ 歌 (Ca) qua nghĩa: hát.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_172",
+    "char": "説",
+    "level": "N4",
+    "hanViet": [
+      "Thuyết"
+    ],
+    "meanings": [
+      "Diễn giải"
+    ],
+    "onyomi": [
+      "セツ",
+      "ゼイ"
+    ],
+    "kunyomi": [
+      "と.く"
+    ],
+    "hint": "Ghi nhớ chữ 説 (Thuyết) qua nghĩa: diễn giải.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_173",
+    "char": "質",
+    "level": "N4",
+    "hanViet": [
+      "Chất"
+    ],
+    "meanings": [
+      "Hỏi"
+    ],
+    "onyomi": [
+      "シツ",
+      "シチ",
+      "チ"
+    ],
+    "kunyomi": [
+      "たち",
+      "ただ.す",
+      "もと",
+      "わりふ"
+    ],
+    "hint": "Ghi nhớ chữ 質 (Chất) qua nghĩa: hỏi.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_174",
+    "char": "館",
+    "level": "N4",
+    "hanViet": [
+      "Quán"
+    ],
+    "meanings": [
+      "Hội quán"
+    ],
+    "onyomi": [
+      "カン"
+    ],
+    "kunyomi": [
+      "やかた",
+      "たて"
+    ],
+    "hint": "Ghi nhớ chữ 館 (Quán) qua nghĩa: hội quán.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_175",
+    "char": "親",
+    "level": "N4",
+    "hanViet": [
+      "Thân"
+    ],
+    "meanings": [
+      "Thân thiết"
+    ],
+    "onyomi": [
+      "シン"
+    ],
+    "kunyomi": [
+      "おや",
+      "おや-",
+      "した.しい",
+      "した.しむ"
+    ],
+    "hint": "Ghi nhớ chữ 親 (Thân) qua nghĩa: thân thiết.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_176",
+    "char": "頭",
+    "level": "N4",
+    "hanViet": [
+      "Đầu"
+    ],
+    "meanings": [
+      "Đầu óc"
+    ],
+    "onyomi": [
+      "トウ",
+      "ズ",
+      "ト"
+    ],
+    "kunyomi": [
+      "あたま",
+      "かしら",
+      "かぶり",
+      "こうべ"
+    ],
+    "hint": "Ghi nhớ chữ 頭 (Đầu) qua nghĩa: đầu óc.",
+    "story": "",
+    "examples": []
+  },
+  {
+    "id": "kanji_n4_177",
+    "char": "薬",
+    "level": "N4",
+    "hanViet": [
+      "Dược"
+    ],
+    "meanings": [
+      "Thuốc"
+    ],
+    "onyomi": [
+      "ヤク"
+    ],
+    "kunyomi": [
+      "くすり"
+    ],
+    "hint": "Ghi nhớ chữ 薬 (Dược) qua nghĩa: thuốc.",
+    "story": "",
+    "examples": []
+  }
+]

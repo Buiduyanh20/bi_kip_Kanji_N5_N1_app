@@ -1,0 +1,63 @@
+[
+  {
+    "id": "vocab_n4_001",
+    "word": "夕方",
+    "reading": "ゆうがた",
+    "meanings": [
+      "Chiều tối"
+    ],
+    "level": "N4",
+    "kanjiIds": [
+      "kanji_n4_002",
+      "kanji_n4_012"
+    ]
+  },
+  {
+    "id": "vocab_n4_002",
+    "word": "薬",
+    "reading": "くすり",
+    "meanings": [
+      "Thuốc"
+    ],
+    "level": "N4",
+    "kanjiIds": [
+      "kanji_n4_177"
+    ]
+  },
+  {
+    "id": "vocab_n4_003",
+    "word": "夏",
+    "reading": "なつ",
+    "meanings": [
+      "Mùa hè"
+    ],
+    "level": "N4",
+    "kanjiIds": [
+      "kanji_n4_119"
+    ]
+  },
+  {
+    "id": "vocab_n4_004",
+    "word": "犬",
+    "reading": "いぬ",
+    "meanings": [
+      "Con chó"
+    ],
+    "level": "N4",
+    "kanjiIds": [
+      "kanji_n4_009"
+    ]
+  },
+  {
+    "id": "vocab_n4_005",
+    "word": "力",
+    "reading": "ちから",
+    "meanings": [
+      "Sức mạnh"
+    ],
+    "level": "N4",
+    "kanjiIds": [
+      "kanji_n4_001"
+    ]
+  }
+]
