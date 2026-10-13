@@ -57,7 +57,39 @@ class _ReviewScreenState extends ConsumerState<ReviewScreen> {
         : entries.where((e) => e.mistake.type == _filter).toList();
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Ôn tập')),
+      appBar: AppBar(
+        centerTitle: false,
+
+        title: const Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+
+          children: [
+            Text(
+              '🔄 Ôn tập',
+              style: TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.w800,
+                color: Colors.black87,
+              ),
+            ),
+
+            Text(
+              'Củng cố những chữ bạn chưa nhớ',
+              style: TextStyle(
+                fontSize: 13,
+                fontWeight: FontWeight.w400,
+                color: Colors.grey,
+              ),
+            ),
+          ],
+        ),
+
+        elevation: 0,
+
+        backgroundColor: Colors.transparent,
+
+        foregroundColor: Colors.black87,
+      ),
       body: SafeArea(
         child: Align(
           alignment: Alignment.topCenter,
