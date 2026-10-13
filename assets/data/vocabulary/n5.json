@@ -1,1 +1,63 @@
-[]
+[
+  {
+    "id": "vocab_n5_001",
+    "word": "母",
+    "reading": "はは",
+    "meanings": [
+      "Mẹ"
+    ],
+    "level": "N5",
+    "kanjiIds": [
+      "kanji_n5_001"
+    ]
+  },
+  {
+    "id": "vocab_n5_002",
+    "word": "父",
+    "reading": "ちち",
+    "meanings": [
+      "Bố"
+    ],
+    "level": "N5",
+    "kanjiIds": [
+      "kanji_n5_002"
+    ]
+  },
+  {
+    "id": "vocab_n5_003",
+    "word": "犬",
+    "reading": "いぬ",
+    "meanings": [
+      "Con chó"
+    ],
+    "level": "N5",
+    "kanjiIds": [
+      "kanji_n5_003"
+    ]
+  },
+  {
+    "id": "vocab_n5_004",
+    "word": "猫",
+    "reading": "ねこ",
+    "meanings": [
+      "Con mèo"
+    ],
+    "level": "N5",
+    "kanjiIds": [
+      "kanji_n5_004"
+    ]
+  },
+  {
+    "id": "vocab_n5_005",
+    "word": "学校",
+    "reading": "がっこう",
+    "meanings": [
+      "Trường học"
+    ],
+    "level": "N5",
+    "kanjiIds": [
+      "kanji_n5_005",
+      "kanji_n5_006"
+    ]
+  }
+]

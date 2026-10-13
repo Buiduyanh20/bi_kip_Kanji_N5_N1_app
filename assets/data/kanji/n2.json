@@ -1,1 +1,119 @@
-[]
+[
+  {
+    "id": "kanji_n2_001",
+    "char": "環",
+    "level": "N2",
+    "hanViet": [
+      "Hoàn"
+    ],
+    "meanings": [
+      "Vòng",
+      "Môi trường"
+    ],
+    "onyomi": [
+      "カン"
+    ],
+    "kunyomi": [],
+    "hint": "Vòng tròn bao quanh một vật.",
+    "story": "Hoàn cảnh là những thứ bao quanh con người.",
+    "examples": [
+      "環境",
+      "循環"
+    ]
+  },
+  {
+    "id": "kanji_n2_002",
+    "char": "際",
+    "level": "N2",
+    "hanViet": [
+      "Tế"
+    ],
+    "meanings": [
+      "Ranh giới",
+      "Dịp"
+    ],
+    "onyomi": [
+      "サイ"
+    ],
+    "kunyomi": [
+      "きわ"
+    ],
+    "hint": "Điểm tiếp xúc giữa hai vùng.",
+    "story": "Tế là nơi giao nhau giữa các sự vật.",
+    "examples": [
+      "国際",
+      "実際"
+    ]
+  },
+  {
+    "id": "kanji_n2_003",
+    "char": "責",
+    "level": "N2",
+    "hanViet": [
+      "Trách"
+    ],
+    "meanings": [
+      "Trách nhiệm",
+      "Đổ lỗi"
+    ],
+    "onyomi": [
+      "セキ"
+    ],
+    "kunyomi": [
+      "せめる"
+    ],
+    "hint": "Gánh lấy phần việc của mình.",
+    "story": "Người có trách nhiệm luôn chịu trách nhiệm về hành động.",
+    "examples": [
+      "責任",
+      "責める"
+    ]
+  },
+  {
+    "id": "kanji_n2_004",
+    "char": "識",
+    "level": "N2",
+    "hanViet": [
+      "Thức"
+    ],
+    "meanings": [
+      "Nhận biết",
+      "Tri thức"
+    ],
+    "onyomi": [
+      "シキ"
+    ],
+    "kunyomi": [],
+    "hint": "Dùng lời nói và suy nghĩ để nhận biết.",
+    "story": "Tri thức giúp con người hiểu thế giới.",
+    "examples": [
+      "知識",
+      "意識"
+    ]
+  },
+  {
+    "id": "kanji_n2_005",
+    "char": "率",
+    "level": "N2",
+    "hanViet": [
+      "Suất"
+    ],
+    "meanings": [
+      "Tỷ lệ",
+      "Dẫn dắt"
+    ],
+    "onyomi": [
+      "リツ",
+      "ソツ"
+    ],
+    "kunyomi": [
+      "ひきいる"
+    ],
+    "hint": "Dẫn đầu một nhóm người.",
+    "story": "Suất có nghĩa là dẫn đường hoặc tính toán tỷ lệ.",
+    "examples": [
+      "割合",
+      "率いる"
+    ]
+  }
+]

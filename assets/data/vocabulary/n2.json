@@ -1,1 +1,67 @@
-[]
+[
+  {
+    "id": "vocab_n2_001",
+    "word": "環境",
+    "reading": "かんきょう",
+    "meanings": [
+      "Môi trường"
+    ],
+    "level": "N2",
+    "kanjiIds": [
+      "kanji_n2_001",
+      "kanji_n2_002"
+    ]
+  },
+  {
+    "id": "vocab_n2_002",
+    "word": "責任",
+    "reading": "せきにん",
+    "meanings": [
+      "Trách nhiệm"
+    ],
+    "level": "N2",
+    "kanjiIds": [
+      "kanji_n2_003",
+      "kanji_n2_004"
+    ]
+  },
+  {
+    "id": "vocab_n2_003",
+    "word": "影響",
+    "reading": "えいきょう",
+    "meanings": [
+      "Ảnh hưởng"
+    ],
+    "level": "N2",
+    "kanjiIds": [
+      "kanji_n2_005",
+      "kanji_n2_006"
+    ]
+  },
+  {
+    "id": "vocab_n2_004",
+    "word": "判断",
+    "reading": "はんだん",
+    "meanings": [
+      "Phán đoán"
+    ],
+    "level": "N2",
+    "kanjiIds": [
+      "kanji_n2_007",
+      "kanji_n2_008"
+    ]
+  },
+  {
+    "id": "vocab_n2_005",
+    "word": "法律",
+    "reading": "ほうりつ",
+    "meanings": [
+      "Pháp luật"
+    ],
+    "level": "N2",
+    "kanjiIds": [
+      "kanji_n2_009",
+      "kanji_n2_010"
+    ]
+  }
+]

@@ -1,1 +1,121 @@
-[]
+[
+  {
+    "id": "kanji_n3_001",
+    "char": "愛",
+    "level": "N3",
+    "hanViet": [
+      "Ái"
+    ],
+    "meanings": [
+      "Yêu thương",
+      "Tình yêu"
+    ],
+    "onyomi": [
+      "アイ"
+    ],
+    "kunyomi": [
+      "いとしい"
+    ],
+    "hint": "Trái tim được che chở, gợi lên tình cảm yêu thương.",
+    "story": "Ái là tình cảm xuất phát từ trái tim dành cho người mình quý.",
+    "examples": [
+      "愛する",
+      "愛情"
+    ]
+  },
+  {
+    "id": "kanji_n3_002",
+    "char": "旅",
+    "level": "N3",
+    "hanViet": [
+      "Lữ"
+    ],
+    "meanings": [
+      "Du lịch",
+      "Chuyến đi"
+    ],
+    "onyomi": [
+      "リョ"
+    ],
+    "kunyomi": [
+      "たび"
+    ],
+    "hint": "Hình ảnh người mang hành lý đi xa.",
+    "story": "Lữ hành là chuyến đi xa, mỗi bước chân là một trải nghiệm mới.",
+    "examples": [
+      "旅行",
+      "旅人"
+    ]
+  },
+  {
+    "id": "kanji_n3_003",
+    "char": "橋",
+    "level": "N3",
+    "hanViet": [
+      "Kiều"
+    ],
+    "meanings": [
+      "Cây cầu"
+    ],
+    "onyomi": [
+      "キョウ"
+    ],
+    "kunyomi": [
+      "はし"
+    ],
+    "hint": "Cây cầu nối hai bờ với nhau.",
+    "story": "Kiều giúp con người vượt qua khoảng cách.",
+    "examples": [
+      "橋",
+      "歩道橋"
+    ]
+  },
+  {
+    "id": "kanji_n3_004",
+    "char": "深",
+    "level": "N3",
+    "hanViet": [
+      "Thâm"
+    ],
+    "meanings": [
+      "Sâu",
+      "Sâu sắc"
+    ],
+    "onyomi": [
+      "シン"
+    ],
+    "kunyomi": [
+      "ふかい"
+    ],
+    "hint": "Nước đi xuống nơi rất sâu.",
+    "story": "Thâm không chỉ sâu về khoảng cách mà còn sâu trong suy nghĩ.",
+    "examples": [
+      "深い",
+      "深夜"
+    ]
+  },
+  {
+    "id": "kanji_n3_005",
+    "char": "研",
+    "level": "N3",
+    "hanViet": [
+      "Nghiên"
+    ],
+    "meanings": [
+      "Nghiên cứu",
+      "Mài giũa"
+    ],
+    "onyomi": [
+      "ケン"
+    ],
+    "kunyomi": [
+      "とぐ"
+    ],
+    "hint": "Mài đá để trở nên sắc bén hơn.",
+    "story": "Nghiên cứu là quá trình mài giũa kiến thức.",
+    "examples": [
+      "研究",
+      "研修"
+    ]
+  }
+]

@@ -1,1 +1,67 @@
-[]
+[
+  {
+    "id": "vocab_n3_001",
+    "word": "経験",
+    "reading": "けいけん",
+    "meanings": [
+      "Kinh nghiệm"
+    ],
+    "level": "N3",
+    "kanjiIds": [
+      "kanji_n3_001",
+      "kanji_n3_002"
+    ]
+  },
+  {
+    "id": "vocab_n3_002",
+    "word": "社会",
+    "reading": "しゃかい",
+    "meanings": [
+      "Xã hội"
+    ],
+    "level": "N3",
+    "kanjiIds": [
+      "kanji_n3_003",
+      "kanji_n3_004"
+    ]
+  },
+  {
+    "id": "vocab_n3_003",
+    "word": "説明",
+    "reading": "せつめい",
+    "meanings": [
+      "Giải thích"
+    ],
+    "level": "N3",
+    "kanjiIds": [
+      "kanji_n3_005",
+      "kanji_n3_006"
+    ]
+  },
+  {
+    "id": "vocab_n3_004",
+    "word": "準備",
+    "reading": "じゅんび",
+    "meanings": [
+      "Chuẩn bị"
+    ],
+    "level": "N3",
+    "kanjiIds": [
+      "kanji_n3_007",
+      "kanji_n3_008"
+    ]
+  },
+  {
+    "id": "vocab_n3_005",
+    "word": "必要",
+    "reading": "ひつよう",
+    "meanings": [
+      "Cần thiết"
+    ],
+    "level": "N3",
+    "kanjiIds": [
+      "kanji_n3_009",
+      "kanji_n3_010"
+    ]
+  }
+]

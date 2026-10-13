@@ -1,1 +1,113 @@
-[]
+[
+  {
+    "id": "kanji_n1_001",
+    "char": "概",
+    "level": "N1",
+    "hanViet": [
+      "Khái"
+    ],
+    "meanings": [
+      "Khái quát",
+      "Đại khái"
+    ],
+    "onyomi": [
+      "ガイ"
+    ],
+    "kunyomi": [],
+    "hint": "Nhìn tổng thể thay vì từng chi tiết nhỏ.",
+    "story": "Khái niệm là cách nhìn tổng quát về một vấn đề.",
+    "examples": [
+      "概要",
+      "概念"
+    ]
+  },
+  {
+    "id": "kanji_n1_002",
+    "char": "矛",
+    "level": "N1",
+    "hanViet": [
+      "Mâu"
+    ],
+    "meanings": [
+      "Ngọn giáo"
+    ],
+    "onyomi": [
+      "ム"
+    ],
+    "kunyomi": [
+      "ほこ"
+    ],
+    "hint": "Vũ khí dùng để tấn công.",
+    "story": "Mâu là cây giáo trong câu chuyện mâu thuẫn.",
+    "examples": [
+      "矛盾"
+    ]
+  },
+  {
+    "id": "kanji_n1_003",
+    "char": "盾",
+    "level": "N1",
+    "hanViet": [
+      "Thuẫn"
+    ],
+    "meanings": [
+      "Cái khiên"
+    ],
+    "onyomi": [
+      "ジュン"
+    ],
+    "kunyomi": [
+      "たて"
+    ],
+    "hint": "Vật dùng để bảo vệ bản thân.",
+    "story": "Thuẫn bảo vệ trước các đòn tấn công.",
+    "examples": [
+      "矛盾"
+    ]
+  },
+  {
+    "id": "kanji_n1_004",
+    "char": "維",
+    "level": "N1",
+    "hanViet": [
+      "Duy"
+    ],
+    "meanings": [
+      "Duy trì",
+      "Giữ gìn"
+    ],
+    "onyomi": [
+      "イ"
+    ],
+    "kunyomi": [],
+    "hint": "Sợi dây giữ mọi thứ liên kết.",
+    "story": "Duy trì là giữ cho trạng thái tiếp tục tồn tại.",
+    "examples": [
+      "維持"
+    ]
+  },
+  {
+    "id": "kanji_n1_005",
+    "char": "促",
+    "level": "N1",
+    "hanViet": [
+      "Xúc"
+    ],
+    "meanings": [
+      "Thúc đẩy",
+      "Khuyến khích"
+    ],
+    "onyomi": [
+      "ソク"
+    ],
+    "kunyomi": [
+      "うながす"
+    ],
+    "hint": "Bàn chân tiến về phía trước nhanh hơn.",
+    "story": "Xúc tiến là làm cho một việc phát triển nhanh hơn.",
+    "examples": [
+      "促進",
+      "促す"
+    ]
+  }
+]

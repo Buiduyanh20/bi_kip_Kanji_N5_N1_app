@@ -23,8 +23,8 @@ class SettingsScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                SettingsHeaderWidget(),
-                SizedBox(height: 24),
+               // SettingsHeaderWidget(),
+               // SizedBox(height: 24),
                 SettingsSectionLabel('LỐI TẮT'),
                 SettingsShortcutsWidget(),
                 SizedBox(height: 24),
@@ -32,7 +32,7 @@ class SettingsScreen extends StatelessWidget {
                 ProgressTransferWidget(),
                 SizedBox(height: 24),
                 SettingsSectionLabel('VÙNG NGUY HIỂM'),
-                ResetDataDialogWidget(),
+                ResetLearningWidget(),
                 SizedBox(height: 24),
                 AppInfoSectionWidget(),
               ],

@@ -1,1 +1,67 @@
-[]
+[
+  {
+    "id": "vocab_n1_001",
+    "word": "概念",
+    "reading": "がいねん",
+    "meanings": [
+      "Khái niệm"
+    ],
+    "level": "N1",
+    "kanjiIds": [
+      "kanji_n1_001",
+      "kanji_n1_002"
+    ]
+  },
+  {
+    "id": "vocab_n1_002",
+    "word": "矛盾",
+    "reading": "むじゅん",
+    "meanings": [
+      "Mâu thuẫn"
+    ],
+    "level": "N1",
+    "kanjiIds": [
+      "kanji_n1_003",
+      "kanji_n1_004"
+    ]
+  },
+  {
+    "id": "vocab_n1_003",
+    "word": "認識",
+    "reading": "にんしき",
+    "meanings": [
+      "Nhận thức"
+    ],
+    "level": "N1",
+    "kanjiIds": [
+      "kanji_n1_005",
+      "kanji_n1_006"
+    ]
+  },
+  {
+    "id": "vocab_n1_004",
+    "word": "促進",
+    "reading": "そくしん",
+    "meanings": [
+      "Thúc đẩy"
+    ],
+    "level": "N1",
+    "kanjiIds": [
+      "kanji_n1_007",
+      "kanji_n1_008"
+    ]
+  },
+  {
+    "id": "vocab_n1_005",
+    "word": "維持",
+    "reading": "いじ",
+    "meanings": [
+      "Duy trì"
+    ],
+    "level": "N1",
+    "kanjiIds": [
+      "kanji_n1_009",
+      "kanji_n1_010"
+    ]
+  }
+]

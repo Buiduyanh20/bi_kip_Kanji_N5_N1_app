@@ -16,13 +16,15 @@ class HomeScreen extends StatelessWidget {
         icon: '📚',
         title: 'Học Kanji',
         description: 'Nhớ chữ qua âm Hán Việt, nghĩa và cách đọc.',
-        onTap: () => context.push(AppRoutes.quizConfigOf(QuizType.kanji)),
+        onTap: () =>
+            context.push('${AppRoutes.quizLevel}?type=${QuizType.kanji}'),
       ),
       ModeCard(
         icon: '📖',
         title: 'Học từ vựng',
         description: 'Luyện đọc và nghĩa của những từ quen thuộc.',
-        onTap: () => context.push(AppRoutes.quizConfigOf(QuizType.vocab)),
+        onTap: () =>
+            context.push('${AppRoutes.quizLevel}?type=${QuizType.vocabulary}'),
       ),
       ModeCard(
         icon: '🔍',
@@ -30,13 +32,6 @@ class HomeScreen extends StatelessWidget {
         description: 'Tìm Kanji, âm Hán Việt, nghĩa và cách đọc.',
         onTap: () => context.push(AppRoutes.kanjiSearch),
       ),
-      // Không có trên web: bottom nav của app không có tab Ôn tập.
-      // ModeCard(
-      //   icon: '🔄',
-      //   title: 'Ôn tập',
-      //   description: 'Ôn lại những câu bạn từng trả lời sai.',
-      //   onTap: () => context.push(AppRoutes.review),
-      // ),
     ];
 
     return Scaffold(
