@@ -2,11 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-
+import 'package:bikip_kanji_app/app/navigation/navigation_provider.dart';
 import 'package:bikip_kanji_app/app/router.dart';
 import 'package:bikip_kanji_app/app/theme/app_colors.dart';
 import 'package:bikip_kanji_app/features/settings/providers/settings_stats_provider.dart';
 import 'package:bikip_kanji_app/features/settings/widgets/legal_document_widgets.dart';
+
+import '../../../app/navigation/bottom_tabs.dart';
 
 /// Lối tắt: Yêu thích, Ôn tập, Góp ý.
 class SettingsShortcutsWidget extends ConsumerWidget {
@@ -38,7 +40,11 @@ class SettingsShortcutsWidget extends ConsumerWidget {
             ),
             trailing: const Icon(Icons.chevron_right),
             onTap: () {
-              // TODO: mở màn yêu thích khi đã có FavoriteScreen
+              final shell = ref.read(navigationShellProvider);
+
+              shell?.goBranch(
+                BottomTabs.favorite,
+              );
             },
           ),
           const Divider(height: 1),
@@ -51,7 +57,13 @@ class SettingsShortcutsWidget extends ConsumerWidget {
                   : '${s.reviewItems} chữ cần ôn',
             ),
             trailing: const Icon(Icons.chevron_right),
-            onTap: () => context.push(AppRoutes.review),
+            onTap: () {
+              final shell = ref.read(navigationShellProvider);
+
+              shell?.goBranch(
+                BottomTabs.review,
+              );
+            },
           ),
           const Divider(height: 1),
           ListTile(

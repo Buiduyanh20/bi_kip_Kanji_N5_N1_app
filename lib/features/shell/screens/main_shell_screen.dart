@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../../../app/navigation/navigation_provider.dart';
 import '../../../app/theme/app_colors.dart';
 
 class _TabItem {
@@ -43,27 +44,42 @@ const _tabs = [
   ),
 ];
 
-class MainShellScreen extends StatelessWidget {
+class MainShellScreen extends ConsumerStatefulWidget {
   final StatefulNavigationShell navigationShell;
 
   const MainShellScreen({super.key, required this.navigationShell});
 
-  void _onTabTap(int index) {
-    navigationShell.goBranch(
-      index,
-      // Bấm lại tab đang mở thì quay về màn hình gốc của tab đó
-      initialLocation: index == navigationShell.currentIndex,
-    );
+  @override
+  ConsumerState<MainShellScreen> createState() => _MainShellScreenState();
+}
+
+class _MainShellScreenState extends ConsumerState<MainShellScreen> {
+  @override
+  void initState() {
+    super.initState();
+
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      ref.read(navigationShellProvider.notifier).state = widget.navigationShell;
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.background,
-      body: navigationShell,
+
+      body: widget.navigationShell,
+
       bottomNavigationBar: _BottomNav(
-        currentIndex: navigationShell.currentIndex,
-        onTap: _onTabTap,
+        currentIndex: widget.navigationShell.currentIndex,
+
+        onTap: (index) {
+          widget.navigationShell.goBranch(
+            index,
+
+            initialLocation: index == widget.navigationShell.currentIndex,
+          );
+        },
       ),
     );
   }
