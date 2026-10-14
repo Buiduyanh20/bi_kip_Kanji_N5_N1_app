@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:bikip_kanji_app/data/models/enums.dart';
 import 'package:bikip_kanji_app/data/models/kanji.dart';
 import 'package:bikip_kanji_app/data/models/vocab.dart';
 
 class QuestionCardWidget extends StatelessWidget {
-  const QuestionCardWidget({super.key, required this.item});
+  const QuestionCardWidget({
+    super.key,
+    required this.item,
+    required this.method,
+  });
 
   final dynamic item;
+  final LearnMethod method;
 
   @override
   Widget build(BuildContext context) {
@@ -15,25 +21,46 @@ class QuestionCardWidget extends StatelessWidget {
         ? item.word
         : '';
 
-    return Card(
-      elevation: 1,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+    // Hán Việt: chỉ hiện chữ (ẩn subtitle vì đó là đáp án)
+    // Nghĩa / Cách đọc: có thể hiện gợi ý phụ nếu cần
+    final String? subtitle = switch (method) {
+      LearnMethod.hanviet => null,
+      LearnMethod.meaning => null, // đang đoán nghĩa → không lộ nghĩa
+      LearnMethod.reading => null, // đang đoán cách đọc → không lộ reading
+    };
+
+    return Container(
+      width: double.infinity,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(24),
+        border: Border.all(color: Colors.black12),
+      ),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 32),
+        padding: EdgeInsets.symmetric(
+          horizontal: 24,
+          vertical: subtitle == null ? 40 : 24,
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               text,
               textAlign: TextAlign.center,
-              style: const TextStyle(fontSize: 72, fontWeight: FontWeight.w700),
+              style: const TextStyle(
+                fontSize: 96,
+                fontWeight: FontWeight.bold,
+                height: 1.1,
+              ),
             ),
-            if (item is Vocab) ...[
-              const SizedBox(height: 8),
+            if (subtitle != null && subtitle.isNotEmpty) ...[
+              const SizedBox(height: 20),
               Text(
-                'Từ vựng',
-                style: TextStyle(
-                  color: Theme.of(context).colorScheme.onSurfaceVariant,
+                subtitle,
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.w600,
                 ),
               ),
             ],
@@ -43,3 +70,31 @@ class QuestionCardWidget extends StatelessWidget {
     );
   }
 }
+
+// import 'package:flutter/material.dart';
+// import 'package:bikip_kanji_app/data/models/enums.dart';
+//
+// class QuestionCardWidget extends StatelessWidget {
+//   const QuestionCardWidget({
+//     super.key,
+//     required this.item,
+//     required this.method,
+//   });
+//
+//   final dynamic item;
+//   final LearnMethod method;
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return const Center(
+//       child: Text(
+//         'DEMO',
+//         style: TextStyle(
+//           fontSize: 120,
+//           fontWeight: FontWeight.bold,
+//           color: Colors.red,
+//         ),
+//       ),
+//     );
+//   }
+// }

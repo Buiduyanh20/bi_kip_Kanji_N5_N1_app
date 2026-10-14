@@ -9,6 +9,8 @@ import 'package:bikip_kanji_app/features/home/widgets/mode_card_widget.dart';
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
+  static const double _maxWidth = 896;
+
   @override
   Widget build(BuildContext context) {
     final cards = <Widget>[
@@ -35,18 +37,25 @@ class HomeScreen extends StatelessWidget {
     ];
 
     return Scaffold(
-      body: Align(
-        alignment: Alignment.topCenter,
-        child: ConstrainedBox(
-          constraints: const BoxConstraints(maxWidth: 896),
-          child: ListView(
-            padding: const EdgeInsets.fromLTRB(16, 10, 16, 24),
-            children: [
-              const SizedBox(height: 20),
-              const HomeHero(child: HomeStatusView()),
-              const SizedBox(height: 24),
-              _ModeGrid(cards: cards),
-            ],
+      body: SafeArea(
+        child: Align(
+          alignment: Alignment.topCenter,
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: _maxWidth),
+            child: LayoutBuilder(
+              builder: (context, constraints) {
+                final horizontal = constraints.maxWidth < 360 ? 12.0 : 16.0;
+                return ListView(
+                  padding: EdgeInsets.fromLTRB(horizontal, 12, horizontal, 24),
+                  children: [
+                    const SizedBox(height: 8),
+                    const HomeHero(child: HomeStatusView()),
+                    const SizedBox(height: 24),
+                    _ModeGrid(cards: cards),
+                  ],
+                );
+              },
+            ),
           ),
         ),
       ),
@@ -61,20 +70,22 @@ class _ModeGrid extends StatelessWidget {
   final List<Widget> cards;
 
   @override
-  Widget build(BuildContext context) => LayoutBuilder(
-    builder: (context, constraints) {
-      const gap = 16.0;
-      final twoColumns = constraints.maxWidth >= 600;
-      final width = twoColumns
-          ? (constraints.maxWidth - gap) / 2
-          : constraints.maxWidth;
-      return Wrap(
-        spacing: gap,
-        runSpacing: gap,
-        children: [
-          for (final card in cards) SizedBox(width: width, child: card),
-        ],
-      );
-    },
-  );
+  Widget build(BuildContext context) {
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        const gap = 16.0;
+        final twoColumns = constraints.maxWidth >= 600;
+        final width = twoColumns
+            ? (constraints.maxWidth - gap) / 2
+            : constraints.maxWidth;
+        return Wrap(
+          spacing: gap,
+          runSpacing: gap,
+          children: [
+            for (final card in cards) SizedBox(width: width, child: card),
+          ],
+        );
+      },
+    );
+  }
 }

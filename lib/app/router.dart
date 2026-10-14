@@ -14,7 +14,7 @@ import '../features/settings/screens/privacy_policy_screen.dart';
 import '../features/settings/screens/settings_screen.dart';
 import '../features/settings/screens/terms_of_service_screen.dart';
 import '../features/shell/screens/main_shell_screen.dart';
-import '../features/learn/screens/quiz_level_screen.dart';
+import '../features/learn/screens/quiz_level_screen.dart' hide QuizConfigScreen;
 
 /// Các loại quiz, truyền qua query param `type`.
 abstract final class QuizType {
@@ -138,7 +138,6 @@ GoRouter createAppRouter({required bool hasSeenWelcome}) {
         builder: (context, state) {
           final typeStr = state.uri.queryParameters['type'] ?? 'kanji';
           final levelStr = state.uri.queryParameters['level'] ?? 'n5';
-
           return QuizConfigScreen(
             contentType: ContentType.values.byName(typeStr),
             level: JlptLevel.values.byName(levelStr),

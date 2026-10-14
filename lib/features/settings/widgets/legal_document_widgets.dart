@@ -24,6 +24,8 @@ class LegalDocumentPage extends StatelessWidget {
   final String titleVi;
   final List<Widget> sections;
 
+  static const double _maxWidth = 640;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,25 +34,39 @@ class LegalDocumentPage extends StatelessWidget {
         child: Align(
           alignment: Alignment.topCenter,
           child: ConstrainedBox(
-            constraints: const BoxConstraints(maxWidth: 640),
-            child: SingleChildScrollView(
-              padding: const EdgeInsets.all(24),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.stretch,
-                children: [
-                  LegalHeader(titleEn: titleEn, titleVi: titleVi),
-                  for (final section in sections) ...[
-                    const SizedBox(height: 16),
-                    section,
-                  ],
-                  const SizedBox(height: 24),
-                  const Text(
-                    '$kLegalAppName v1.0.0',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 12, color: AppColors.textHint),
+            constraints: const BoxConstraints(maxWidth: _maxWidth),
+            child: LayoutBuilder(
+              builder: (context, constraints) {
+                final horizontal = constraints.maxWidth < 360 ? 12.0 : 24.0;
+
+                return SingleChildScrollView(
+                  padding: EdgeInsets.fromLTRB(
+                    horizontal,
+                    16,
+                    horizontal,
+                    24,
                   ),
-                ],
-              ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      LegalHeader(titleEn: titleEn, titleVi: titleVi),
+                      for (final section in sections) ...[
+                        const SizedBox(height: 16),
+                        section,
+                      ],
+                      const SizedBox(height: 24),
+                      const Text(
+                        '$kLegalAppName v1.0.0',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 12,
+                          color: AppColors.textHint,
+                        ),
+                      ),
+                    ],
+                  ),
+                );
+              },
             ),
           ),
         ),
@@ -67,8 +83,12 @@ class LegalHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final narrow = MediaQuery.sizeOf(context).width < 360;
+    final titleSize = narrow ? 18.0 : 22.0;
+    final subtitleSize = narrow ? 14.0 : 16.0;
+
     return Container(
-      padding: const EdgeInsets.all(20),
+      padding: EdgeInsets.all(narrow ? 14 : 20),
       decoration: BoxDecoration(
         color: AppColors.primary.withValues(alpha: 0.06),
         borderRadius: BorderRadius.circular(20),
@@ -79,12 +99,12 @@ class LegalHeader extends StatelessWidget {
         children: [
           Row(
             children: [
-              const ExcludeSemantics(
+              ExcludeSemantics(
                 child: Text(
                   '漢',
-                  locale: Locale('ja', 'JP'),
+                  locale: const Locale('ja', 'JP'),
                   style: TextStyle(
-                    fontSize: 32,
+                    fontSize: narrow ? 26 : 32,
                     fontWeight: FontWeight.w700,
                     color: AppColors.primary,
                   ),
@@ -114,16 +134,16 @@ class LegalHeader extends StatelessWidget {
           const SizedBox(height: 16),
           Text(
             titleEn,
-            style: const TextStyle(
-              fontSize: 22,
+            style: TextStyle(
+              fontSize: titleSize,
               fontWeight: FontWeight.w800,
               color: AppColors.textPrimary,
             ),
           ),
           Text(
             titleVi,
-            style: const TextStyle(
-              fontSize: 16,
+            style: TextStyle(
+              fontSize: subtitleSize,
               fontWeight: FontWeight.w600,
               color: AppColors.textSecondary,
             ),
@@ -156,8 +176,10 @@ class LegalSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final narrow = MediaQuery.sizeOf(context).width < 360;
+
     return Container(
-      padding: const EdgeInsets.all(20),
+      padding: EdgeInsets.all(narrow ? 14 : 20),
       decoration: BoxDecoration(
         color: AppColors.background,
         borderRadius: BorderRadius.circular(16),

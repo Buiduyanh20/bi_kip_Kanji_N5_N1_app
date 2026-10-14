@@ -13,10 +13,11 @@ class WelcomeScreen extends StatefulWidget {
 
 class _WelcomeScreenState extends State<WelcomeScreen>
     with SingleTickerProviderStateMixin {
-  late AnimationController _controller;
+  static const double _maxWidth = 480;
 
-  late Animation<double> _fadeAnimation;
-  late Animation<double> _scaleAnimation;
+  late final AnimationController _controller;
+  late final Animation<double> _fadeAnimation;
+  late final Animation<double> _scaleAnimation;
 
   @override
   void initState() {
@@ -27,15 +28,14 @@ class _WelcomeScreenState extends State<WelcomeScreen>
       duration: const Duration(seconds: 2),
     );
 
-    _fadeAnimation = CurvedAnimation(parent: _controller, curve: Curves.easeIn);
+    _fadeAnimation =
+        CurvedAnimation(parent: _controller, curve: Curves.easeIn);
 
-    _scaleAnimation = Tween<double>(
-      begin: 0.7,
-      end: 1,
-    ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeOutBack));
+    _scaleAnimation = Tween<double>(begin: 0.7, end: 1).animate(
+      CurvedAnimation(parent: _controller, curve: Curves.easeOutBack),
+    );
 
     _controller.forward();
-
     _goHomeAfterDelay();
   }
 
@@ -43,18 +43,15 @@ class _WelcomeScreenState extends State<WelcomeScreen>
     await Future.delayed(const Duration(seconds: 4));
 
     final prefs = await SharedPreferences.getInstance();
-
     await prefs.setBool('has_seen_welcome', true);
 
     if (!mounted) return;
-
     context.go(AppRoutes.home);
   }
 
   @override
   void dispose() {
     _controller.dispose();
-
     super.dispose();
   }
 
@@ -62,91 +59,89 @@ class _WelcomeScreenState extends State<WelcomeScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xffFAF7F0),
-
       body: SafeArea(
-        child: Center(
-          child: FadeTransition(
-            opacity: _fadeAnimation,
+        child: Align(
+          alignment: Alignment.center,
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: _maxWidth),
+            child: LayoutBuilder(
+              builder: (context, constraints) {
+                final narrow = constraints.maxWidth < 360;
+                final logoSize = narrow ? 88.0 : 110.0;
+                final titleSize = narrow ? 28.0 : 34.0;
+                final subtitleSize = narrow ? 15.0 : 18.0;
+                final kanjiSize = narrow ? 48.0 : 60.0;
+                final stepSize = narrow ? 20.0 : 24.0;
 
-            child: ScaleTransition(
-              scale: _scaleAnimation,
-
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-
-                children: [
-                  // Logo
-                  Container(
-                    width: 110,
-
-                    height: 110,
-
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-
-                      color: Colors.white,
-
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black12,
-
-                          blurRadius: 20,
-
-                          offset: Offset(0, 10),
-                        ),
-                      ],
-                    ),
-
-                    child: Padding(
-                      padding: const EdgeInsets.all(15),
-                      child: Image.asset(
-                        "assets/icon/app_icon.png",
-                        fit: BoxFit.contain,
+                return SingleChildScrollView(
+                  padding: EdgeInsets.symmetric(
+                    horizontal: narrow ? 12 : 24,
+                    vertical: 24,
+                  ),
+                  child: FadeTransition(
+                    opacity: _fadeAnimation,
+                    child: ScaleTransition(
+                      scale: _scaleAnimation,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          SizedBox(height: narrow ? 12 : 24),
+                          Container(
+                            width: logoSize,
+                            height: logoSize,
+                            decoration: const BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.white,
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black12,
+                                  blurRadius: 20,
+                                  offset: Offset(0, 10),
+                                ),
+                              ],
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.all(15),
+                              child: Image.asset(
+                                'assets/icon/app_icon.png',
+                                fit: BoxFit.contain,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: narrow ? 20 : 30),
+                          Text(
+                            'Bí Kíp Kanji',
+                            style: TextStyle(
+                              fontSize: titleSize,
+                              fontWeight: FontWeight.bold,
+                              color: const Color(0xff222222),
+                            ),
+                          ),
+                          const SizedBox(height: 12),
+                          Text(
+                            'Người Việt học Kanji\n'
+                                'dễ hơn bằng âm Hán Việt',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: subtitleSize,
+                              height: 1.5,
+                              color: Colors.black54,
+                            ),
+                          ),
+                          SizedBox(height: narrow ? 32 : 50),
+                          _buildKanjiFlow(
+                            kanjiSize: kanjiSize,
+                            stepSize: stepSize,
+                          ),
+                          SizedBox(height: narrow ? 32 : 50),
+                          const CircularProgressIndicator(strokeWidth: 2),
+                          SizedBox(height: narrow ? 12 : 24),
+                        ],
                       ),
                     ),
                   ),
-
-                  const SizedBox(height: 30),
-
-                  const Text(
-                    "Bí Kíp Kanji",
-
-                    style: TextStyle(
-                      fontSize: 34,
-
-                      fontWeight: FontWeight.bold,
-
-                      color: Color(0xff222222),
-                    ),
-                  ),
-
-                  const SizedBox(height: 12),
-
-                  const Text(
-                    "Người Việt học Kanji\n"
-                    "dễ hơn bằng âm Hán Việt",
-
-                    textAlign: TextAlign.center,
-
-                    style: TextStyle(
-                      fontSize: 18,
-
-                      height: 1.5,
-
-                      color: Colors.black54,
-                    ),
-                  ),
-
-                  const SizedBox(height: 50),
-
-                  // Kanji learning flow
-                  _buildKanjiFlow(),
-
-                  const SizedBox(height: 50),
-
-                  const CircularProgressIndicator(strokeWidth: 2),
-                ],
-              ),
+                );
+              },
             ),
           ),
         ),
@@ -154,35 +149,28 @@ class _WelcomeScreenState extends State<WelcomeScreen>
     );
   }
 
-  Widget _buildKanjiFlow() {
+  Widget _buildKanjiFlow({
+    required double kanjiSize,
+    required double stepSize,
+  }) {
     return Column(
       children: [
-        const Text(
-          "母",
-
-          style: TextStyle(fontSize: 60, fontWeight: FontWeight.bold),
+        Text(
+          '母',
+          style: TextStyle(fontSize: kanjiSize, fontWeight: FontWeight.bold),
         ),
-
         const SizedBox(height: 8),
-
         _arrow(),
-
-        const Text(
-          "Mẫu",
-
-          style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
+        Text(
+          'Mẫu',
+          style: TextStyle(fontSize: stepSize, fontWeight: FontWeight.w600),
         ),
-
         _arrow(),
-
-        const Text("Mẹ", style: TextStyle(fontSize: 24)),
-
+        Text('Mẹ', style: TextStyle(fontSize: stepSize)),
         _arrow(),
-
-        const Text(
-          "はは",
-
-          style: TextStyle(fontSize: 24, color: Colors.blueGrey),
+        Text(
+          'はは',
+          style: TextStyle(fontSize: stepSize, color: Colors.blueGrey),
         ),
       ],
     );
@@ -191,8 +179,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
   Widget _arrow() {
     return const Padding(
       padding: EdgeInsets.symmetric(vertical: 4),
-
-      child: Text("↓", style: TextStyle(fontSize: 22, color: Colors.grey)),
+      child: Text('↓', style: TextStyle(fontSize: 22, color: Colors.grey)),
     );
   }
 }

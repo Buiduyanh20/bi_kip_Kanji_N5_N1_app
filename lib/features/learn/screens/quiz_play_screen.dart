@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:bikip_kanji_app/data/repositories/providers.dart';
 import 'package:bikip_kanji_app/data/models/quiz_session.dart';
+
 import '../providers/quiz_controller.dart';
 import '../widgets/answer_input_widget.dart';
 import '../widgets/question_card_widget.dart';
@@ -12,16 +13,15 @@ import '../widgets/quiz_summary_widget.dart';
 class QuizPlayScreen extends ConsumerWidget {
   const QuizPlayScreen({super.key});
 
+  static const double _maxWidth = 672;
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final state = ref.watch(quizControllerProvider);
-
     final session = state.session;
 
     if (session == null) {
-      return const Scaffold(
-        body: Center(child: Text('KhÃ´ng cÃ³ phiÃªn há»c')),
-      );
+      return const Scaffold(body: Center(child: Text('Không có phiên học')));
     }
 
     if (session.phase == QuizPhase.finished) {
@@ -33,73 +33,124 @@ class QuizPlayScreen extends ConsumerWidget {
 
       return Scaffold(
         appBar: AppBar(),
-        body: Padding(
-          padding: const EdgeInsets.all(16),
-          child: QuizSummaryWidget(
-            correct: correct,
-            total: session.questions.length,
-            mistakes: mistakes,
-            reviewMode: session.mode == QuizMode.review,
-            onReview: () {
-              ref.read(quizControllerProvider.notifier).reviewMistakes();
-            },
-            onRestart: () {
-              ref.read(quizControllerProvider.notifier).restart();
+        body: SafeArea(
+          child: Align(
+            alignment: Alignment.topCenter,
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(maxWidth: _maxWidth),
+              child: LayoutBuilder(
+                builder: (context, constraints) {
+                  final horizontal = constraints.maxWidth < 360 ? 12.0 : 16.0;
 
-              Navigator.pop(context);
-            },
+                  return SingleChildScrollView(
+                    padding: EdgeInsets.fromLTRB(horizontal, 8, horizontal, 16),
+                    child: QuizSummaryWidget(
+                      correct: correct,
+                      total: session.questions.length,
+                      mistakes: mistakes,
+                      reviewMode: session.mode == QuizMode.review,
+                      onReview: () {
+                        ref
+                            .read(quizControllerProvider.notifier)
+                            .reviewMistakes();
+                      },
+                      onRestart: () {
+                        ref.read(quizControllerProvider.notifier).restart();
+
+                        Navigator.pop(context);
+                      },
+                    ),
+                  );
+                },
+              ),
+            ),
           ),
         ),
       );
     }
 
     final question = session.currentQuestion!;
-
     final repo = ref.read(contentRepositoryProvider);
 
     final item = repo.itemById(question.contentType, question.itemId);
 
     if (item == null) {
       return const Scaffold(
-        body: Center(child: Text('KhÃ´ng tÃ¬m tháº¥y dá»¯ liá»‡u')),
+        body: Center(child: Text('Không tìm thấy dữ liệu')),
       );
     }
 
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       appBar: AppBar(),
-      body: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          children: [
-            QuizProgressBarWidget(
-              current: session.currentIndex + 1,
-              total: session.questions.length,
+      body: SafeArea(
+        child: Align(
+          alignment: Alignment.topCenter,
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: _maxWidth),
+            child: LayoutBuilder(
+              builder: (context, constraints) {
+                final horizontal = constraints.maxWidth < 360 ? 12.0 : 16.0;
+
+                return Padding(
+                  padding: EdgeInsets.fromLTRB(horizontal, 8, horizontal, 12),
+                  child: Column(
+                    children: [
+                      QuizProgressBarWidget(
+                        current: session.currentIndex + 1,
+                        total: session.questions.length,
+                      ),
+
+                      const SizedBox(height: 16),
+
+                      Expanded(
+                        child: SingleChildScrollView(
+                          child: Column(
+                            children: [
+                              QuestionCardWidget(
+                                item: item,
+                                method: session.method,
+                              ),
+
+                              const SizedBox(height: 16),
+
+                              if (session.phase == QuizPhase.answering)
+                                AnswerInputWidget(
+                                  onSubmit: (answer) {
+                                    ref
+                                        .read(quizControllerProvider.notifier)
+                                        .submit(answer);
+                                  },
+                                ),
+
+                              if (session.phase == QuizPhase.result &&
+                                  session.lastResult != null)
+                                ResultPanelWidget(
+                                  item: item,
+                                  method: session.method,
+                                  correct: session.lastResult!.correct,
+                                  status: session.lastResult!.status,
+                                  input: session.lastInput ?? '',
+                                  expected: session.lastResult!.expected,
+                                  last:
+                                      session.currentIndex ==
+                                      session.questions.length - 1,
+                                  onNext: () {
+                                    ref
+                                        .read(quizControllerProvider.notifier)
+                                        .next();
+                                  },
+                                ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                );
+              },
             ),
-
-            const SizedBox(height: 24),
-
-            Expanded(child: QuestionCardWidget(item: item)),
-
-            if (session.phase == QuizPhase.answering)
-              AnswerInputWidget(
-                onSubmit: (answer) {
-                  ref.read(quizControllerProvider.notifier).submit(answer);
-                },
-              ),
-
-            if (session.phase == QuizPhase.result && session.lastResult != null)
-              ResultPanelWidget(
-                item: item,
-                correct: session.lastResult!.correct,
-                status: session.lastResult!.status,
-                input: session.lastInput ?? '',
-                expected: session.lastResult!.expected,
-                last: session.currentIndex == session.questions.length - 1,
-                onNext: () {
-                  ref.read(quizControllerProvider.notifier).next();
-                },
-              ),
-          ],
+          ),
         ),
       ),
     );

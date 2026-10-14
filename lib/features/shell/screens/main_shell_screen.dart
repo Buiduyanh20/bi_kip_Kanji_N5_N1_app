@@ -67,16 +67,12 @@ class _MainShellScreenState extends ConsumerState<MainShellScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.background,
-
       body: widget.navigationShell,
-
       bottomNavigationBar: _BottomNav(
         currentIndex: widget.navigationShell.currentIndex,
-
         onTap: (index) {
           widget.navigationShell.goBranch(
             index,
-
             initialLocation: index == widget.navigationShell.currentIndex,
           );
         },
@@ -93,6 +89,13 @@ class _BottomNav extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.sizeOf(context).width;
+    final compact = width < 360;
+    final barHeight = compact ? 56.0 : 60.0;
+    final iconSize = compact ? 18.0 : 20.0;
+    final labelSize = compact ? 10.0 : 11.0;
+    final pillWidth = compact ? 36.0 : 40.0;
+
     return Container(
       decoration: const BoxDecoration(
         color: AppColors.background,
@@ -108,15 +111,18 @@ class _BottomNav extends StatelessWidget {
       child: SafeArea(
         top: false,
         child: SizedBox(
-          height: 60,
+          height: barHeight,
           child: Row(
             children: List.generate(
               _tabs.length,
-              (i) => Expanded(
+                  (i) => Expanded(
                 child: _NavItem(
                   tab: _tabs[i],
                   isActive: currentIndex == i,
                   onTap: () => onTap(i),
+                  iconSize: iconSize,
+                  labelSize: labelSize,
+                  pillWidth: pillWidth,
                 ),
               ),
             ),
@@ -131,11 +137,17 @@ class _NavItem extends StatelessWidget {
   final _TabItem tab;
   final bool isActive;
   final VoidCallback onTap;
+  final double iconSize;
+  final double labelSize;
+  final double pillWidth;
 
   const _NavItem({
     required this.tab,
     required this.isActive,
     required this.onTap,
+    required this.iconSize,
+    required this.labelSize,
+    required this.pillWidth,
   });
 
   @override
@@ -149,7 +161,7 @@ class _NavItem extends StatelessWidget {
           AnimatedContainer(
             duration: const Duration(milliseconds: 200),
             curve: Curves.easeOut,
-            width: 40,
+            width: pillWidth,
             height: 28,
             decoration: BoxDecoration(
               color: isActive
@@ -163,7 +175,7 @@ class _NavItem extends StatelessWidget {
                 child: Icon(
                   isActive ? tab.iconActive : tab.icon,
                   key: ValueKey(isActive),
-                  size: 20,
+                  size: iconSize,
                   color: isActive ? AppColors.primary : AppColors.navInactive,
                 ),
               ),
@@ -173,12 +185,16 @@ class _NavItem extends StatelessWidget {
           AnimatedDefaultTextStyle(
             duration: const Duration(milliseconds: 200),
             style: TextStyle(
-              fontSize: 11,
+              fontSize: labelSize,
               fontWeight: isActive ? FontWeight.w700 : FontWeight.w400,
               color: isActive ? AppColors.primary : AppColors.navInactive,
               height: 1,
             ),
-            child: Text(tab.label),
+            child: Text(
+              tab.label,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+            ),
           ),
         ],
       ),
