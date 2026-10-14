@@ -8,6 +8,7 @@ import 'package:bikip_kanji_app/data/models/enums.dart';
 import 'package:bikip_kanji_app/data/models/quiz_session.dart';
 import 'package:bikip_kanji_app/data/providers/app_state.dart';
 import 'package:bikip_kanji_app/data/repositories/providers.dart';
+import '../../../data/models/quiz_question.dart';
 import 'quiz_state.dart';
 
 class QuizController extends Notifier<QuizState> {
@@ -73,6 +74,33 @@ class QuizController extends Notifier<QuizState> {
         level: firstItem.level,
         method: first.method,
         questions: questions,
+      ),
+      error: null,
+    );
+    return true;
+  }
+
+  /// Ôn tập từ danh sách câu hỏi cho trước (đã lọc/cắt ở màn Ôn tập).
+  /// Xáo trộn như `buildReviewQuiz`. Trả về false nếu không có câu nào.
+  bool startReviewFromQuestions(List<QuizQuestion> questions) {
+    final content = ref.read(contentRepositoryProvider);
+
+    final valid = questions
+        .where((q) => content.itemById(q.contentType, q.itemId) != null)
+        .toList();
+    if (valid.isEmpty) return false;
+
+    final mixed = shuffled(valid, Random());
+    final first = mixed.first;
+    final firstItem = content.itemById(first.contentType, first.itemId)!;
+
+    state = state.copyWith(
+      session: QuizSession(
+        mode: QuizMode.review,
+        contentType: first.contentType,
+        level: firstItem.level,
+        method: first.method,
+        questions: mixed,
       ),
       error: null,
     );

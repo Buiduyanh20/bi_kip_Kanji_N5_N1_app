@@ -3,43 +3,44 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import 'package:bikip_kanji_app/app/router.dart';
-import 'package:bikip_kanji_app/app/theme/app_colors.dart';
 import 'package:bikip_kanji_app/data/models/enums.dart';
 import 'package:bikip_kanji_app/features/learn/providers/quiz_controller.dart';
 import 'package:bikip_kanji_app/features/review/providers/review_provider.dart';
-import 'package:bikip_kanji_app/features/review/providers/review_empty_state.dart';
+import 'package:bikip_kanji_app/features/review/widgets/review_empty_state.dart';
+import 'package:bikip_kanji_app/features/review/widgets/review_filter_bar.dart';
 import 'package:bikip_kanji_app/features/review/widgets/review_item_card.dart';
+import 'package:bikip_kanji_app/features/review/widgets/review_start_bar.dart';
+import 'package:bikip_kanji_app/features/review/widgets/review_summary_card.dart';
 
-class ReviewScreen extends ConsumerStatefulWidget {
+class ReviewScreen extends ConsumerWidget {
   const ReviewScreen({super.key});
 
-  @override
-  ConsumerState<ReviewScreen> createState() => _ReviewScreenState();
-}
-
-class _ReviewScreenState extends ConsumerState<ReviewScreen> {
   static const double _maxWidth = 672;
+  static const int _quickCount = 10;
 
-  ContentType? _filter; // null = Tất cả
-
-  void _startReview() {
-    // Web: dựng quiz từ TOÀN BỘ lỗi sai, bỏ qua bộ lọc.
-    final started = ref.read(quizControllerProvider.notifier).startReview();
+  void _start(
+      BuildContext context,
+      WidgetRef ref,
+      List<ReviewEntry> entries,
+      ) {
+    final started = ref
+        .read(quizControllerProvider.notifier)
+        .startReviewFromQuestions([for (final e in entries) e.question]);
     if (!started) {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Chưa có câu nào cần ôn.')),
       );
       return;
     }
-    // Ôn tập là tab: dùng push để quay về đúng tab khi đóng quiz.
+    // Ôn tập là tab: dùng push để đóng quiz thì quay về đúng tab.
     context.push(AppRoutes.quizPlayOf(QuizType.review));
   }
 
   @override
-  Widget build(BuildContext context) {
-    final entries = ref.watch(reviewEntriesProvider);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final all = ref.watch(reviewEntriesProvider);
 
-    if (entries.isEmpty) {
+    if (all.isEmpty) {
       return Scaffold(
         appBar: AppBar(title: const Text('Ôn tập')),
         body: Align(
@@ -55,9 +56,16 @@ class _ReviewScreenState extends ConsumerState<ReviewScreen> {
       );
     }
 
-    final filtered = _filter == null
-        ? entries
-        : entries.where((e) => e.mistake.type == _filter).toList();
+    final filtered = ref.watch(filteredReviewEntriesProvider);
+    final stats = ref.watch(reviewStatsProvider);
+    final filter = ref.watch(reviewFilterProvider);
+
+    // "Khó nhất": luôn sắp theo số lần sai, bất kể kiểu sắp xếp đang chọn.
+    List<ReviewEntry> hardest() {
+      final byWrong = [...filtered]
+        ..sort((a, b) => b.mistake.wrong.compareTo(a.mistake.wrong));
+      return byWrong.take(_quickCount).toList();
+    }
 
     return Scaffold(
       appBar: AppBar(title: const Text('Ôn tập')),
@@ -72,30 +80,24 @@ class _ReviewScreenState extends ConsumerState<ReviewScreen> {
                   child: ListView(
                     padding: const EdgeInsets.all(16),
                     children: [
-                      // Web: subtitle dùng tổng số, không đổi theo bộ lọc.
-                      Text(
-                        '${entries.length} mục cần cải thiện',
-                        style: const TextStyle(
-                          fontSize: 14,
-                          color: AppColors.textHint,
-                        ),
-                      ),
+                      ReviewSummaryCard(stats: stats),
                       const SizedBox(height: 16),
-                      Wrap(
-                        spacing: 8,
-                        runSpacing: 8,
-                        children: [
-                          _chip('Tất cả', null),
-                          _chip('Kanji', ContentType.kanji),
-                          _chip('Từ vựng', ContentType.vocabulary),
-                        ],
-                      ),
+                      const ReviewFilterBar(),
                       const SizedBox(height: 16),
                       if (filtered.isEmpty)
-                        const Padding(
-                          padding: EdgeInsets.symmetric(vertical: 32),
-                          child: Center(
-                            child: Text('Không có mục nào trong nhóm này.'),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 24),
+                          child: Column(
+                            children: [
+                              const Text('Không có mục nào trong nhóm này.'),
+                              if (!filter.isDefault)
+                                TextButton(
+                                  onPressed: () => ref
+                                      .read(reviewFilterProvider.notifier)
+                                      .reset(),
+                                  child: const Text('Bỏ bộ lọc'),
+                                ),
+                            ],
                           ),
                         ),
                       for (final entry in filtered)
@@ -114,16 +116,13 @@ class _ReviewScreenState extends ConsumerState<ReviewScreen> {
                     ],
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
-                  child: SizedBox(
-                    width: double.infinity,
-                    height: 52,
-                    child: FilledButton(
-                      onPressed: _startReview,
-                      child: Text('Ôn tập (${entries.length} mục)'),
-                    ),
-                  ),
+                ReviewStartBar(
+                  count: filtered.length,
+                  quickCount: _quickCount,
+                  onStart: () => _start(context, ref, filtered),
+                  onQuick: filtered.length > _quickCount
+                      ? () => _start(context, ref, hardest())
+                      : null,
                 ),
               ],
             ),
@@ -132,11 +131,4 @@ class _ReviewScreenState extends ConsumerState<ReviewScreen> {
       ),
     );
   }
-
-  Widget _chip(String label, ContentType? value) => ChoiceChip(
-    label: Text(label),
-    selected: _filter == value,
-    showCheckmark: false,
-    onSelected: (_) => setState(() => _filter = value),
-  );
 }

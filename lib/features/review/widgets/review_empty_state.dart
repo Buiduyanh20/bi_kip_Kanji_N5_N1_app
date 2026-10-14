@@ -37,7 +37,8 @@ class ReviewEmptyState extends StatelessWidget {
           FilledButton(
             style: FilledButton.styleFrom(minimumSize: const Size(0, 48)),
             onPressed: () =>
-                context.push(AppRoutes.quizLevelOf(QuizType.kanji)),
+               // context.push(AppRoutes.quizLevelOf(QuizType.kanji)),
+            context.go(AppRoutes.home),
             child: const Text('Học Kanji'),
           ),
         ],
