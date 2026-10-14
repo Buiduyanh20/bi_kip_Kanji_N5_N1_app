@@ -6,8 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:share_plus/share_plus.dart';
 
-import 'package:bikip_kanji_app/app/theme/app_colors.dart';
-import 'package:bikip_kanji_app/core/logic/backup_codec.dart';
 import 'package:bikip_kanji_app/data/providers/app_state.dart';
 import 'package:bikip_kanji_app/data/repositories/backup_repository.dart';
 

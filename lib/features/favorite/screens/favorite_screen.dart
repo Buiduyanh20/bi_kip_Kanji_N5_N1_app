@@ -161,7 +161,7 @@ class _FavoriteScreenState extends ConsumerState<FavoriteScreen> {
                           16,
                         ),
                         itemCount: filtered.length,
-                        separatorBuilder: (_, __) =>
+                        separatorBuilder: (_, _) =>
                         const SizedBox(height: 10),
                         itemBuilder: (context, i) {
                           final e = filtered[i];

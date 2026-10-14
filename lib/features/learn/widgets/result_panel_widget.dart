@@ -4,7 +4,6 @@ import 'package:bikip_kanji_app/core/logic/answer_checker.dart';
 import 'package:bikip_kanji_app/data/models/enums.dart';
 import 'package:bikip_kanji_app/data/models/kanji.dart';
 import 'package:bikip_kanji_app/data/models/vocab.dart';
-import 'package:bikip_kanji_app/features/favorite/widgets/favorite_button_widget.dart';
 
 class ResultPanelWidget extends StatelessWidget {
   const ResultPanelWidget({

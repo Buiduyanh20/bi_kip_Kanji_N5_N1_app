@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:go_router/go_router.dart';
 import 'package:bikip_kanji_app/app/navigation/navigation_provider.dart';
-import 'package:bikip_kanji_app/app/router.dart';
 import 'package:bikip_kanji_app/app/theme/app_colors.dart';
 import 'package:bikip_kanji_app/features/settings/providers/settings_stats_provider.dart';
 import 'package:bikip_kanji_app/features/settings/widgets/legal_document_widgets.dart';
