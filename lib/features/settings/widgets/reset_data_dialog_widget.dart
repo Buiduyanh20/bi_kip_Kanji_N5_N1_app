@@ -14,92 +14,116 @@ class ResetLearningWidget extends ConsumerWidget {
   Future<void> _showResetSheet(BuildContext context, WidgetRef ref) async {
     final confirmed = await showModalBottomSheet<bool>(
       context: context,
+
       showDragHandle: true,
+
+      // Cho phép sheet cao hơn mặc định 9/16 màn hình
+      isScrollControlled: true,
+
       builder: (ctx) {
-        return Padding(
-          padding: const EdgeInsets.all(24),
+        return SafeArea(
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.all(24),
 
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
 
-            children: [
-              Container(
-                width: 64,
-                height: 64,
+              children: [
+                Container(
+                  width: 64,
 
-                decoration: BoxDecoration(
-                  color: Colors.red.withValues(alpha: 0.1),
-                  shape: BoxShape.circle,
-                ),
+                  height: 64,
 
-                child: const Icon(
-                  Icons.restart_alt,
-                  size: 36,
-                  color: Colors.red,
-                ),
-              ),
+                  decoration: BoxDecoration(
+                    color: Colors.red.withValues(alpha: 0.1),
 
-              const SizedBox(height: 16),
-
-              const Text(
-                'Bắt đầu lại hành trình?',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-              ),
-
-              const SizedBox(height: 12),
-
-              const Text(
-                'Toàn bộ tiến độ học hiện tại sẽ được đặt lại:',
-                textAlign: TextAlign.center,
-              ),
-
-              const SizedBox(height: 16),
-
-              _ResetItem(
-                icon: Icons.menu_book,
-                text: 'Tiến độ Kanji và từ vựng',
-              ),
-
-              _ResetItem(icon: Icons.history, text: 'Lịch sử trả lời quiz'),
-
-              _ResetItem(icon: Icons.bookmark, text: 'Danh sách ôn tập'),
-
-              _ResetItem(icon: Icons.settings, text: 'Cài đặt cá nhân'),
-
-              const SizedBox(height: 20),
-
-              SizedBox(
-                width: double.infinity,
-
-                child: FilledButton(
-                  style: FilledButton.styleFrom(
-                    backgroundColor: Colors.red,
-                    foregroundColor: Colors.white,
-                    minimumSize: const Size(0, 48),
+                    shape: BoxShape.circle,
                   ),
 
-                  onPressed: () {
-                    Navigator.pop(ctx, true);
-                  },
+                  child: const Icon(
+                    Icons.restart_alt,
 
-                  child: const Text('Xác nhận bắt đầu lại'),
+                    size: 36,
+
+                    color: Colors.red,
+                  ),
                 ),
-              ),
 
-              const SizedBox(height: 8),
+                const SizedBox(height: 16),
 
-              SizedBox(
-                width: double.infinity,
+                const Text(
+                  'Bắt đầu lại hành trình?',
 
-                child: TextButton(
-                  onPressed: () {
-                    Navigator.pop(ctx, false);
-                  },
-
-                  child: const Text('Hủy'),
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
-              ),
-            ],
+
+                const SizedBox(height: 12),
+
+                const Text(
+                  'Toàn bộ tiến độ học hiện tại sẽ được đặt lại:',
+
+                  textAlign: TextAlign.center,
+                ),
+
+                const SizedBox(height: 16),
+
+                const _ResetItem(
+                  icon: Icons.menu_book,
+
+                  text: 'Tiến độ Kanji và từ vựng',
+                ),
+
+                const _ResetItem(
+                  icon: Icons.history,
+
+                  text: 'Lịch sử trả lời quiz',
+                ),
+
+                const _ResetItem(
+                  icon: Icons.bookmark,
+
+                  text: 'Danh sách ôn tập',
+                ),
+
+                const _ResetItem(icon: Icons.settings, text: 'Cài đặt cá nhân'),
+
+                const SizedBox(height: 20),
+
+                SizedBox(
+                  width: double.infinity,
+
+                  child: FilledButton(
+                    style: FilledButton.styleFrom(
+                      backgroundColor: Colors.red,
+
+                      foregroundColor: Colors.white,
+
+                      minimumSize: const Size(0, 48),
+                    ),
+
+                    onPressed: () {
+                      Navigator.pop(ctx, true);
+                    },
+
+                    child: const Text('Xác nhận bắt đầu lại'),
+                  ),
+                ),
+
+                const SizedBox(height: 8),
+
+                SizedBox(
+                  width: double.infinity,
+
+                  child: TextButton(
+                    onPressed: () {
+                      Navigator.pop(ctx, false);
+                    },
+
+                    child: const Text('Hủy'),
+                  ),
+                ),
+              ],
+            ),
           ),
         );
       },
@@ -124,7 +148,9 @@ class ResetLearningWidget extends ConsumerWidget {
 
       await prefs.remove('has_seen_welcome');
     } catch (_) {
-      if (!context.mounted) return;
+      if (!context.mounted) {
+        return;
+      }
 
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Không thể đặt lại dữ liệu.')),
@@ -133,7 +159,9 @@ class ResetLearningWidget extends ConsumerWidget {
       return;
     }
 
-    if (!context.mounted) return;
+    if (!context.mounted) {
+      return;
+    }
 
     context.go(AppRoutes.welcome);
   }
@@ -197,16 +225,12 @@ class ResetLearningWidget extends ConsumerWidget {
 
             style: OutlinedButton.styleFrom(
               foregroundColor: Colors.red,
-              backgroundColor: Colors.red.withValues(
-                alpha: 0.05,
-              ),
-              side: const BorderSide(
-                color: Colors.red,
-              ),
-              minimumSize: const Size(
-                0,
-                48,
-              ),
+
+              backgroundColor: Colors.red.withValues(alpha: 0.05),
+
+              side: const BorderSide(color: Colors.red),
+
+              minimumSize: const Size(0, 48),
             ),
 
             onPressed: () => _showResetSheet(context, ref),

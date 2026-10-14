@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
-
+import 'package:bikip_kanji_app/app/navigation/bottom_tabs.dart';
+import 'package:bikip_kanji_app/app/navigation/navigation_provider.dart';
 import 'package:bikip_kanji_app/app/router.dart';
 import 'package:bikip_kanji_app/app/theme/app_colors.dart';
 import 'package:bikip_kanji_app/data/providers/app_state.dart';
@@ -34,7 +35,7 @@ class HomeStatusView extends ConsumerWidget {
         ...switch (status.stage) {
           HomeStage.notStarted => _notStarted(),
           HomeStage.completed => _completed(context, status),
-          HomeStage.inProgress => _inProgress(context, status),
+          HomeStage.inProgress => _inProgress(context, ref, status),
         },
       ],
     );
@@ -98,7 +99,7 @@ class HomeStatusView extends ConsumerWidget {
   ];
 
   // ── Đang học ──
-  List<Widget> _inProgress(BuildContext context, HomeStatusData s) => [
+  List<Widget> _inProgress(BuildContext context,WidgetRef ref, HomeStatusData s) => [
     const _Title('Tiếp tục hành trình của bạn'),
     const SizedBox(height: 24),
     _StatBox(
@@ -135,7 +136,14 @@ class HomeStatusView extends ConsumerWidget {
       _ActionButton(
         label: 'Ôn các câu cần nhớ',
         filled: false,
-        onPressed: () => context.push(AppRoutes.review),
+        onPressed: () {
+          final shell = ref.read(navigationShellProvider);
+          if (shell != null) {
+            shell.goBranch(BottomTabs.review);
+          } else {
+            context.go(AppRoutes.review);
+          }
+        },
       ),
     ],
   ];

@@ -1,26 +1,15 @@
 import 'package:flutter/material.dart';
 
 import 'package:bikip_kanji_app/app/theme/app_colors.dart';
-import 'package:bikip_kanji_app/data/models/content_item.dart';
-import 'package:bikip_kanji_app/data/models/content_item_ext.dart';
 import 'package:bikip_kanji_app/features/progress/providers/progress_summary_provider.dart';
-import 'package:bikip_kanji_app/features/progress/widgets/item_chip_widget.dart';
 
 const _kLearning = Color(0xFFF59E0B);
 const _kFresh = Color(0xFFE2E8F0);
-const _kChipLimit = 24;
 
 class LevelProgressCardWidget extends StatelessWidget {
-  const LevelProgressCardWidget({
-    super.key,
-    required this.data,
-    this.onReview,
-    this.onItemTap,
-  });
+  const LevelProgressCardWidget({super.key, required this.data});
 
   final LevelProgressData data;
-  final VoidCallback? onReview;
-  final void Function(ContentItem)? onItemTap;
 
   @override
   Widget build(BuildContext context) {
@@ -79,32 +68,6 @@ class LevelProgressCardWidget extends StatelessWidget {
                 done: e.value,
                 total: data.total,
               ),
-          ],
-          if (data.learning.isNotEmpty) ...[
-            const SizedBox(height: 20),
-            _ChipGroup(
-              label: 'Đang học (cần ôn)',
-              color: _kLearning,
-              items: data.learning,
-              onItemTap: onItemTap,
-            ),
-            if (onReview != null) ...[
-              const SizedBox(height: 12),
-              FilledButton.icon(
-                onPressed: onReview,
-                icon: const Icon(Icons.refresh),
-                label: Text('Ôn ${data.learning.length} mục còn yếu'),
-              ),
-            ],
-          ],
-          if (data.mastered.isNotEmpty) ...[
-            const SizedBox(height: 20),
-            _ChipGroup(
-              label: 'Đã nhớ',
-              color: AppColors.success,
-              items: data.mastered,
-              onItemTap: onItemTap,
-            ),
           ],
         ],
       ),
@@ -188,57 +151,6 @@ class _MethodRow extends StatelessWidget {
               style: const TextStyle(fontSize: 12, color: AppColors.textHint)),
         ],
       ),
-    );
-  }
-}
-
-class _ChipGroup extends StatefulWidget {
-  const _ChipGroup({
-    required this.label,
-    required this.color,
-    required this.items,
-    this.onItemTap,
-  });
-  final String label;
-  final Color color;
-  final List<ContentItem> items;
-  final void Function(ContentItem)? onItemTap;
-
-  @override
-  State<_ChipGroup> createState() => _ChipGroupState();
-}
-
-class _ChipGroupState extends State<_ChipGroup> {
-  bool _expanded = false;
-
-  @override
-  Widget build(BuildContext context) {
-    final items = widget.items;
-    final shown = _expanded ? items : items.take(_kChipLimit).toList();
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text('${widget.label} (${items.length})',
-            style: TextStyle(
-                fontSize: 14, fontWeight: FontWeight.w600, color: widget.color)),
-        const SizedBox(height: 8),
-        Wrap(
-          spacing: 8,
-          runSpacing: 8,
-          children: [
-            for (final i in shown)
-              ItemChipWidget(
-                label: i.displayText,
-                onTap: widget.onItemTap == null ? null : () => widget.onItemTap!(i),
-              ),
-          ],
-        ),
-        if (items.length > _kChipLimit)
-          TextButton(
-            onPressed: () => setState(() => _expanded = !_expanded),
-            child: Text(_expanded ? 'Thu gọn' : 'Xem tất cả ${items.length}'),
-          ),
-      ],
     );
   }
 }

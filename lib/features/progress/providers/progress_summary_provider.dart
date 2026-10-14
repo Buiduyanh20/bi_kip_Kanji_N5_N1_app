@@ -8,9 +8,14 @@ import 'package:bikip_kanji_app/data/models/progress.dart';
 import 'package:bikip_kanji_app/data/providers/app_state.dart';
 import 'package:bikip_kanji_app/data/repositories/providers.dart';
 
-/// Nhãn phương pháp học. Nếu app đã có hàm label cho LearnMethod
-/// (ví dụ trong labels.dart) thì thay thế hàm này bằng hàm đó.
-String methodLabel(LearnMethod m) => m.name;
+/// Nhãn tiếng Việt (có dấu) cho từng phương pháp học.
+const _methodLabels = <LearnMethod, String>{
+  LearnMethod.hanviet: 'Hán Việt',
+  LearnMethod.meaning: 'Nghĩa',
+  LearnMethod.reading: 'Cách đọc',
+};
+
+String methodLabel(LearnMethod m) => _methodLabels[m] ?? m.name;
 
 class LevelProgressData {
   const LevelProgressData({

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
 import 'package:bikip_kanji_app/app/theme/app_colors.dart';
-import 'package:bikip_kanji_app/data/models/content_item.dart';
 import 'package:bikip_kanji_app/data/models/enums.dart';
 import 'package:bikip_kanji_app/features/progress/providers/progress_summary_provider.dart';
 import 'package:bikip_kanji_app/features/progress/widgets/level_progress_card_widget.dart';
@@ -18,10 +16,6 @@ class ProgressScreen extends ConsumerStatefulWidget {
 class _ProgressScreenState extends ConsumerState<ProgressScreen> {
   ContentType _type = ContentType.kanji;
   JlptLevel? _level;
-
-  // TODO: nối với router / navigation_provider hiện có của app.
-  void _openReview() {}
-  void _openKanjiDetail(ContentItem item) {}
 
   @override
   Widget build(BuildContext context) {
@@ -64,12 +58,7 @@ class _ProgressScreenState extends ConsumerState<ProgressScreen> {
                   ),
                 )
               else
-                _Body(
-                  type: _type,
-                  level: selected,
-                  onReview: _openReview,
-                  onItemTap: _type == ContentType.kanji ? _openKanjiDetail : null,
-                ),
+                _Body(type: _type, level: selected),
             ],
           ),
         ),
@@ -79,25 +68,14 @@ class _ProgressScreenState extends ConsumerState<ProgressScreen> {
 }
 
 class _Body extends ConsumerWidget {
-  const _Body({
-    required this.type,
-    required this.level,
-    required this.onReview,
-    required this.onItemTap,
-  });
+  const _Body({required this.type, required this.level});
 
   final ContentType type;
   final JlptLevel level;
-  final VoidCallback onReview;
-  final void Function(ContentItem)? onItemTap;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final data = ref.watch(levelProgressProvider((type, level)));
-    return LevelProgressCardWidget(
-      data: data,
-      onReview: onReview,
-      onItemTap: onItemTap,
-    );
+    return LevelProgressCardWidget(data: data);
   }
 }
