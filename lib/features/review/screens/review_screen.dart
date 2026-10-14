@@ -3,10 +3,11 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import 'package:bikip_kanji_app/app/router.dart';
+import 'package:bikip_kanji_app/app/theme/app_colors.dart';
 import 'package:bikip_kanji_app/data/models/enums.dart';
 import 'package:bikip_kanji_app/features/learn/providers/quiz_controller.dart';
 import 'package:bikip_kanji_app/features/review/providers/review_provider.dart';
-import 'package:bikip_kanji_app/features/review/widgets/review_empty_state.dart';
+import 'package:bikip_kanji_app/features/review/providers/review_empty_state.dart';
 import 'package:bikip_kanji_app/features/review/widgets/review_item_card.dart';
 
 class ReviewScreen extends ConsumerStatefulWidget {
@@ -17,19 +18,21 @@ class ReviewScreen extends ConsumerStatefulWidget {
 }
 
 class _ReviewScreenState extends ConsumerState<ReviewScreen> {
+  static const double _maxWidth = 672;
+
   ContentType? _filter; // null = Tất cả
 
   void _startReview() {
     // Web: dựng quiz từ TOÀN BỘ lỗi sai, bỏ qua bộ lọc.
     final started = ref.read(quizControllerProvider.notifier).startReview();
     if (!started) {
-      ScaffoldMessenger.of(
-        context,
-      ).showSnackBar(const SnackBar(content: Text('Chưa có câu nào cần ôn.')));
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Chưa có câu nào cần ôn.')),
+      );
       return;
     }
-    // Thay màn Ôn tập bằng quiz: đóng quiz thì về nơi đã mở Ôn tập.
-    context.pushReplacement(AppRoutes.quizPlayOf(QuizType.review));
+    // Ôn tập là tab: dùng push để quay về đúng tab khi đóng quiz.
+    context.push(AppRoutes.quizPlayOf(QuizType.review));
   }
 
   @override
@@ -42,7 +45,7 @@ class _ReviewScreenState extends ConsumerState<ReviewScreen> {
         body: Align(
           alignment: Alignment.topCenter,
           child: ConstrainedBox(
-            constraints: const BoxConstraints(maxWidth: 672),
+            constraints: const BoxConstraints(maxWidth: _maxWidth),
             child: const Padding(
               padding: EdgeInsets.all(16),
               child: ReviewEmptyState(),
@@ -57,44 +60,12 @@ class _ReviewScreenState extends ConsumerState<ReviewScreen> {
         : entries.where((e) => e.mistake.type == _filter).toList();
 
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: false,
-
-        title: const Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-
-          children: [
-            Text(
-              '🔄 Ôn tập',
-              style: TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.w800,
-                color: Colors.black87,
-              ),
-            ),
-
-            Text(
-              'Củng cố những chữ bạn chưa nhớ',
-              style: TextStyle(
-                fontSize: 13,
-                fontWeight: FontWeight.w400,
-                color: Colors.grey,
-              ),
-            ),
-          ],
-        ),
-
-        elevation: 0,
-
-        backgroundColor: Colors.transparent,
-
-        foregroundColor: Colors.black87,
-      ),
+      appBar: AppBar(title: const Text('Ôn tập')),
       body: SafeArea(
         child: Align(
           alignment: Alignment.topCenter,
           child: ConstrainedBox(
-            constraints: const BoxConstraints(maxWidth: 672),
+            constraints: const BoxConstraints(maxWidth: _maxWidth),
             child: Column(
               children: [
                 Expanded(
@@ -106,13 +77,18 @@ class _ReviewScreenState extends ConsumerState<ReviewScreen> {
                         '${entries.length} mục cần cải thiện',
                         style: const TextStyle(
                           fontSize: 14,
-                          color: Colors.grey,
+                          color: AppColors.textHint,
                         ),
                       ),
                       const SizedBox(height: 16),
-                      _FilterBar(
-                        value: _filter,
-                        onChanged: (v) => setState(() => _filter = v),
+                      Wrap(
+                        spacing: 8,
+                        runSpacing: 8,
+                        children: [
+                          _chip('Tất cả', null),
+                          _chip('Kanji', ContentType.kanji),
+                          _chip('Từ vựng', ContentType.vocabulary),
+                        ],
                       ),
                       const SizedBox(height: 16),
                       if (filtered.isEmpty)
@@ -130,8 +106,8 @@ class _ReviewScreenState extends ConsumerState<ReviewScreen> {
                             entry: entry,
                             onTap: entry.mistake.type == ContentType.kanji
                                 ? () => context.push(
-                                    AppRoutes.kanjiDetailOf(entry.item.id),
-                                  )
+                              AppRoutes.kanjiDetailOf(entry.item.id),
+                            )
                                 : null,
                           ),
                         ),
@@ -156,31 +132,11 @@ class _ReviewScreenState extends ConsumerState<ReviewScreen> {
       ),
     );
   }
-}
 
-class _FilterBar extends StatelessWidget {
-  const _FilterBar({required this.value, required this.onChanged});
-
-  final ContentType? value;
-  final ValueChanged<ContentType?> onChanged;
-
-  @override
-  Widget build(BuildContext context) {
-    Widget chip(String label, ContentType? v) => ChoiceChip(
-      label: Text(label),
-      selected: value == v,
-      showCheckmark: false,
-      onSelected: (_) => onChanged(v),
-    );
-
-    return Wrap(
-      spacing: 8,
-      runSpacing: 8,
-      children: [
-        chip('Tất cả', null),
-        chip('Kanji', ContentType.kanji),
-        chip('Từ vựng', ContentType.vocabulary),
-      ],
-    );
-  }
+  Widget _chip(String label, ContentType? value) => ChoiceChip(
+    label: Text(label),
+    selected: _filter == value,
+    showCheckmark: false,
+    onSelected: (_) => setState(() => _filter = value),
+  );
 }

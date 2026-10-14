@@ -1,5 +1,7 @@
 import 'dart:math';
+
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+
 import 'package:bikip_kanji_app/core/logic/answer_checker.dart';
 import 'package:bikip_kanji_app/core/logic/quiz_builder.dart';
 import 'package:bikip_kanji_app/data/models/enums.dart';
@@ -10,11 +12,10 @@ import 'quiz_state.dart';
 
 class QuizController extends Notifier<QuizState> {
   @override
-  QuizState build() {
-    return QuizState.initial;
-  }
+  QuizState build() => QuizState.initial;
 
-  void start({
+  /// Bắt đầu phiên học. Trả về false nếu không dựng được câu hỏi nào.
+  bool start({
     required ContentType contentType,
     required JlptLevel level,
     required LearnMethod method,
@@ -22,31 +23,29 @@ class QuizController extends Notifier<QuizState> {
   }) {
     final content = ref.read(contentRepositoryProvider);
 
-    final progress = ref.read(progressProvider);
-
     final questions = buildLearnQuiz(
       contentType: contentType,
       items: content.itemsByLevel(contentType, level),
       method: method,
       count: count,
-      progress: progress,
+      progress: ref.read(progressProvider),
       rng: Random(),
     );
-
-    final session = QuizSession(
-      mode: QuizMode.learn,
-      contentType: contentType,
-      level: level,
-      method: method,
-      questions: questions,
-    );
+    if (questions.isEmpty) return false;
 
     state = state.copyWith(
-      session: session,
+      session: QuizSession(
+        mode: QuizMode.learn,
+        contentType: contentType,
+        level: level,
+        method: method,
+        questions: questions,
+      ),
       selectedMethod: method,
       selectedCount: count,
       error: null,
     );
+    return true;
   }
 
   /// Ôn tập từ toàn bộ lỗi sai trong tiến độ (web: ReviewClient.startReview).
@@ -60,12 +59,10 @@ class QuizController extends Notifier<QuizState> {
       count: count,
       rng: Random(),
     ).where((q) => content.itemById(q.contentType, q.itemId) != null).toList();
-
     if (questions.isEmpty) return false;
 
-    // QuizSession của bạn bắt buộc có contentType/level/method (không null),
-    // trong khi ôn tập trộn nhiều loại. Lấy theo câu đầu tiên, giống web
-    // (`contentType: questions[0]?.contentType ?? "kanji"`).
+    // QuizSession bắt buộc có contentType/level/method nên lấy theo câu đầu tiên.
+    // Màn quiz luôn đọc method/contentType của TỪNG câu, không đọc từ session.
     final first = questions.first;
     final firstItem = content.itemById(first.contentType, first.itemId)!;
 
@@ -84,23 +81,14 @@ class QuizController extends Notifier<QuizState> {
 
   Future<void> submit(String answer) async {
     final session = state.session;
-
-    if (session == null) return;
-
-    if (session.phase != QuizPhase.answering) return;
+    if (session == null || session.phase != QuizPhase.answering) return;
 
     final question = session.currentQuestion;
+    if (question == null || session.results.containsKey(question.key)) return;
 
-    if (question == null) return;
-
-    if (session.results.containsKey(question.key)) {
-      return;
-    }
-
-    final content = ref.read(contentRepositoryProvider);
-
-    final item = content.itemById(question.contentType, question.itemId);
-
+    final item = ref
+        .read(contentRepositoryProvider)
+        .itemById(question.contentType, question.itemId);
     if (item == null) return;
 
     final result = checkAnswer(
@@ -109,14 +97,7 @@ class QuizController extends Notifier<QuizState> {
       item: item,
     );
 
-    await ref
-        .read(progressProvider.notifier)
-        .recordAnswer(
-          item: item,
-          method: question.method,
-          isCorrect: result.correct,
-        );
-
+    // Đổi phase trước: bấm "Kiểm tra" hai lần không nộp đôi.
     state = state.copyWith(
       session: session.copyWith(
         phase: QuizPhase.result,
@@ -126,17 +107,19 @@ class QuizController extends Notifier<QuizState> {
         results: {...session.results, question.key: result.correct},
       ),
     );
+
+    await ref.read(progressProvider.notifier).recordAnswer(
+      item: item,
+      method: question.method,
+      isCorrect: result.correct,
+    );
   }
 
   void next() {
     final session = state.session;
-
-    if (session == null) return;
-
-    if (session.phase != QuizPhase.result) return;
+    if (session == null || session.phase != QuizPhase.result) return;
 
     final nextIndex = session.currentIndex + 1;
-
     if (nextIndex >= session.questions.length) {
       state = state.copyWith(
         session: session.copyWith(phase: QuizPhase.finished),
@@ -155,10 +138,7 @@ class QuizController extends Notifier<QuizState> {
     );
   }
 
-  void restart() {
-    clear();
-  }
-
+  /// "Ôn các câu sai": phiên mới chỉ gồm các câu vừa sai (giống web).
   void reviewMistakes() {
     final session = state.session;
     if (session == null) return;
@@ -179,9 +159,9 @@ class QuizController extends Notifier<QuizState> {
     );
   }
 
-  void clear() {
-    state = QuizState.initial;
-  }
+  void restart() => clear();
+
+  void clear() => state = QuizState.initial;
 }
 
 final quizControllerProvider = NotifierProvider<QuizController, QuizState>(

@@ -19,7 +19,7 @@ class FavoriteEmptyStateWidget extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Icon(
-              noFavorites ? Icons.favorite_border : Icons.search_off,
+              noFavorites ? Icons.favorite_border_rounded : Icons.search_off,
               size: 56,
               color: const Color(0xFFCBD5E1),
             ),
@@ -31,7 +31,7 @@ class FavoriteEmptyStateWidget extends StatelessWidget {
             const SizedBox(height: 8),
             Text(
               noFavorites
-                  ? 'Bấm ♡ ở màn chi tiết Kanji để lưu lại tại đây.'
+                  ? 'Bấm ♡ khi đang học hoặc ở màn chi tiết Kanji để lưu lại tại đây.'
                   : 'Thử từ khóa hoặc cấp độ khác.',
               textAlign: TextAlign.center,
               style: const TextStyle(color: AppColors.textHint),
@@ -40,7 +40,8 @@ class FavoriteEmptyStateWidget extends StatelessWidget {
               const SizedBox(height: 20),
               FilledButton(
                 style: FilledButton.styleFrom(minimumSize: const Size(0, 48)),
-                onPressed: () => context.go(AppRoutes.quizConfig),
+                onPressed: () =>
+                    context.push(AppRoutes.quizLevelOf(QuizType.kanji)),
                 child: const Text('Học Kanji'),
               ),
             ],

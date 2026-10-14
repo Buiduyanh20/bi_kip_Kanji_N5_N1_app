@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
+import 'package:bikip_kanji_app/app/router.dart';
 import 'package:bikip_kanji_app/app/theme/app_colors.dart';
 
-/// Port của `ReviewEmptyState.tsx`.
 class ReviewEmptyState extends StatelessWidget {
   const ReviewEmptyState({super.key});
 
@@ -35,8 +36,8 @@ class ReviewEmptyState extends StatelessWidget {
           const SizedBox(height: 20),
           FilledButton(
             style: FilledButton.styleFrom(minimumSize: const Size(0, 48)),
-            // Web: Link "/kanji". Ở app, Kanji là một tab của shell.
-            onPressed: () => {},
+            onPressed: () =>
+                context.push(AppRoutes.quizLevelOf(QuizType.kanji)),
             child: const Text('Học Kanji'),
           ),
         ],

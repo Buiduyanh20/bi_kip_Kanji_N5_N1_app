@@ -3,7 +3,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import 'package:bikip_kanji_app/app/router.dart';
+import 'package:bikip_kanji_app/core/logic/mastery.dart';
 import 'package:bikip_kanji_app/data/models/enums.dart';
+import 'package:bikip_kanji_app/data/providers/app_state.dart';
 import 'package:bikip_kanji_app/data/repositories/providers.dart';
 
 class QuizLevelScreen extends ConsumerWidget {
@@ -16,6 +18,7 @@ class QuizLevelScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final repo = ref.watch(contentRepositoryProvider);
+    final progress = ref.watch(progressProvider);
     final levels = repo.levelsWithContent(contentType);
 
     return Scaffold(
@@ -46,6 +49,7 @@ class QuizLevelScreen extends ConsumerWidget {
                   padding: EdgeInsets.fromLTRB(horizontal, 12, horizontal, 24),
                   children: [
                     Container(
+                      width: double.infinity,
                       padding: const EdgeInsets.all(20),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
@@ -56,17 +60,12 @@ class QuizLevelScreen extends ConsumerWidget {
                           ],
                         ),
                       ),
-                      child: const Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Chọn cấp độ phù hợp để bắt đầu học.',
-                            style: TextStyle(
-                              fontSize: 22,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ],
+                      child: const Text(
+                        'Chọn cấp độ phù hợp để bắt đầu học.',
+                        style: TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                     const SizedBox(height: 24),
@@ -76,14 +75,13 @@ class QuizLevelScreen extends ConsumerWidget {
                         child: _LevelCard(
                           level: level,
                           count: repo.countByLevel(contentType, level),
-                          onTap: () {
-                            context.push(
-                              AppRoutes.quizConfigOf(
-                                contentType.name,
-                                level: level.name,
-                              ),
-                            );
-                          },
+                          mastered: _mastered(repo, progress, level),
+                          onTap: () => context.push(
+                            AppRoutes.quizConfigOf(
+                              contentType.name,
+                              level: level.code,
+                            ),
+                          ),
                         ),
                       ),
                   ],
@@ -95,22 +93,36 @@ class QuizLevelScreen extends ConsumerWidget {
       ),
     );
   }
+
+  /// Số mục "đã nhớ" (mọi phương pháp đều mastered), cùng quy tắc với màn Tiến độ.
+  int _mastered(dynamic repo, Map progress, JlptLevel level) {
+    final summaries = summarizeByLevel(
+      content: repo.itemsByLevel(contentType, level),
+      contentType: contentType,
+      methods: repo.availableMethods(contentType, level),
+      items: Map.castFrom(progress),
+    );
+    return summaries.isEmpty ? 0 : summaries.first.mastered;
+  }
 }
 
 class _LevelCard extends StatelessWidget {
   const _LevelCard({
     required this.level,
     required this.count,
+    required this.mastered,
     required this.onTap,
   });
 
   final JlptLevel level;
   final int count;
+  final int mastered;
   final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
     final color = _levelColor(level);
+    final ratio = count == 0 ? 0.0 : mastered / count;
 
     return Material(
       color: Colors.white,
@@ -157,14 +169,14 @@ class _LevelCard extends StatelessWidget {
                     ),
                     const SizedBox(height: 6),
                     Text(
-                      '$count mục học',
+                      '$mastered / $count mục đã nhớ',
                       style: TextStyle(color: Colors.grey[600]),
                     ),
                     const SizedBox(height: 10),
                     ClipRRect(
                       borderRadius: BorderRadius.circular(10),
                       child: LinearProgressIndicator(
-                        value: 0,
+                        value: ratio,
                         minHeight: 6,
                         backgroundColor: Colors.grey[200],
                         color: color,

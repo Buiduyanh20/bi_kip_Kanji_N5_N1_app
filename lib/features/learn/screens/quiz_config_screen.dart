@@ -1,11 +1,15 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
+
+import 'package:bikip_kanji_app/app/router.dart';
+import 'package:bikip_kanji_app/data/models/app_settings.dart';
 import 'package:bikip_kanji_app/data/models/enums.dart';
 import 'package:bikip_kanji_app/data/providers/app_state.dart';
 import 'package:bikip_kanji_app/data/repositories/providers.dart';
-import '../../../data/models/app_settings.dart';
 import '../providers/quiz_controller.dart';
-import '../screens/quiz_play_screen.dart';
 import '../widgets/count_selector_widget.dart';
 import '../widgets/custom_count_sheet.dart';
 import '../widgets/method_selector_widget.dart';
@@ -27,36 +31,64 @@ class QuizConfigScreen extends ConsumerStatefulWidget {
 class _QuizConfigScreenState extends ConsumerState<QuizConfigScreen> {
   static const double _maxWidth = 672;
 
+  late final List<LearnMethod> _methods;
+  late final int _total;
   LearnMethod? _method;
-  int? _count;
+  late int _count;
 
   @override
   void initState() {
     super.initState();
+    final repo = ref.read(contentRepositoryProvider);
+    final settings = ref.read(settingsProvider);
 
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      final repo = ref.read(contentRepositoryProvider);
-      final methods = repo.availableMethods(widget.contentType, widget.level);
-      final total = repo.countByLevel(widget.contentType, widget.level);
+    _methods = repo.availableMethods(widget.contentType, widget.level);
+    _total = repo.countByLevel(widget.contentType, widget.level);
 
-      setState(() {
-        _method = methods.firstOrNull;
-        _count = total;
-      });
-    });
+    // Giống web: nhớ lastMethod nếu còn dùng được, không thì phương pháp đầu.
+    _method = _methods.contains(settings.lastMethod)
+        ? settings.lastMethod
+        : _methods.firstOrNull;
+
+    final last = settings.lastCount;
+    _count = (last == null || last.isAll || last.count! > _total)
+        ? _total
+        : last.count!;
+  }
+
+  Future<void> _start() async {
+    final method = _method;
+    if (method == null || _count < 1) return;
+
+    final started = ref.read(quizControllerProvider.notifier).start(
+      contentType: widget.contentType,
+      level: widget.level,
+      method: method,
+      count: _count,
+    );
+    if (!started) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Không tạo được phiên học.')),
+      );
+      return;
+    }
+
+    unawaited(
+      ref.read(settingsProvider.notifier).setLastLearningOptions(
+        method,
+        _count == _total
+            ? const CountChoice.all()
+            : CountChoice.of(_count),
+      ),
+    );
+
+    // Thay config bằng quiz: back từ quiz về thẳng danh sách cấp độ.
+    context.pushReplacement(AppRoutes.quizPlayOf(widget.contentType.name));
   }
 
   @override
   Widget build(BuildContext context) {
-    final repo = ref.watch(contentRepositoryProvider);
-    final settings = ref.watch(settingsProvider);
-    final methods = repo.availableMethods(widget.contentType, widget.level);
-    final total = repo.countByLevel(widget.contentType, widget.level);
-
-    _method ??= methods.contains(settings.lastMethod)
-        ? settings.lastMethod
-        : methods.first;
-    _count ??= total;
+    final isCustom = ![10, 20, 50, _total].contains(_count);
 
     return Scaffold(
       appBar: AppBar(
@@ -95,16 +127,18 @@ class _QuizConfigScreenState extends ConsumerState<QuizConfigScreen> {
               builder: (context, constraints) {
                 final horizontal = constraints.maxWidth < 360 ? 12.0 : 16.0;
 
+                if (_methods.isEmpty || _total == 0) {
+                  return const Center(
+                    child: Text('Cấp độ này chưa có nội dung.'),
+                  );
+                }
+
                 return Column(
                   children: [
                     Expanded(
                       child: SingleChildScrollView(
-                        padding: EdgeInsets.fromLTRB(
-                          horizontal,
-                          8,
-                          horizontal,
-                          16,
-                        ),
+                        padding:
+                        EdgeInsets.fromLTRB(horizontal, 8, horizontal, 16),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
@@ -126,11 +160,10 @@ class _QuizConfigScreenState extends ConsumerState<QuizConfigScreen> {
                                 ),
                               ),
                               child: MethodSelectorWidget(
-                                availableMethods: methods,
+                                availableMethods: _methods,
                                 selected: _method,
-                                onChanged: (value) {
-                                  setState(() => _method = value);
-                                },
+                                onChanged: (value) =>
+                                    setState(() => _method = value),
                               ),
                             ),
                             const SizedBox(height: 24),
@@ -155,14 +188,13 @@ class _QuizConfigScreenState extends ConsumerState<QuizConfigScreen> {
                                 crossAxisAlignment: CrossAxisAlignment.stretch,
                                 children: [
                                   CountSelectorWidget(
-                                    total: total,
-                                    selectedCount: _count!,
-                                    onChanged: (value) {
-                                      setState(() => _count = value);
-                                    },
+                                    total: _total,
+                                    selectedCount: _count,
+                                    onChanged: (value) =>
+                                        setState(() => _count = value),
                                   ),
                                   const SizedBox(height: 12),
-                                  if (![10, 20, 50, total].contains(_count))
+                                  if (isCustom)
                                     Container(
                                       margin: const EdgeInsets.only(bottom: 12),
                                       padding: const EdgeInsets.symmetric(
@@ -170,8 +202,8 @@ class _QuizConfigScreenState extends ConsumerState<QuizConfigScreen> {
                                         vertical: 10,
                                       ),
                                       decoration: BoxDecoration(
-                                        color: Colors.blue
-                                            .withValues(alpha: 0.08),
+                                        color:
+                                        Colors.blue.withValues(alpha: 0.08),
                                         borderRadius: BorderRadius.circular(12),
                                       ),
                                       child: Row(
@@ -198,7 +230,7 @@ class _QuizConfigScreenState extends ConsumerState<QuizConfigScreen> {
                                     onPressed: () async {
                                       final value = await showCustomCountSheet(
                                         context,
-                                        maxCount: total,
+                                        maxCount: _total,
                                       );
                                       if (value != null) {
                                         setState(() => _count = value);
@@ -213,42 +245,12 @@ class _QuizConfigScreenState extends ConsumerState<QuizConfigScreen> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsets.fromLTRB(
-                        horizontal,
-                        8,
-                        horizontal,
-                        12,
-                      ),
+                      padding: EdgeInsets.fromLTRB(horizontal, 8, horizontal, 12),
                       child: SizedBox(
                         width: double.infinity,
                         height: 52,
                         child: FilledButton(
-                          onPressed: () async {
-                            if (_method == null || _count == null) return;
-
-                            ref.read(quizControllerProvider.notifier).start(
-                              contentType: widget.contentType,
-                              level: widget.level,
-                              method: _method!,
-                              count: _count!,
-                            );
-
-                            final countChoice = (_count == total)
-                                ? const CountChoice.all()
-                                : CountChoice.of(_count!);
-
-                            await ref
-                                .read(settingsProvider.notifier)
-                                .setLastLearningOptions(_method!, countChoice);
-
-                            if (!context.mounted) return;
-
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (_) => const QuizPlayScreen(),
-                              ),
-                            );
-                          },
+                          onPressed: _method == null ? null : _start,
                           child: const Text(
                             'Bắt đầu học',
                             style: TextStyle(

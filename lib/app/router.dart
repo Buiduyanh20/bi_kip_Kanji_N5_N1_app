@@ -1,11 +1,12 @@
-import 'package:bikip_kanji_app/features/welcome/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+
 import '../data/models/enums.dart';
 import '../features/favorite/screens/favorite_screen.dart';
 import '../features/home/screens/home_screen.dart';
 import '../features/kanji_detail/screens/kanji_detail_screen.dart';
 import '../features/learn/screens/quiz_config_screen.dart';
+import '../features/learn/screens/quiz_level_screen.dart';
 import '../features/learn/screens/quiz_play_screen.dart';
 import '../features/progress/screens/progress_screen.dart';
 import '../features/review/screens/review_screen.dart';
@@ -14,7 +15,7 @@ import '../features/settings/screens/privacy_policy_screen.dart';
 import '../features/settings/screens/settings_screen.dart';
 import '../features/settings/screens/terms_of_service_screen.dart';
 import '../features/shell/screens/main_shell_screen.dart';
-import '../features/learn/screens/quiz_level_screen.dart' hide QuizConfigScreen;
+import '../features/welcome/screens/welcome_screen.dart';
 
 /// Các loại quiz, truyền qua query param `type`.
 abstract final class QuizType {
@@ -43,6 +44,7 @@ abstract final class AppRoutes {
   static const termsOfService = '/settings/terms';
 
   // Helper dựng đường dẫn
+  static String quizLevelOf(String type) => '$quizLevel?type=$type';
   static String quizConfigOf(String type, {required String level}) =>
       '$quizConfig?type=$type&level=$level';
   static String quizPlayOf(String type) => '$quizPlay?type=$type';
@@ -118,17 +120,16 @@ GoRouter createAppRouter({required bool hasSeenWelcome}) {
         ],
       ),
 
-      // ── Toàn màn hình ──
+      // ── Toàn màn hình (đè lên bottom nav) ──
       GoRoute(
         parentNavigatorKey: _rootNavigatorKey,
         path: AppRoutes.quizLevel,
         name: 'quizLevel',
         builder: (context, state) {
-          final typeStr = state.uri.queryParameters['type'] ?? 'kanji';
-
-          return QuizLevelScreen(
-            contentType: ContentType.values.byName(typeStr),
-          );
+          final type =
+              ContentType.tryParse(state.uri.queryParameters['type']) ??
+                  ContentType.kanji;
+          return QuizLevelScreen(contentType: type);
         },
       ),
       GoRoute(
@@ -136,12 +137,13 @@ GoRouter createAppRouter({required bool hasSeenWelcome}) {
         path: AppRoutes.quizConfig,
         name: 'quizConfig',
         builder: (context, state) {
-          final typeStr = state.uri.queryParameters['type'] ?? 'kanji';
-          final levelStr = state.uri.queryParameters['level'] ?? 'n5';
-          return QuizConfigScreen(
-            contentType: ContentType.values.byName(typeStr),
-            level: JlptLevel.values.byName(levelStr),
-          );
+          final type =
+              ContentType.tryParse(state.uri.queryParameters['type']) ??
+                  ContentType.kanji;
+          final level =
+              JlptLevel.tryParse(state.uri.queryParameters['level']) ??
+                  JlptLevel.n5;
+          return QuizConfigScreen(contentType: type, level: level);
         },
       ),
       GoRoute(
@@ -150,6 +152,7 @@ GoRouter createAppRouter({required bool hasSeenWelcome}) {
         name: 'quizPlay',
         builder: (context, state) => const QuizPlayScreen(),
       ),
+      // Phải khai báo TRƯỚC '/kanji/:id' để '/kanji/search' không bị bắt nhầm.
       GoRoute(
         parentNavigatorKey: _rootNavigatorKey,
         path: AppRoutes.kanjiSearch,
